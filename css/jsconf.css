@@ -1,0 +1,46 @@
+@import url(http://www.princexml.com/fonts/larabie/index.css) all;
+
+body {
+  background: black;
+  color: #ccc;
+  font-family: "Droid", sans-serif;
+  font-family: "Kenyan Coffee";
+  font-family: "Teen";
+  font-size: 22px;
+  text-align:center;
+  height: 100%;
+}
+a{ color: #E9FBF9;}
+p, li {
+  font-size:18px;
+}
+#callforspeakers ul{
+  margin-top:0px;
+  padding-bottom: 12px;
+}
+p {
+  margin-bottom:6px;
+}
+#for {
+
+  width:800px;
+  text-align: left;
+  margin:20px auto;
+    
+}
+
+#win {
+  text-align: center;
+/*  text-shadow: #ddd 0.2em 0.2em 0.2em*/
+}
+p {
+  padding-bottom: 20px;
+}
+  
+.submit input {
+  font-size: 18px;
+}
+
+.submit { 
+  padding: 8px;
+}
