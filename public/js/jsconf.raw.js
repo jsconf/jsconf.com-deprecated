@@ -3,7 +3,7 @@ var jsconf = (function () {
   var templates = {
     article: "<div class='article'><div class='title'>{{title}}</div><div class='body'>{{body}}</div><div class='more'>\
     <a href='javascript:jsconf.news(1)'>Previous</a> | <a href='javascript:jsconf.news(1)'>Next</a></div></div>",
-    call_for_speakers: "<div id='callforspeakers'><h1>Calling all JavaScript Visionaries, Craftspeople, and Drunkards</h1>\
+    call_for_speakers: "<div id='callforspeakers'><h1>Calling all JavaScript Visionaries, Craftspeople, and Other Such Peoples</h1>\
     <p>We are bringing together the top minds in JavaScript for a truly memorable and mindblowing time. Do you have a great \
     product, project, or concept in JavaScript that you think the world needs to see? JSConf is the launching point for \
     everything JavaScript in 2010 and beyond; at least until JSConf EU. The JSConf team has made a firm commitment to making \
@@ -22,6 +22,19 @@ var jsconf = (function () {
     </div>"
   };
   var current_news_index = 0;
+  
+  if (window.location.href.indexOf("#")) {
+    var key= window.location.href.split("#")[1];
+    if (key) {
+      if (key == "call_for_speakers") {
+        jsconf.call_for_speakers();
+      } else if (key == "register") {
+          jsconf.register();
+      } else if (key == "wtf") {
+          jsconf.wtf();
+      }
+    }
+  }
   return {
     help: function() {
       console.log("Welcome to JSConf 2010 - The JavaScript Conference");

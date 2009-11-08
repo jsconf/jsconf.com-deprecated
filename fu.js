@@ -1,6 +1,6 @@
 // Stolen like a theif in the night from http://github.com/ry/node_chat/raw/master/fu.js
 // Also added a couple things to make it awesomerer.
-// But hell its call fu.js, it had to be used.
+// But hell its called fu.js, it had to be used.
 var createServer = require("http").createServer;
 var sys = require("sys");
 DEBUG = false;
@@ -30,7 +30,7 @@ fu.post = function (path, handler) {
 
 var server = createServer(function (req, res) {
   var map = getMap;
-  if (req.metod ==="POST") {
+  if (req.method ==="POST") {
     map = postMap;
   }
   var handler = map[req.uri.path] || notFound;
