@@ -11,8 +11,12 @@ role :app, "jsconf.us"
 role :db,  "jsconf.us"
 
 namespace :deploy do
-  task :start {}
-  task :stop {}
+  task :start do
+  end
+    
+  task :stop do
+  end
+  
   task :restart, :roles => :app, :except => { :no_release => true } do
     
   end
