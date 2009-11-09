@@ -1,7 +1,7 @@
 COUCHHOST = "localhost";
 COUCHPORT = 5984;
 HOST = "localhost"; // localhost
-PORT = 8001;
+PORT = 8000;
 
 
 var fu = require("./fu"),
