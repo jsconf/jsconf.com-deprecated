@@ -19,7 +19,9 @@ function isblank(str) {
 }
 
 
-fu.get("/", fu.staticHandler("index.html"));
+fu.get("/", fu.staticHandler("public/index.html"));
+
+
 
 fu.post("/speaker", function (req, res) {
     var data = "";

@@ -1,1 +1,73 @@
-var _0x5f13=["\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x61\x72\x74\x69\x63\x6C\x65\x27\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x74\x69\x74\x6C\x65\x27\x3E\x7B\x7B\x74\x69\x74\x6C\x65\x7D\x7D\x3C\x2F\x64\x69\x76\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x6F\x64\x79\x27\x3E\x7B\x7B\x62\x6F\x64\x79\x7D\x7D\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E","\x57\x65\x6C\x63\x6F\x6D\x65\x20\x74\x6F\x20\x4A\x53\x43\x6F\x6E\x66\x20\x32\x30\x31\x30\x20\x2D\x20\x54\x68\x65\x20\x4A\x61\x76\x61\x53\x63\x72\x69\x70\x74\x20\x43\x6F\x6E\x66\x65\x72\x65\x6E\x63\x65","\x6C\x6F\x67","\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D","","\x41\x76\x61\x69\x6C\x61\x62\x6C\x65\x20\x43\x6F\x6D\x6D\x61\x6E\x64\x73\x3A","\x6A\x73\x63\x6F\x6E\x66\x2E\x6E\x65\x77\x73\x28\x29","\x6A\x73\x63\x6F\x6E\x66\x2E\x63\x61\x6C\x6C\x5F\x66\x6F\x72\x5F\x73\x70\x65\x61\x6B\x65\x72\x73\x28\x29","\x6A\x73\x63\x6F\x6E\x66\x2E\x6C\x6F\x63\x61\x74\x65\x28\x29","\x6A\x73\x63\x6F\x6E\x66\x2E\x72\x65\x67\x69\x73\x74\x65\x72\x28\x29","\x6A\x73\x63\x6F\x6E\x66\x2E\x76\x69\x64\x65\x6F\x73\x28\x32\x30\x30\x39\x7C\x67\x6C\x6F\x62\x61\x6C\x7C\x61\x6C\x6C\x29","\x6A\x73\x63\x6F\x6E\x66\x2E\x77\x74\x66\x28\x29","\x6A\x73\x63\x6F\x6E\x66\x2E\x6D\x6F\x64\x65\x28\x62\x6F\x73\x73\x7C\x6D\x79\x5F\x6C\x69\x74\x74\x6C\x65\x5F\x70\x6F\x6E\x79\x7C\x73\x6D\x62\x29","\x52\x65\x71\x75\x65\x73\x74\x69\x6E\x67\x20\x64\x61\x74\x61\x20\x66\x72\x6F\x6D\x20\x74\x68\x65\x20\x4D\x50\x43\x2E\x2E\x2E","\x45\x6E\x64\x20\x6F\x66\x20\x4C\x69\x6E\x65\x2E\x2E\x2E","\x53\x53\x53\x53\x53\x53\x53\x53\x50\x50\x50\x50\x50\x50\x50\x50\x45\x45\x45\x45\x45\x45\x45\x45\x45\x41\x41\x41\x41\x41\x41\x41\x4B\x4B\x4B\x4B\x4B\x4B\x4B\x4B\x45\x45\x45\x45\x45\x45\x45\x45\x45\x45\x52\x52\x52\x52\x52\x52\x52\x52\x52\x53\x53\x53\x53\x53\x53\x53\x53","\x57\x61\x73\x68\x69\x6E\x67\x74\x6F\x6E\x2C\x20\x44\x43\x20\x69\x73\x20\x61\x6C\x6C\x20\x49\x20\x63\x61\x6E\x20\x74\x65\x6C\x6C\x20\x79\x6F\x75\x20\x66\x6F\x72\x20\x6E\x6F\x77\x2E"];var jsconf=(function (){var _0xe833x2={article:_0x5f13[0]};var _0xe833x3=0;return {help:function (){console[_0x5f13[2]](_0x5f13[1]);console[_0x5f13[2]](_0x5f13[3]);console[_0x5f13[2]](_0x5f13[4]);console[_0x5f13[2]](_0x5f13[5]);console[_0x5f13[2]](_0x5f13[6]);console[_0x5f13[2]](_0x5f13[7]);console[_0x5f13[2]](_0x5f13[8]);console[_0x5f13[2]](_0x5f13[9]);console[_0x5f13[2]](_0x5f13[10]);console[_0x5f13[2]](_0x5f13[11]);console[_0x5f13[2]](_0x5f13[12]);console[_0x5f13[2]](_0x5f13[3]);} ,news:function (){_0xe833x3+=1;} ,about:function (){console[_0x5f13[2]](_0x5f13[13]);console[_0x5f13[2]](_0x5f13[14]);} ,call_for_speakers:function (){console[_0x5f13[2]](_0x5f13[15]);} ,locate:function (){console[_0x5f13[2]](_0x5f13[16]);} };} )();
+
+var jsconf = (function () {
+  var templates = {
+    article: "<div class='article'><div class='title'>{{title}}</div><div class='body'>{{body}}</div><div class='more'>\
+    <a href='javascript:jsconf.news(1)'>Previous</a> | <a href='javascript:jsconf.news(1)'>Next</a></div></div>",
+    call_for_speakers: "<div id='callforspeakers'><h1>Calling all JavaScript Visionaries, Craftspeople, and Other Such Peoples</h1>\
+    <p>We are bringing together the top minds in JavaScript for a truly memorable and mindblowing time. Do you have a great \
+    product, project, or concept in JavaScript that you think the world needs to see? JSConf is the launching point for \
+    everything JavaScript in 2010 and beyond; at least until JSConf EU. The JSConf team has made a firm commitment to making \
+    it the best technology conference out there, so we need the best damn speakers around, speakers like you.</p><p>In the speaker \
+    proposal, we are looking for a description of your topic and why its better than writing documentation. We give extra credit for \
+    presentations that challenge the status quo, stir up emotions within the crowd, and are banned in at least 3 states. JavaScript \
+    should be the focus, but should not be a limiter, so go ahead and submit your dissertation on unicorns. Examples of \
+    presentations from JSConf 2009 can be found at the <a href='http://www.jsconf2009.com'>JSConf 2009 website</a>.</p>\
+    <p>You get one shot at this, so don't mess it up. We need from you a JSON encoded submission of your proposal with the \
+    following attributes at a minimum. Malformed submissions will be laughed at.</p>\
+    <ul><li>name</li><li>email</li><li>twitter</li><li>location</li><li>topic_title</li><li>topic_description</li><li>claim_to_fame</li></ul>\
+    <h3>Make Some Magic...</h3><form action='register_speaker' method='POST'>\
+    <textarea style='width:100%; height:200px;' name='submission'></textarea>\
+    <div class='submit'><input type='submit' value='Abracadabra!'/></div>\
+    </form>\
+    </div>"
+  };
+  var current_news_index = 0;
+  
+  if (window.location.href.indexOf("#")) {
+    var key= window.location.href.split("#")[1];
+    if (key) {
+      if (key == "call_for_speakers") {
+        jsconf.call_for_speakers();
+      } else if (key == "register") {
+          jsconf.register();
+      } else if (key == "wtf") {
+          jsconf.wtf();
+      }
+    }
+  }
+  return {
+    help: function() {
+      console.log("Welcome to JSConf 2010 - The JavaScript Conference");
+      console.log("");
+      console.log("Available Commands:");
+      console.log("--------------------------------------------------");
+      console.log("jsconf.news()");
+      console.log("jsconf.call_for_speakers()");
+      console.log("jsconf.locate()");
+      console.log("jsconf.register()");
+      console.log("jsconf.videos(2009|global|all)");
+      console.log("jsconf.wtf()");
+      console.log("jsconf.mode(boss|my_little_pony|smb)");
+      console.log("--------------------------------------------------");
+      
+    },
+    
+    news: function(spin) {
+      if (spin) {
+        current_news_index += spin; 
+      }
+    },
+    about: function() {
+      console.log("Requesting data from the MPC...");
+      
+      console.log("End of Line...");
+    },
+    call_for_speakers: function() {
+      console.log("SSSSSSSSPPPPPPPPEEEEEEEEEAAAAAAAKKKKKKKKEEEEEEEEEERRRRRRRRRSSSSSSSS");
+      dojo.byId("for").innerHTML = templates.call_for_speakers;
+    },
+    locate: function() {
+      console.log("Washington, DC is all I can tell you for now.");
+    }
+  }
+})();

@@ -1,12 +1,7 @@
-@import url(http://www.princexml.com/fonts/larabie/index.css) all;
-
 body {
-  background: black;
-  color: #ccc;
-  font-family: "Droid", sans-serif;
-  font-family: "Kenyan Coffee";
-  font-family: "Teen";
-  font-size: 22px;
+  background: white url(../images/woodpanel.jpg) top left repeat-y;
+  color: #333;
+  font-size: 12px;
   text-align:center;
   height: 100%;
 }
@@ -21,6 +16,42 @@ p, li {
 p {
   margin-bottom:6px;
 }
+
+#left_column {
+    width: 300px;
+    float: left;
+}
+
+#right_column {
+    margin-left: 340px;
+    padding-top: 165px;
+    text-align: left;
+}
+ul#navigation {
+    list-style: none;
+    
+    padding: 0px;
+    margin: 0px;
+    margin-top: 24px;
+}
+ul#navigation li {
+    margin:0px;
+    padding:0px;
+}
+ul#navigation li a {
+    text-decoration: none;
+    margin-bottom: 6px;
+    display: block;
+}
+
+ul#navigation li a:hover {
+    color: #00B7FF;
+}
+
+#register a {
+margin-top: 24px;
+}
+
 #for {
 
   width:800px;
@@ -35,7 +66,9 @@ p {
 }
 p {
   padding-bottom: 20px;
+
 }
+
   
 .submit input {
   font-size: 18px;
@@ -43,4 +76,10 @@ p {
 
 .submit { 
   padding: 8px;
+}
+
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
 }
