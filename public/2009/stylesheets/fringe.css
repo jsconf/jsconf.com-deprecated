@@ -1,0 +1,135 @@
+body {
+  font-size: 1em;
+  font-line-height: 1;
+  font-family: "Courier New", Courier, serif;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  background: #fff; }
+
+#header {
+  background: #2F3134 url('../images/header.gif') center left no-repeat;
+  height: 50px;
+  font-family: Palatino,Georgia,Trebuchet MS,serif; }
+
+#content h1 {
+  margin-top: 0px; }
+
+#header h1 {
+  display: none; }
+
+#tagline {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background: #666666;
+  color: white;
+  text-align: right;
+  padding: 8px 20px;
+  font-size: 12px;
+  weight: normal; }
+
+#tagline img {
+  vertical-align: middle; }
+
+.haha {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px; }
+
+#navigation {
+  margin-left: 20px;
+  top: 50px;
+  position: absolute; }
+
+#navigation  h4 {
+  display: none; }
+
+#navigation ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+#navigation li {
+  display: inline; }
+
+#navigation li a, #navigation li a:visited {
+  color: #f6ee2b;
+  padding: 7px 20px 7px;
+  text-decoration: none;
+  margin: 1px 0px;
+  line-height: 1;
+  display: block;
+  float: left; }
+
+#navigation li a:hover {
+  background: #f6ee2b;
+  color: black; }
+
+#content {
+  width: 60%;
+  margin: 20px;
+  margin-right: 0px;
+  float: left; }
+
+#sidebar {
+  width: 24%;
+  float: right; }
+
+#datebox {
+  background: transparent;
+  color: white;
+  position: absolute;
+  top: 52px;
+  right: 0px;
+  width: 24%;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center; }
+
+#datebox .content {
+  padding: 8px;
+  background: black;
+  margin: 0px 20px 0px 0px; }
+
+#datebox div {
+  font-size: 80%; }
+
+#subscriptionbox {
+  margin: 20px;
+  margin-left: 0px;
+  margin-top: 90px; }
+
+#subscriptionbox h4 {
+  background: #f6ee2b;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 10px; }
+
+#subscriptionbox p {
+  font-size: 10px; }
+
+#subscriptionbox form label {
+  display: block; }
+
+#subscriptionbox form {
+  font-size: 80%; }
+
+#subscriptionbox form div.button {
+  padding-top: 8px; }
+
+p span {
+  background: #f6ee2b; }
+
+#stylepicker a img {
+  border: 1px solid black;
+  margin-bottom: 4px; }
+
+#stylepicker a, #stylepicker a:visited, #stylepicker a:link {
+  display: block;
+  float: left;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 11px;
+  margin: 12px; }

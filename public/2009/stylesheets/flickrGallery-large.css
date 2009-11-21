@@ -1,0 +1,197 @@
+#palomarpics  {
+/*  background:#242424;*/
+  background:black;
+  padding:8px;
+  margin-bottom:12px;
+}
+
+
+/********* BUTTONS **************/
+
+.largeImage_nextPage {
+width:30px;
+height:30px;
+position:absolute;
+background:url(../images/arrow_right_double_small.png);
+top:30px;
+right:0px;
+cursor:pointer;
+z-index:800;
+display:none;
+}
+.largeImage_nextPage:hover {
+background:url(../images/arrow_right_double_small_on.png);
+}
+.largeImage_prevPage {
+width:30px;
+height:30px;
+position:absolute;
+background:url(../images/arrow_left_double_small.png);
+top:30px;
+left:0px;
+cursor:pointer;
+z-index:800;
+display:none;
+}
+.largeImage_prevPage:hover {
+background:url(../images/arrow_left_double_small_on.png);
+}
+.largeImage_flickrLink {
+float:left;
+width:30px;
+height:30px;
+background:url(../images/flickr_small_off.png) no-repeat;
+position:absolute;
+top:60px;
+left:0px;
+z-index:800;
+display:none;
+font-size:0pt;
+text-decoration:none;
+}
+.largeImage_flickrLink span { visibility:hidden; }
+.largeImage_flickrLink:hover {
+background:url(../images/flickr_small_on.png) no-repeat;
+}
+.largeImage_prev
+{
+color:#000;
+position:absolute;
+left:0px;
+top:0px;
+width:30px;
+height:30px;
+text-align:center;
+background:#fff;
+display:none;
+cursor:pointer;
+z-index:800;
+background:url(../images/arrow_left_small.png) no-repeat;
+}
+.largeImage_prev:hover {
+background:url(../images/arrow_left_small_on.png) no-repeat;
+}
+.largeImage_prev span, .largeImage_next span { visibility:hidden; }
+.largeImage_next
+{
+color:#000;
+position:absolute;
+right:0px;
+top:0px;
+width:30px;
+height:30px;
+text-align:center;
+display:none;
+cursor:pointer;
+z-index:800;
+background:url(../images/arrow_right_small.png) no-repeat;
+}
+.largeImage_next:hover {
+background:url(../images/arrow_right_small_on.png) no-repeat;
+}
+
+/******* END BUTTONS *************/
+
+
+/******* IMAGE AREA **************/
+#flickrTest
+{
+width:450px;
+margin:0px auto;
+background:#000;
+padding:30px;
+position:relative;
+border:1px solid #cccccc;
+}
+.largeImageWrap {
+position:relative;
+z-index:100;
+background:url(../images/ajax-loader.gif) center center no-repeat;
+}
+.caption
+{
+color:#fff;
+text-align:center;
+font-size:20px;
+min-height:35px;
+font-style: italic;
+clear:left;
+margin:15px 0px 10px 0px;
+}
+.largeImage
+{
+position:relative;
+margin:0px auto;
+text-align:center;
+}
+.largeImage img { border:0px; }
+.largeImage a { color:#000; }
+/********* END IMAGE AREA ***********/
+
+/********* THUMBS AND SLIDER **********/
+
+
+.thumbs img, .galleryUL img
+{
+width:100px;
+cursor:pointer;
+height:100px;
+opacity:.7;
+filter:alpha(opacity=70);
+border:0px;
+}
+.thumbs, .galleryUL { top:0px; left:0px; }
+
+.sliderGallery {
+background: url(../images/producdtbrowser_background_20070622.jpg) no-repeat;
+overflow: hidden;
+position: relative;
+padding: 10px;
+height: 125px;
+width: 400px;
+z-index:800;
+margin:25px auto 0px auto;
+}
+        
+.sliderGallery UL {
+position: absolute;
+list-style: none;
+overflow: none;
+white-space: nowrap;
+padding: 0;
+margin: 0;
+}
+        
+.sliderGallery UL LI {
+display: inline;
+}
+     
+.slider {
+width: 360px;
+height: 17px;
+margin-top: 110px;
+margin-left: 8px;
+padding: 1px;
+position: relative;
+background: url(../images/productbrowser_scrollbar_small.png) no-repeat;
+float:left;display:inline;
+}
+
+.handle {
+position: absolute;
+cursor: move;
+height: 17px;
+width: 160px;
+top: 0;
+background: url(../images/productbrowser_scroller_small.png) no-repeat;
+z-index: 100;
+}
+.slider span {
+color: #bbb;
+font-size: 80%;
+cursor: pointer;
+position: absolute;
+z-index: 110;
+top: 3px;
+}
+/*********** END SLIDER *************/

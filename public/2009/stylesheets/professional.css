@@ -1,0 +1,189 @@
+body {
+  font-size: 1em;
+  font-line-height: 1;
+  font-family: Helvetica, arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 40px;
+  background: #fff; }
+
+#header {
+  background: #2F3134 url('../images/header.gif') center left no-repeat;
+  background: white url('../images/jsconf2009.gif') center center no-repeat;
+  height: 50px;
+  height: 65px;
+  border-right: 1px solid #808080;
+  width: 233px;
+  font-family: Palatino,Georgia,Trebuchet MS,serif; }
+
+#content h1 {
+  margin: 0px;
+  position: absolute;
+  top: 40px;
+  left: 233px;
+  right: 233px;
+  font-family: Helvetiker;
+  font-size: 32px;
+  height: 65px;
+  vertical-align: middle;
+  border-right: 1px solid #808080;
+  margin-left: 20px;
+  line-height: 1;
+  padding: 18px 0px; }
+
+#header h1 {
+  display: none; }
+
+#tagline {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: #CBE86B;
+  font-family: "Courier New", courier;
+  border-bottom: 20px solid black;
+  color: black;
+  text-align: center;
+  padding: 4px 20px 5px;
+  line-height: 1;
+  font-size: 11px;
+  weight: normal; }
+
+#tagline img {
+  vertical-align: middle; }
+
+.haha {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px; }
+
+#navigation h4 span {
+  display: none; }
+
+#navigation h4 {
+  background: white url('../images/navigate.gif') top left no-repeat;
+  height: 22px;
+  width: 64px;
+  margin: 20px 10px 10px; }
+
+#navigation {
+  width: 233px;
+  position: absolute;
+  border-top: 1px solid #808080;
+  left: 0px; }
+
+#wrapper {
+  margin-left: 234px; }
+
+#navigation ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin: 0px 10px; }
+
+
+#navigation li a, #navigation li a:visited {
+  color: #1C140D;
+  padding: 8px 20px;
+  text-decoration: none;
+  margin: 1px 0px;
+  line-height: 1;
+  display: block; }
+
+#navigation li a:hover {
+  background: #CBE86B;
+  color: black; }
+
+#content .bodycontent {
+  position: absolute;
+  left: 233px;
+  right: 233px;
+  top: 105px;
+  padding: 20px;
+  bottom: 0px;
+  background: #CBE86B;
+  background: #F2E9E1;
+  background: black;
+  color: white;
+  background: white;
+  color: black;
+  border: 1px solid #808080;
+  border-bottom: 0px;
+  line-height: 1.2; }
+
+#content .bodycontent li {
+  font-size: 95%;
+  margin-bottom: 4px; }
+
+#sidebar {
+  padding: 0px;
+  width: 233px;
+  border-top: 1px solid #808080;
+  margin-left: 0px;
+  position: absolute;
+  right: 0px; }
+
+#datebox {
+  background: black;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  width: 233px;
+  height: 65px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center; }
+
+#datebox .content {
+  margin: 15px; }
+
+#datebox .content div {
+  font-size: 80%; }
+
+#subscriptionbox {
+  padding: 0px 12px; }
+
+#subscriptionbox h4 {
+  background: white url('../images/register.gif') top left no-repeat;
+  height: 22px;
+  width: 149px;
+  margin: 20px 0px 10px; }
+
+#subscriptionbox p {
+  font-size: 10px; }
+
+#subscriptionbox h4 span {
+  display: none;
+  background: #f6ee2b;
+  text-align: center;
+  padding: 8px; }
+
+#subscriptionbox form {
+  font-size: 80%; }
+
+#subscriptionbox form div input {
+  width: 203px;
+  font-size: 14px; }
+
+#subscriptionbox form div {
+  margin-bottom: 10px; }
+
+#subscriptionbox form div.button {
+  padding-top: 8px; }
+
+#subscriptionbox form div.button  input {
+  width: auto; }
+
+#stylepicker a img {
+  border: 1px solid black;
+  margin-bottom: 4px; }
+
+#stylepicker a, #stylepicker a:visited, #stylepicker a:link {
+  display: block;
+  float: left;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 11px;
+  margin: 12px; }
