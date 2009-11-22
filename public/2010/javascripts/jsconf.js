@@ -1,4 +1,4 @@
-
+dojo.require('dojo.io');
 var jsconf = (function () {
   var templates = {
     call_for_speakers: "<div id='callforspeakers'><h1>ARRR!! All Rascals, Scoundrels, Villains, and Knaves</h1>\
