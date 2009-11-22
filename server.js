@@ -40,21 +40,18 @@ fu.post("/speaker", function (req, res) {
           var store = COUCHDB.post("/jsconf", {"Content-Length": reg_data_str.length});
           store.sendBody(reg_data_str);
           store.finish(function (response) {
-            sys.puts("STATUS: " + response.statusCode);
-            sys.puts("HEADERS: " + JSON.stringify(response.headers));
             response.setBodyEncoding("utf8");
             var couchbody = "";
             response.addListener("body", function (chunk) {
               couchbody += chunk;
             });
             response.addListener("complete", function() {
-              sys.puts("BODY: "+couchbody);
               res.simpleJSON(201, { response: "ok" });  
             });
           });
         }
       } catch (e) {
-        res.simpleJSON(400, { message: "I said JSON, motherfucker." });      
+        res.simpleJSON(400, { message: "MUTINY WILL NOT BE TOLERATED!!!" });      
       }
     });
   });

@@ -1,104 +1,125 @@
+<!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="/stylesheets/style.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.3.2/dojo/dojo.xd.js" type="text/javascript"></script>
-<script src="/javascripts/base.min.js"></script>
-<script src="/javascripts/app.js" type="text/javascript"></script>
-<title>JSConf.US 2010 -- JavaScript All The Way</title>
-</head>
-<body>
-  <div id="header">
-    <div id="navigation">
-        JSConf 2009
-        <ul>
-    </div>
-  </div>  
-  <div id="container">
-    <div id="viewpane">
-      <div id="articles" class="block">
-        <h2>JSConf News</h2>
-        <div id='article_listing'>
-        </div>
-      </div>
-      <div id="schedule" class="block">
-        <h2>Schedule of Events</h2>
-        <div id='events_schedule'>
-        </div>
-      </div>
-  
-      <div id="videos" class="block">
-        <div class="inner">
-          <h2>Video Archive</h2>
-          <p>On the fence about JSConf or just looking for some material to improve your JavaScript-Fu, look no further than the video archive for JSConf which presents all of the amazing presentations from both JSConf US 2009 and JSConf EU 2009. The mix of videos here cover JavaScript programming the browser, server, and mobile devices. The videos here will help you on your way to Supreme JavaScript Mastery, best of luck!</p>
-          <div id='video_listing'></div>
-        </div>
-      </div>
-  
-      <div id="register" class="block">
-        <h2>Register For JSConf US 2010</h2>\
-        <div id='registration'></div>
-      </div>
-  
-      <div id="home" class="block">
-        <h1>JSConf 2010</h1>
-        
-      </div>
-  
-      <div id="sponsors" class="block">
-        <div class="inner">
-          <h2>Be A Part Of The JavaScript Community!</h2>
-          <h3>Sponsor JSConf</h3>
-          <p>JSConf has been a resounding success for both the attendees and sponsors of the two events in 2009. This year will be even bigger, better, and brighter as JavaScript steps to the forefront of programming languages in all fronts. Everything about JSConf is hand-crafted to ensure that it remains one of the greatest technology conferences out there. Each detail, from the speakers right down to the sponsorships, is focused on providing a high quality experience for all involved. When sponsoring JSConf, we ensure that you are identified as the sole sponsor of a critical element of the event, be it one of our conference parties or the excellent food. The 150 attendees of this event will come from around the globe seeking out the best services and products to assist in their continued development - services and products like yours.</p>
-          <p>We offer a variety of sponsorship opportunities, any of which will happily be tailored to your specific company or goals. For more details about our sponsorship opportunities, <a href="/jsconfus_sponsorship.pdf">please review our sponsorship brochure</a>. If you are interested in pursuing a JSConf sponsorship, please contact us at <a href="mailto:sponsorship@jsconf.us">sponsorship@jsconf.us</a> or (703) 628-7533.</p>
-          <div id='class_pictures'>
-            <img src="/images/jsconfus.jpg" width="400px" alt="The Crowd of JSConf US 2009"/>
-            <img src="/images/jsconfeu.jpg" width="400px" alt="The Crowd of JSConf EU 2009"/>
-          </div>
-        </div>
-      </div>
-  
-      <div id="about" class="block">
-        <div class="inner">
-          <h2>About JSConf</h2>
-          <p><a href="http://search.twitter.com/search?q=jsconf">"JSConf is awesome"</a>. That seems to be the going definition of this initimate conference dedicated to the JavaScript programming language. One thing has been made clear, JSConf is one of the <a href="http://developer.yahoo.net/blog/archives/2009/05/jsconf_recap.html">best</a> <a href="http://developer.yahoo.net/blog/archives/2009/11/jsconfeu_all_th.html">tech</a> <a href="http://blogs.igalia.com/ltilve/2009/11/12/back-from-jsconf-eu-2009/">conferences</a> out there and rightly so, because JavaScript is one of the best languages out there. The core focus of this conference is to expose the details about JavaScript that are often overlooked and present them more as a discussion with the audience. The content of the conference caters to all types of JavaScript users from client interfaces to server development to testing. No matter which programming language you love, you know of the pleasure and pain of JavaScript programming.</p>
-          <p>JSConf focuses on two things, presenting mind-altering JavaScript technology during the daytime and providing exceptional "networking" parties during the evenings. Our goal with JSConf is to establish the JavaScript community as the best out there, if just because we are part of every other major web system out there. That's right, we are part of everything. One of the key things of JSConf is that it isn't run by a big corporation, but by a (crazy) group of JavaScript developers just like you. We make sure the conference is a conference we would want to be at, because we have to be at it.</p>
-          <p>We are trying to make something different and we are trying to do it with JavaScript.</p>
-          <div id="class_logos">
-            <a href="http://jsconf.us/2009"><img src='/images/jsus_logo.png' alt="JSConf US 2009 Logo"/></a>
-            <a href="http://jsconf.eu/2009"><img src='/images/lg_logo.png' alt="JSConf EU 2009 Logo"/></a>
-          </div>
-        </div>
-      </div>
-  
-      <div id="speakers" class="block">
-        <div class="inner">
-          <h2>Calling all JavaScript Visionaries, Craftspeople, and Rebellious Leaders</h2>
-          <p>We are bringing together the top minds in JavaScript for a truly memorable and mindblowing time. Do you have a great 
-          product, project, or concept in JavaScript that you think the world needs to see? JSConf is the launching point for
-          everything JavaScript in 2010 and beyond; at least until JSConf EU. The JSConf team has made a firm commitment to making 
-          it the best technology conference out there, so we need the best damn speakers around, speakers like you.</p>
-          <p>In the speaker proposal, we are looking for a description of your topic and why its better than writing documentation. We give extra credit for 
-          presentations that challenge the status quo, stir up emotions within the crowd, and are banned in at least 3 states. JavaScript
-          should be the focus, but should not be a limiter, so go ahead and submit your dissertation on unicorns. Examples of 
-          presentations from 2009 can be found at the JSConf <a href='http://jsconf.us/2009'>US</a> and <a href=''>EU</a> websites</a>.</p>
-          <p>You get one shot at this, so don't mess it up. We need from you a JSON encoded submission of your proposal with the 
-          following attributes at a minimum. Malformed submissions will be laughed at.</p>
-          <code class="example">
-            { name: "Mr. Sample", email: "info@jsconf.us", location: "Washington DC", topic_title: "I like p0wn13s", topic_description, "", claim_to_fame: "One time, at bandcamp..." }
-          </code>
-          <h3>Make Some Magic...</h3>
-          <form action='register_speaker' method='POST'>
-            <textarea style='' name='submission'></textarea>
-            <div class='submit'><input type='submit' value='Abracadabra!'/></div>
-          </form>
-        </div>
-      </div>
-  
-      <div id="venue" class="block">
-        <h2>Venue</h2>
-        <p>To be Determined</p>
-      </div>
-    </div>
-  </div>
-</body>
+ <head>
+  <title>JSConf.US Two Thousand Ten -- Swashbucklin' JavaScript!</title>
+  <meta content='chrome=1' http-equiv='X-UA-Compatible' />
+  <style type="text/css">
+    body {
+      background: black url(http://jsconf.s3.amazonaws.com/planks.jpg) top center repeat-x;
+      padding:0px;
+      margin:0px;
+    }
+    #splash {
+      width:100%;
+      background: transparent url(http://jsconf.s3.amazonaws.com/splash.jpg) top center no-repeat;
+      height:440px;
+    }
+    #splash #details {
+      display: none;
+    }
+  </style>
+ </head>
+ <body>
+   <div id="splash">
+     <div id="details">
+       <h1>JSConf US 2010<h1>
+       <h2>Pillaging the Rubies and Perls! Aye, we be takin' Python down to Davy Jone's locker! I do it all for the booty!</h2>
+       
+       
+       
+       <p>Yo ho, yo ho, a pirate's life for me</p>
+       <p>
+       We pillage, we plunder, we rifle and loot<br/>
+       Drink up me hearties, yo ho<br/>
+       We kidnap and ravage and don't give a hoot<br/>
+       Drink up me hearties, yo ho
+       </p>  
+       <p>Yo ho, yo ho, a pirate's life for me</p>
+       <p>
+       We extort, we pilfer, we filch and sack<br/>
+       Drink up me hearties, yo ho<br/>
+       Maraud and embezzle and even high-jack<br/>
+       Drink up me hearties yo ho
+       </p>  
+       <p>Yo ho, yo ho, a pirate's life for me</p>
+       <p>
+       We kindle and char, inflame and ignite<br/>
+       Drink up me hearties, yo ho<br/>
+       We burn up the city, we're really a fright<br/>
+       Drink up me hearties, yo ho
+       <p>
+       We're rascals, scoundrels, villains, and knaves<br/>
+       Drink up me hearties, yo ho<br/>
+       We're devils and black sheep, really bad eggs<br/>
+       Drink up me hearties, yo ho
+       </p>
+       <p>Yo ho, yo ho, a pirate's life for me</p>
+       <p>
+       We're beggars and blighters and ne'er do-well cads<br/>
+       Drink up me hearties, yo ho<br/>
+       Aye, but we're loved by our mommies and dads<br/>
+       Drink up me hearties, yo ho
+       </p>
+<!--
+#[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[#
+#//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////#
+[//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////[
+[//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////#
+[//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////#
+#///////////////////////////////////////////[[[[[[[[#######[[[/////////////////////////////////////////////////////////#
+#/////////////////////////////////////////#: &Hp77997JQDDQJ9p^\[///////////////////////////////////////////////////////#
+#/////////////////////////////////////[#x@EDPPLLLLD9NPMMMLLPPPEHx[/////////////////////////////////////////////////////#
+#////////////////////////////////////[^WEQLMMMMMMLE7QMMMLQEQLMLQ9@[////////////////////////////////////////////////////#
+#///////////////////////////////////:&9PMMMMMMMMMJ7JLMMPzEzDMMMMLz [///////////////////////////////////////////////////#
+#//////////////////////////////////[HQLMMMMMMMMMDpEPMMPJEzLMMMMMMM3#///////////////////////////////////////////////////#
+#/////////////////////////////////[xLMMMMLMMMMMMWWQMLP9EDMMMMPDPMMp#///////////////////////////////////////////////////#
+#/////////////////////////////////#HMMMMLJDLMMMPHDMLQ3JLMMMMMdxdDMd#///////////////////////////////////////////////////#
+#/////////////////////////////////#^MMMML7@DMML7ELLEdJMMMMLME:[ EMP&\//////////////////////////////////////////////////#
+#/////////////////////////////////[\QLMMPppPMMDHPLEW9LMMPJ9MJx#^JML_#//////////////////////////////////////////////////#
+#//////////////////////////////////[dQMML9dDMMQ@LQWNDLPD9WNMPW37PMzx[//////////////////////////////////////////////////#
+#///////////////////////////////////\WDMLP&EPLz@MNHpE97N339MMLLLMMEx[//////////////////////////////////////////////////#
+#//////////////////////////////////[/xNDPLpp9J93MH_&d@&@3NELLMLLLLL&\//////////////////////////////////////////////////#
+#/////////////////////////////////////:_3zLDWd3zM9W9zp\HJEppJPQzz9L7^#/////////////////////////////////////////////////#
+#///////////////////////////[x&&^:[/////[#Hd@WExPPW@pMxNDP7[[::\##_  ://///////////////////////////////////////////////#
+#//////////////////////////# JDDQN^//////[## W9:&H_^pLx7PMQ_#xdWWp79W /////[#:\[///////////////////////////////////////#
+#///////////////////////\  &WLLMMP7_#[//////\^3@dd@@ddxJLMLJ3WJPDDPLE_////\_p7Nx[//////////////////////////////////////#
+#/////////////////////[[dN9EJJ7QPLPE@^x\[[///#x__^   #:p9EJENN7999EJN^[[# HEPML_#[/////////////////////////////////////#
+#/////////////////////[#EQQzNd_NJzQPDz7H :#[////[[////[x  ^^  xxxx ^_ :x&7DLLLLd :[////////////////////////////////////#
+#//////////////////////[  &@&@3WWWppJLMLDE@x#[///////////////////[[\ @WJLPQzzz7_Wp:////////////////////////////////////#
+#/////////////////////////////[[[##\ d9DLMMPz7H [[/////////#\x^@HWEDLLMP7H&__@ xxx[////////////////////////////////////#
+#/////////////////////////////////[[[#\x&WzPLLPQ93^:[//\ &37JzDPPPDz9Wd x\####[[[[/////////////////////////////////////#
+#//////////////////////////////////////[#: @37zDLDJ73_: &WJDQzE7pH&^x:\[[[/////////////////////////////////////////////#
+#/////////////////////////////////////////[#x^H7JzQDDJppW797H&^ :\#[///////////////////////////////////////////////////#
+#/////////////////////////////////////[[#\:x _dWWWW7JQPPQEN3^x:#[[/////////////////////////////////////////////////////#
+#////////////////////////////////[[[[#: _H7EzDPDEp^:x@EDLLMLDEp&x\[[///////////////////////////////////////////////////#
+#////////////////////////////[[\x _dNEDLLMLQ7H^:#[////#:&NQLMMMMPQp_x#/////////////////////////////////////////////////#
+#/////////////////////[\3WNWNEJzQDPLPJNH_ x:#[[////////[[#:xdNEQLMLPDJW_x\#[[//////////////////////////////////////////#
+#/////////////////////#^JNJDE37JPLQW_ x\#[[[//////////////[[#xx _d7QLLD9777NW3d&^ x#///////////////////////////////////#
+#/////////////////////[xpNDLQH7QJW&x#[////////////////////////[[#\ &3N9N79JQPDEN79N3 #/////////////////////////////////#
+#//////////////////////[x3zLDNE9Hx[////////////////////////////////[#x  _@WEzDzJDLDQH#/////////////////////////////////#
+#////////////////////////xpEENH #///////////////////////////////////////[xd3HNJPPE3p #/////////////////////////////////#
+#/////////////////////////[[[[////////////////////////////////////////////\&9PMDpx/////////////////////////////////////#
+#//////////////////////////////////////////////////////////////////////////[#\\#[[/////////////////////////////////////#
+#////////////////////////////////////////////////////////////////////////////[[////////////////////////////////////////#
+#//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////#
+#//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////#
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////[#
+#[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[#
+-->
+       <div id="date">
+         April 17th - 18th 2010
+       </div>
+       <div id="place">
+        Washington, DC
+       </div>
+       <h3>SIGN UP NOW -- IF YOU DARE!</h3>
+     </div>
+   </div> 
+  <!-- All you need is a little curiosity and a good console -->
+  <!-- IE, you can just suck it -->
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/dojo/1.3.2/dojo/dojo.xd.js'></script>
+  <script type='text/javascript' src='javascripts/mustache.js'></script>
+  <script type='text/javascript' src='javascripts/jsconf.js'></script>
+  <!-- Suck it good -->
+ </body>
 </html>
