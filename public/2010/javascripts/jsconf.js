@@ -50,8 +50,13 @@ var jsconf = (function () {
                   form: "regform",
                   handleAs: "json",
                   handle: function(data,args)     {
-                      alert(data);
-                  }
+                      if (data.name == "Error") {
+                          alert(data.responseText);
+                      } else {
+                          alert(data);
+                      }
+                  },
+                  failOk: true
               });
           });
       },

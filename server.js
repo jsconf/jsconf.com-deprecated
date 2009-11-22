@@ -10,7 +10,7 @@ function isblank(str) {
     return (str.replace(/^\s+|\s+$/, '') === "");
 }
 
-fu.post("//register_speaker", function (req, res) {
+fu.post("/app/register_speaker", function (req, res) {
     var data = "";
     req.addListener("body", function(chunk) {
         data += chunk;
