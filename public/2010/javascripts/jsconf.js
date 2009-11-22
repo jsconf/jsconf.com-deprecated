@@ -54,6 +54,10 @@ var jsconf = (function () {
     },
 	wtf: function() {
 	  console.log("It's fucking JSConf, did you expect anything less than pirates?");
+	},
+	register: function() {
+		window.location.href="http://guestlistapp.com/events/5574";
 	}
+	
   }
 })();
