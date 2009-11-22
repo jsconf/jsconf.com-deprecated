@@ -13,7 +13,7 @@ var jsconf = (function () {
     <p>You get one shot at this, so don't mess it up. We need from you a JSON encoded submission of your proposal with the \
     following attributes at a minimum. Malformed submissions will be laughed at.</p>\
     <ul><li>name</li><li>email</li><li>twitter</li><li>location</li><li>topic_title</li><li>topic_description</li><li>claim_to_fame</li></ul>\
-    <h3>Make Some Magic...</h3><form action='register_speaker' method='POST'>\
+    <h3>Make Some Magic...</h3><form action='/2010/register_speaker' method='POST'>\
     <textarea style='width:100%; height:200px;' name='submission'></textarea>\
     <div class='submit'><input type='submit' value='Abracadabra!'/></div>\
     </form>\
@@ -21,43 +21,53 @@ var jsconf = (function () {
   };
 
   return {
-    help: function() {
-      console.log("Welcome to JSConf 2010 - The JavaScript Conference");
-      console.log("");
-      console.log("Available Commands:");
-      console.log("--------------------------------------------------");
-      console.log("jsconf.about()");
-      console.log("jsconf.call_for_speakers()");
-      console.log("jsconf.locate()");
-      console.log("jsconf.register()");
-      console.log("jsconf.videos(US|EU)");
-      console.log("jsconf.wtf()");
-      console.log("--------------------------------------------------");
-      
-    },
+      help: function() {
+          console.log("Welcome to JSConf 2010 - The JavaScript Conference");
+          console.log("");
+          console.log("Available Commands:");
+          console.log("--------------------------------------------------");
+          console.log("jsconf.about()");
+          console.log("jsconf.call_for_speakers()");
+          console.log("jsconf.locate()");
+          console.log("jsconf.register()");
+          console.log("jsconf.videos(US|EU)");
+          console.log("jsconf.wtf()");
+          console.log("--------------------------------------------------");
+          
+      },
     
-    about: function() {
-      console.log("Requesting data from the MPC...");
-      console.log("If you have to ask, you shouldn't be here.")
-      console.log("End of Line...");
-    },
-    call_for_speakers: function() {
-      console.log("ARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR MATEY!");
-      dojo.byId("wrap").innerHTML = templates.call_for_speakers;
-    },
-	videos: function(w) {
-		var url = (w == "EU" ? "http://jsconf.eu/2009" : "http://jsconf.us/2009");
-		window.location.href=url;
-	},
-    locate: function() {
-      console.log("Washington, DC off the Starboard Side, Captain!");
-    },
-	wtf: function() {
+      about: function() {
+          console.log("Requesting data from the MPC...");
+          console.log("If you have to ask, you shouldn't be here.")
+          console.log("End of Line...");
+      },
+      call_for_speakers: function() {
+        console.log("ARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR MATEY!");
+        dojo.byId("wrap").innerHTML = templates.call_for_speakers;
+        dojo.io.bind({
+            // Bewares of the SCURVY
+            load: function(type, data, evt) {
+                alert(data);
+            },
+            error: function(type, data, evt) {
+                alert(data);
+            },
+            formNode: document.getElementById( "callforspeakers" ),
+            mimetype: "application/json"
+        });
+      },
+      videos: function(w) {
+	  var url = (w == "EU" ? "http://jsconf.eu/2009" : "http://jsconf.us/2009");
+	  window.location.href=url;
+      },
+      locate: function() {
+          console.log("Washington, DC off the Starboard Side, Captain!");
+      },
+      wtf: function() {
 	  console.log("It's fucking JSConf, did you expect anything less than pirates?");
-	},
-	register: function() {
-		window.location.href="http://guestlistapp.com/events/5574";
-	}
-	
+      },
+      register: function() {
+	  window.location.href="http://guestlistapp.com/events/5574";
+      }
   }
 })();
