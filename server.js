@@ -17,7 +17,8 @@ fu.post("/app/register_speaker", function (req, res) {
     });
     req.addListener("complete", function() {
         try {
-            var reg_data = JSON.parse(data);
+            var clean_data = decodeURI(data).replace(/\%40/g, "@").replace(/\%3A/g, ":").replace(/\%2C/g, ",").replace("submission=", "").replace(/\)$/, "");
+            var reg_data = JSON.parse(clean_data);
             reg_data.category="speaker";
             if (isblank(reg_data.name) || isblank(reg_data.twitter) || isblank(reg_data.email) || isblank(reg_data.location) || isblank(reg_data.topic_title) || isblank(reg_data.topic_description) || isblank(reg_data.claim_to_fame)) {
                 res.simpleJSON(400, { message: "If you follow the directions, there will be cake." });

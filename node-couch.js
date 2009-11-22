@@ -19,7 +19,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-
+var http = require("http"), sys = require("sys");
 var clients = {};
 
 function cache_client(port, host) {
@@ -28,7 +28,7 @@ function cache_client(port, host) {
 	if (client) {
 		return client;
 	} else {
-		return clients[key] = node.http.createClient(port, host);
+		return clients[key] = http.createClient(port, host);
 	}
 }
 
@@ -40,7 +40,7 @@ function _interact(verb, path, successStatus, options, port, host) {
 	var client = cache_client(port, host);
 	var requestPath = path + encodeOptions(options);
 	if (CouchDB.debug) {
-		node.debug("COUCHING " + requestPath + " -> " + verb);
+		sys.debug("COUCHING " + requestPath + " -> " + verb);
 	}
 	
 	if (options.keys) {
@@ -67,7 +67,7 @@ function _interact(verb, path, successStatus, options, port, host) {
 		
 		response.addListener("complete", function() {
 			if (CouchDB.debug) {
-				node.debug("COMPLETED " + requestPath + " -> " + verb);
+				sys.debug("COMPLETED " + requestPath + " -> " + verb);
 			}
 			responseBody = JSON.parse(responseBody);
 			if (response.statusCode === successStatus) {
