@@ -53,7 +53,7 @@ var jsconf = (function () {
                       if (data.name == "Error") {
                           alert(data.responseText);
                       } else {
-                          alert(data);
+                          alert(data.message);
                       }
                   },
                   failOk: true
