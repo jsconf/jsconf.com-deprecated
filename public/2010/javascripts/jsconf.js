@@ -13,7 +13,7 @@ var jsconf = (function () {
     <p>You get one shot at this, so don't mess it up. We need from you a JSON encoded submission of your proposal with the \
     following attributes at a minimum. Malformed submissions will be laughed at.</p>\
     <ul><li>name</li><li>email</li><li>twitter</li><li>location</li><li>topic_title</li><li>topic_description</li><li>claim_to_fame</li></ul>\
-    <h3>Make Some Magic...</h3><form action='/2010/register_speaker' method='POST'>\
+    <h3>Make Some Magic...</h3><form action='/app/register_speaker' method='POST'>\
     <textarea style='width:100%; height:200px;' name='submission'></textarea>\
     <div class='submit'><input type='submit' value='Abracadabra!'/></div>\
     </form>\
