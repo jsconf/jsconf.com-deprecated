@@ -29,6 +29,7 @@ fu.post = function (path, handler) {
  
  
 var server = createServer(function (req, res) {
+    sys.puts(req.uri.path);
   var map = getMap;
   if (req.method ==="POST") {
     map = postMap;
