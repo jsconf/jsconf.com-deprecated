@@ -1,7 +1,6 @@
 
 var jsconf = (function () {
   var templates = {
-	map: ""
     call_for_speakers: "<div id='callforspeakers'><h1>ARRR!! All Rascals, Scoundrels, Villains, and Knaves</h1>\
     <p>We are bringing together the top minds in JavaScript for a truly memorable and mindblowing time. Do you have a great \
     product, project, or concept in JavaScript that you think the world needs to see? JSConf is the launching point for \
@@ -44,10 +43,11 @@ var jsconf = (function () {
     },
     call_for_speakers: function() {
       console.log("ARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR MATEY!");
-      dojo.byId("splash").innerHTML = templates.call_for_speakers;
+      dojo.byId("wrap").innerHTML = templates.call_for_speakers;
     },
 	videos: function(w) {
-		window.open((w == "EU" ? "http://jsconf.eu/2009" : "http://jsconf.us/2009"));
+		var url = (w == "EU" ? "http://jsconf.eu/2009" : "http://jsconf.us/2009");
+		window.location.href=url;
 	},
     locate: function() {
       console.log("Washington, DC off the Starboard Side, Captain!");
