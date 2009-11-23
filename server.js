@@ -29,9 +29,7 @@ fu.post("/app/register_speaker", function (req, res) {
         try {
 						data = data.split("=")[1];
             var clean_data = decodeURIComponent(data); //.replace(/\%40/g, "@").replace(/\%3A/g, ":").replace(/\%2C/g, ",").replace("submission=", "").replace(/\)$/, "");
-						sys.puts(clean_data);
             var reg_data = JSON.parse(clean_data);
-						sys.puts(reg_data);	
             reg_data.category="speaker";
 						reg_data.created_at = (new Date());
             if (isblank(reg_data.name) || isblank(reg_data.twitter) || isblank(reg_data.email) || isblank(reg_data.location) || isblank(reg_data.topic_title) || isblank(reg_data.topic_description) || isblank(reg_data.claim_to_fame)) {
