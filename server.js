@@ -7,7 +7,12 @@ function isblank(str) {
     if (!str) {
         return true;
     } 
-    return (str.replace(/^\s+|\s+$/, '') === "");
+		try	 {
+	    return (str.replace(/^\s+|\s+$/, '') === "");
+		} catch (e) {
+			
+			return false;
+		}
 }
 
 function save_failed(data) {
