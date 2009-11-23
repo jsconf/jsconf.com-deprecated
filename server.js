@@ -22,7 +22,8 @@ fu.post("/app/register_speaker", function (req, res) {
     });
     req.addListener("complete", function() {
         try {
-            var clean_data = decodeURI(data).replace(/\%40/g, "@").replace(/\%3A/g, ":").replace(/\%2C/g, ",").replace("submission=", "").replace(/\)$/, "");
+						data = data.split("=")[1];
+            var clean_data = decodeURIComponent(data); //.replace(/\%40/g, "@").replace(/\%3A/g, ":").replace(/\%2C/g, ",").replace("submission=", "").replace(/\)$/, "");
             var reg_data = JSON.parse(clean_data);
             reg_data.category="speaker";
 						reg_data.created_at = (new Date());
