@@ -5,7 +5,7 @@ var jsconf = (function () {
     product, project, or concept in JavaScript that you think the world needs to see? JSConf is the launching point for \
     everything JavaScript in 2010 and beyond; at least until JSConf EU. The JSConf team has made a firm commitment to making \
     it the best technology conference out there, so we need the best damn speakers around, speakers like you.</p><p>In the speaker \
-    proposal, we are looking for a description of your topic and why its better than writing documentation. We give extra credit for \
+    proposal, we are looking for a description of your topic and why it's better than writing documentation. We give extra credit for \
     presentations that challenge the status quo, stir up emotions within the crowd, and are banned in at least 3 states. JavaScript \
     should be the focus, but should not be a limiter, so go ahead and submit your dissertation on unicorns. Examples of \
     presentations from JSConf 2009 can be found at the <a href='http://www.jsconf2009.com'>JSConf 2009 website</a>.</p>\
