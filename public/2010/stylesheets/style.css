@@ -1,12 +1,14 @@
-body{
-	margin:0px;
-	padding:0px;
-	overflow:hidden;
-	
-	font-family: helvetica, arial, sans-serif;
-        font-size: 12px;
-	background: red url(../images/wood-bg.jpg) top left;
-	background-attachment: fixed;
+body {
+  background: black url(http://jsconf.s3.amazonaws.com/planks.jpg) top center repeat-x;
+  padding:0px;
+  margin:0px;
+  top:0px;
+  bottom:0px;
+  position: absolute;
+  overflow:hidden;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+  background-attachment: fixed;
 }
 
 div#class_pictures {
@@ -16,8 +18,12 @@ div#class_pictures {
 
 div#container{ 
 	overflow:hidden;
-	height: 100%;
-	width:100%;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  height:100%;
+  width:100%;
 }
 div#viewpane {
 	height: 1680px;
@@ -25,53 +31,226 @@ div#viewpane {
 	position: absolute;
 }
 div.block {
-	height: 520px;
-	width: 860px;
+	height: 528px;
+	width: 862px;
 	float: left;
 	background: white;
-        border: 5px solid #333;
 	margin: 10px;
-	padding: 5px;
 }
 #header {
-	position: fixed;
-	top:0px;
-	z-index: 99;
-	width: 100%;
-	height:0px;
-	overflow: visible;
+    position: fixed;
+    top:0px;
+    z-index: 99;
+    width: 100%;
+    height:0px;
+    overflow: visible;
 }
 
 code.example {
- background:#eee;
+ background:black;
  border: 1px solid #cecece;
  padding: 8px;
  margin: 8px 0px;
  display: block;
-}
-.inner {
-    padding: 12px
-}
-.inner h2 {
-    margin-top: 0px
+ color: #FFFFFA;
 }
 
+
+.left{
+  margin-left: 10px;
+  margin-top: 325px;
+  float:left;
+  text-align: center;
+  width: 370px;
+  
+}
 textarea {
 width:100%; height:150px;
 margin: 8px 0px;
 }
 
 #navigation {
-	width: 520px;
-	margin: 0px auto;
-	background: #333;
-	padding: 20px;
-	z-index: 99px;
-	text-align: center;
-	border: 1px solid #666;
-	border-top:0px;
-	-moz-border-bottom-left-radius:10px;
-	-moz-border-bottom-right-radius:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
+    width: 900px;
+    height: 135px;
+    margin: 0px auto;
+    background: transparent url(../images/header.png) top center no-repeat;
+    z-index: 99px;
+    text-align: center;
+
 }
+
+#navigation ul{
+    list-style:none;
+    padding: 50px 40px 0px 250px;
+    
+    margin:0px;
+}
+
+#navigation li {
+    float:left;
+}
+#navigation li a {
+    display: block;
+    color:#a39784;
+    padding: 7px;
+    font-weight:bold;
+    font-size:14px;
+    text-decoration:none;
+    font-family:georgia;
+}
+
+
+#articles {
+    background: transparent url(../images/news.png) top left no-repeat;
+}
+
+#schedule {
+    background: transparent url(../images/schedule.png) top left no-repeat;
+}
+#home {
+background: transparent url(../images/home.png) top left no-repeat;
+}
+#home h1 { display:none;}
+#videos {
+    background: transparent url(../images/video.png) top left no-repeat;
+}
+
+#register {
+    background: transparent url(../images/registration.png) top left no-repeat;
+}
+
+#sponsors {
+    background: transparent url(../images/sponsors.png) top left no-repeat;
+}
+
+#about {
+    background: transparent url(../images/about.png) top left no-repeat;
+}
+
+#speakers {
+    background: transparent url(../images/speakers.png) top left no-repeat;
+}
+
+#venue {
+    background: transparent url(../images/venue.png) top left no-repeat;
+}
+
+
+#navigation a{
+    color: white;
+}
+
+.block .inner {
+    padding-left: 110px;
+    padding-right: 55px;
+    padding-top: 20px;
+    color:#FFFFFA;
+    line-height: 1.4;
+}
+
+
+#speakers.block .inner {
+  padding-left: 400px;
+}
+
+.block a,.block a:visited {
+  color:#f7b04d;
+}
+
+.registernow {
+  float:right;
+  margin-bottom:12px;
+  margin-left:12px;
+}
+
+#articles.block h2 { display: none;}
+#articles.block .inner {
+  padding-left:135px;
+  padding-top:40px;
+}
+#articles.block .article { margin-bottom: 12px;}
+#articles.block h3 { font-weight:bold; font-size:14px; margin-top:0px; margin-bottom:0px;}
+#articles.block .article .dateline { font-size:10px; font-style:italic; margin-bottom:6px;}
+#articles.block .body {font-size: 12px;}
+#articles.block .body p {margin-top: 0px;}
+#article_listing { width: 630px; height:400px;}
+
+
+.event h4 {display:none;}
+.event {
+  background: transparent url(../images/ticket.png) top left no-repeat;
+  height: 312px;
+  margin:6px auto 0px;
+  width: 559px;
+}
+
+
+.container {
+  width: 440px; 
+  margin: 0px auto;
+  
+}
+.event table {
+  line-height: 26px;
+  padding-bottom: 11px;
+  width:100%;
+  font-size:12px;
+}
+
+table {
+  border-spacing: 0px 0px;
+  border-collapse: separate;
+}
+
+.tickets{ padding-top:77px;}
+
+table, td, th{vertical-align: middle;}
+thead td{ font-weight:bold;}
+.event table td {border-bottom: 1px solid #DADADA;}
+
+
+/* standard button  */
+button {
+	position: relative;
+  border: 0;
+  overflow: visible; /* IE7 fix */
+  padding: 0;
+  cursor: pointer;
+  color: #303030;
+  padding: 0 5px 0 0;
+  font-weight: bold;
+  height: 33px;
+  margin: 0;
+	background: url("http://guestlistapp.com/images/1262492555/buttons-right.png") right -157px  no-repeat;
+}
+button span {
+	display: block;
+	position: relative;
+	white-space: nowrap;
+  line-height: 33px;
+	height: 33px;
+  padding: 0 15px 0 20px;
+  background: url("http://guestlistapp.com/images/1262492555/buttons-left.png") left -157px no-repeat;
+}
+button:hover, 
+button:focus { background: url("http://guestlistapp.com/images/1262492555/buttons-right.png") right -191px  no-repeat; outline: none; }
+button:hover span, 
+button:focus span,
+button.disabled:focus span { background: url("http://guestlistapp.com/images/1262492555/buttons-left.png") left -191px no-repeat; }
+button::-moz-focus-inner {
+  /* Firefox extra padding fix */
+  border: none;
+  padding: 0px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Safari and Google Chrome only - fix margins */
+	button span {
+    margin-top: -1px;
+	}
+}
+
+.tickets table .quantity { text-align: right;
+width: 50px;}
+
+
+a img {border: 0px;}

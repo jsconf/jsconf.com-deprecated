@@ -1,5 +1,7 @@
 body {
-  background: white url(../images/woodpanel.jpg) top left repeat-y;
+  background: black url(http://jsconf.s3.amazonaws.com/planks.jpg) top center repeat-x;
+  padding:0px;
+  margin:0px;
   color: #333;
   font-size: 12px;
   text-align:center;
