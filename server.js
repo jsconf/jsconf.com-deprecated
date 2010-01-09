@@ -33,8 +33,8 @@ fu.post("/app/register_speaker", function (req, res) {
             reg_data.category="speaker";
 						reg_data.created_at = (new Date());
             if (isblank(reg_data.name) || isblank(reg_data.twitter) || isblank(reg_data.email) || isblank(reg_data.location) || isblank(reg_data.topic_title) || isblank(reg_data.topic_description) || isblank(reg_data.claim_to_fame)) {
+  							save_failed(data);
                 res.simpleJSON(400, { message: "If you follow the directions, there will be cake." });
-								save_failed(data);
             } else {
                 couchdb.saveDoc(reg_data, {success: function(doc) {
                     res.simpleJSON(201, { message: "We got yer submission. ARR, we be gettin' back to you soon." });
