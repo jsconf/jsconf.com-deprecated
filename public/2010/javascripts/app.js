@@ -1,7 +1,7 @@
 ;var jsconf = (function () {
     var targeted_id = 'home';
-    var template = "<div class='article'><h3><a href='{{link}}'>{{title}}</a></h3><div class='dateline'>{{date}}</div><div class='body'>{{{body}}}</div>";
-    
+    var article_template = "<div class='article'><h3><a href='{{link}}'>{{title}}</a></h3><div class='dateline'>{{date}}</div><div class='body'>{{{body}}}</div>";
+    var video_template = "<a href='{{link}}' class='video'><div class='img'><img height='90' width='120' src='{{flv}}.jpg'/></div><div class='title'>{{title}}</div></a>";
     var panel_width = 870;
     var left_edge = function() {
         return jQuery("#navigation").offset().left;
@@ -52,22 +52,44 @@
         var blog_feed = new google.feeds.Feed("http://jsconf.posterous.com/rss.xml");
         blog_feed.setNumEntries(10); //Google Feed API method
         blog_feed.load(function(result) {
-          console.log(result);
           if (!result.error) {
             result.feed.entries.forEach(function(e,i){
-              jQuery("#article_listing").append(Mustache.to_html(template, {title: e.title, body: e.content, date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
+              jQuery("#article_listing").append(Mustache.to_html(article_template, {title: e.title, body: e.content, date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
+              if (i == 0) {
+                jQuery("#top_article").append(Mustache.to_html(article_template, {title: e.title, body: e.contentSnippet.replace("Permalink", ""), date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
+              }
             });
             $("#article_listing .article p:last").remove();
           }
         });
+      },
+      load_videos: function() {
+        var blog_feed = new google.feeds.Feed("http://blip.tv/?search=jsconf;s=search&skin=rss");
+        blog_feed.setNumEntries(20); //Google Feed API method
+        blog_feed.load(function(result) {
+          if (!result.error) {
+            var count = result.feed.entries.length;
+            result.feed.entries.forEach(function(pick) {
+              var t = pick.title.split(" ").slice(0,2).join(" ").replace(/[^a-zA-z ]/, "");
+              $("#video_listing").append(Mustache.to_html(video_template, {title: t,  link: pick.link, flv: pick.mediaGroups[0].contents[1].url }));
+            })
+          }
+        });
+        
+      }, 
+      load_tweets: function() {
+        $("#twitter").tweet({
+            avatar_size: 28,
+            count: 3,
+            query: "jsconf",
+            loading_text: "searching twitter..."
+          });
       }
     }
 })();
 
 
 
-google.load("feeds", "1");
-google.load("jquery", "1");
 
 
 var initialize = function() {
@@ -81,6 +103,8 @@ var initialize = function() {
     jsconf.focus_on(jQuery(this).attr("href").replace("#",""));
   });
   jsconf.load_blog();
+  jsconf.load_videos();
+  jsconf.load_tweets();
 };
 
 

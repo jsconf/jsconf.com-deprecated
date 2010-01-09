@@ -115,6 +115,7 @@ background: transparent url(../images/home.png) top left no-repeat;
     background: transparent url(../images/video.png) top left no-repeat;
 }
 
+
 #register {
     background: transparent url(../images/registration.png) top left no-repeat;
 }
@@ -169,9 +170,9 @@ background: transparent url(../images/home.png) top left no-repeat;
   padding-top:40px;
 }
 #articles.block .article { margin-bottom: 12px;}
-#articles.block h3 { font-weight:bold; font-size:14px; margin-top:0px; margin-bottom:0px;}
-#articles.block .article .dateline { font-size:10px; font-style:italic; margin-bottom:6px;}
-#articles.block .body {font-size: 12px;}
+.article h3 { font-weight:bold; font-size:14px; margin-top:0px; margin-bottom:0px;}
+.article .dateline { font-size:10px; font-style:italic; margin-bottom:6px;}
+.article .body {font-size: 12px;}
 #articles.block .body p {margin-top: 0px;}
 #article_listing { width: 630px; height:400px;}
 
@@ -254,3 +255,90 @@ width: 50px;}
 
 
 a img {border: 0px;}
+
+#venue h2, #videos h2 { display:none;}
+#venue .inner p { 
+  background:none;
+  padding:0px;
+}
+
+#videos .title {
+  text-align: center;
+  margin-top: 2px;
+  background:transparent url(../images/grad.png) top left;
+  padding:2px;
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px
+}
+#sponsors .inner p, #videos .inner p {
+    color:white;
+    background:transparent url(../images/grad.png) top left;
+    padding:8px;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px
+}
+#twitter {
+  float: left;
+  height: 130px;
+  overflow: hidden;
+  width: 295px;
+  margin-left: 33px;
+}
+#top_article h3 { margin: 0px; padding: 0px; margin-bottom: 4px;}
+#top_article {
+  float: left;
+  height: 130px;
+  width: 390px;
+}
+
+#top_article a { color: black;}
+
+#home .buffer { 
+  height:355px;}
+#video_listing{
+  height: 360px;
+  overflow: auto;
+}
+#video_listing a {
+  display:block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+
+a img {
+  /*GECKOOOOOOOOOOOOOOOOOOOOOOOOO*/
+  border: 0px;
+}
+
+#home .inner { 
+  padding-right: 0px;
+}
+
+.query {
+  font-family: Arial, serif;
+  font-size: 10px;
+  background:transparent url(../images/grad.png) top left;
+  padding:8px;
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px
+  color: white; }
+  .query .tweet_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; }
+    .query .tweet_list li {
+      overflow: auto;
+      padding: .5em; }
+    .query .tweet_list .tweet_even {}
+    .query .tweet_list .tweet_avatar {
+      padding-right: .5em;
+      float: left; }
+      .query .tweet_list .tweet_avatar img {
+        border: 1px solid #3f3f3f;
+        vertical-align: middle; }
