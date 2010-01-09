@@ -1,5 +1,3 @@
-var r = null;
-var s = null;
 
 /*
  * jQuery Form Plugin
@@ -1242,8 +1240,6 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
       },
       wrap_form: function() {
         $('#regform').ajaxForm({complete: function(responseText, statusText) {
-          r = responseText;
-          s = statusText;
           $("#submission").val(responseText.responseText);
         }});
       }
