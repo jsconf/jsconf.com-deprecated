@@ -1,5 +1,5 @@
 body {
-  background: black url(http://jsconf.s3.amazonaws.com/planks.jpg) top center repeat-x;
+  background: black url(../images/planks.slim.jpg) top center repeat-x;
   padding:0px;
   margin:0px;
   top:0px;
@@ -73,7 +73,7 @@ margin: 8px 0px;
     width: 900px;
     height: 135px;
     margin: 0px auto;
-    background: transparent url(../images/jsconfsprite.png) -10px -10px no-repeat;
+    background: transparent url(../images/header.png) top left no-repeat;
     z-index: 99px;
     text-align: center;
 
@@ -179,7 +179,7 @@ background: transparent url(../images/jsconfsprite.png) -10px -3299px no-repeat;
 
 .event h4 {display:none;}
 .event {
-  background: transparent url(../images/jsconfsprite.png) -10px -2357px no-repeat;
+  background: transparent url(../images/ticket.png) center center no-repeat;
   height: 312px;
   margin:6px auto 0px;
   width: 559px;
