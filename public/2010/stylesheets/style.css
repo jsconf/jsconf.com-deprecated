@@ -4,8 +4,8 @@ body {
   margin:0px;
   top:0px;
   bottom:0px;
-  position: absolute;
-  overflow:hidden;
+/*  position: absolute;*/
+/*  overflow:hidden;*/
   font-family: helvetica, arial, sans-serif;
   font-size: 12px;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ div#class_pictures {
 }
 
 div#container{ 
-	overflow:hidden;
+/*  overflow:hidden;*/
   top:0px;
   bottom:0px;
   left:0px;
@@ -26,9 +26,9 @@ div#container{
   width:100%;
 }
 div#viewpane {
-	height: 1680px;
-	width: 2700px;
-	position: absolute;
+/*  height: 1680px;
+  width: 2700px;
+  position: absolute;*/
 }
 div.block {
 	height: 528px;
