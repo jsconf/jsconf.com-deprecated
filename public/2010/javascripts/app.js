@@ -49,7 +49,7 @@
         refocus(true);
       },
       load_blog: function() {
-        var blog_feed = new google.feeds.Feed("http://jsconf.posterous.com/rss.xml");
+        var blog_feed = new google.feeds.Feed("http://feeds.feedburner.com/posterous/mkEj");
         blog_feed.setNumEntries(10); //Google Feed API method
         blog_feed.load(function(result) {
           if (!result.error) {
