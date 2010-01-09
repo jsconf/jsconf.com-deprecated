@@ -1244,7 +1244,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
         $('#regform').ajaxForm({complete: function(responseText, statusText) {
           r = responseText;
           s = statusText;
-          $("#regform").val(responseText);
+          $("#submission").val(responseText);
         }});
       }
     }
