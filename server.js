@@ -37,7 +37,7 @@ fu.post("/app/register_speaker", function (req, res) {
 								save_failed(data);
             } else {
                 couchdb.saveDoc(reg_data, {success: function(doc) {
-                    res.simpleJSON(201, { response: "ok" });
+                    res.simpleJSON(201, { message: "We got yer submission. ARR, we be gettin' back to you soon." });
                 }, error: function(result) {
 										save_failed(data);
                     res.simpleJSON(400, { message: "MUTINY WILL NOT BE TOLERATED!!!" });  

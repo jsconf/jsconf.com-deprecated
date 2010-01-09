@@ -1,0 +1,1 @@
+var setTimeout=function() {}

@@ -197,7 +197,7 @@ google.load("feeds", "1");
   
       <div id="speakers" class="block">
         <div class="left">
-          <form action='/app/register_speaker' method='POST'>
+          <form action='/app/register_speaker' id="regform" method='POST'>
             <textarea style='' name='submission'></textarea>
             <div class='submit'><input type='submit' value='I WANT ME PICTURE IN THAT FRAME!'/></div>
           </form>          
@@ -230,11 +230,6 @@ google.load("feeds", "1");
       </div>
     </div>
   </div>
-  
-  <script type="text/javascript" src="javascripts/mustache.js"></script>
-  <script type="text/javascript" src="javascripts/date.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.tweet.js"></script>
-  <script type="text/javascript" src="javascripts/app.js"></script>
-
+  <script type="text/javascript" src="javascripts/app.min.js"></script>
 </body>
 </html>
