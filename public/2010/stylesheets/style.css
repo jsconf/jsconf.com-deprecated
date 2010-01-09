@@ -101,39 +101,39 @@ margin: 8px 0px;
 
 
 #articles {
-    background: transparent url(../images/jsconfsprite.png) -10px -165px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px 0px no-repeat;
 }
 
 #schedule {
-    background: transparent url(../images/jsconfsprite.png) -10px -713px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -528px no-repeat;
 }
 #home {
-background: transparent url(../images/jsconfsprite.png) -10px -3299px no-repeat;
+background: transparent url(../images/panels.jpg) 0px -2112px no-repeat;
 }
 #home h1 { display:none;}
 #videos {
-    background: transparent url(../images/jsconfsprite.png) -10px -1261px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -1056px no-repeat;
 }
 
 
 #register {
-    background: transparent url(../images/jsconfsprite.png) -10px -1809px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -1584px no-repeat;
 }
 
 #sponsors {
-    background: transparent url(../images/jsconfsprite.png) -10px -3847px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -2640px no-repeat;
 }
 
 #about {
-    background: transparent url(../images/jsconfsprite.png) -10px -4395px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -3168px no-repeat;
 }
 
 #speakers {
-    background: transparent url(../images/jsconfsprite.png) -10px -4943px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -3696px no-repeat;
 }
 
 #venue {
-    background: transparent url(../images/jsconfsprite.png) -10px -5491px no-repeat;
+    background: transparent url(../images/panels.jpg) 0px -4224px no-repeat;
 }
 
 
