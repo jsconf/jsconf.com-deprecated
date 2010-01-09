@@ -73,7 +73,7 @@ margin: 8px 0px;
     width: 900px;
     height: 135px;
     margin: 0px auto;
-    background: transparent url(../images/header.png) top center no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -10px no-repeat;
     z-index: 99px;
     text-align: center;
 
@@ -101,39 +101,39 @@ margin: 8px 0px;
 
 
 #articles {
-    background: transparent url(../images/news.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -165px no-repeat;
 }
 
 #schedule {
-    background: transparent url(../images/schedule.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -713px no-repeat;
 }
 #home {
-background: transparent url(../images/home.png) top left no-repeat;
+background: transparent url(../images/jsconfsprite.png) -10px -3299px no-repeat;
 }
 #home h1 { display:none;}
 #videos {
-    background: transparent url(../images/video.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -1261px no-repeat;
 }
 
 
 #register {
-    background: transparent url(../images/registration.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -1809px no-repeat;
 }
 
 #sponsors {
-    background: transparent url(../images/sponsors.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -3847px no-repeat;
 }
 
 #about {
-    background: transparent url(../images/about.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -4395px no-repeat;
 }
 
 #speakers {
-    background: transparent url(../images/speakers.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -4943px no-repeat;
 }
 
 #venue {
-    background: transparent url(../images/venue.png) top left no-repeat;
+    background: transparent url(../images/jsconfsprite.png) -10px -5491px no-repeat;
 }
 
 
@@ -179,7 +179,7 @@ background: transparent url(../images/home.png) top left no-repeat;
 
 .event h4 {display:none;}
 .event {
-  background: transparent url(../images/ticket.png) top left no-repeat;
+  background: transparent url(../images/jsconfsprite.png) -10px -2357px no-repeat;
   height: 312px;
   margin:6px auto 0px;
   width: 559px;
