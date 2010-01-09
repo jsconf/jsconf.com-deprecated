@@ -1,3 +1,6 @@
+var r = null;
+var s = null;
+
 /*
  * jQuery Form Plugin
  * version: 2.36 (07-NOV-2009)
@@ -1238,13 +1241,14 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
           });
       },
       wrap_form: function() {
-        $('#regform').ajaxForm({dataType: 'json', success: function(responseText, statusText) {
-          alert(responseText.message);
+        $('#regform').ajaxForm({success: function(responseText, statusText) {
+          r = responseText;
+          s = statusText;
+          $("#regform").val(responseText);
         }});
       }
     }
 })();
-
 
 
 
