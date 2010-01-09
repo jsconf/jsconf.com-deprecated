@@ -179,7 +179,7 @@ background: transparent url(../images/panels.jpg) 0px -2112px no-repeat;
 
 .event h4 {display:none;}
 .event {
-  background: transparent url(../images/ticket.png) center center no-repeat;
+  background: transparent url(../images/ticket.png) top center no-repeat;
   height: 312px;
   margin:6px auto 0px;
   width: 559px;
@@ -203,7 +203,7 @@ table {
   border-collapse: separate;
 }
 
-.tickets{ padding-top:77px;}
+.tickets{ padding-top:90px;}
 
 table, td, th{vertical-align: middle;}
 thead td{ font-weight:bold;}
