@@ -334,7 +334,7 @@ a img {
     background-color: transparent; }
     .query .tweet_list li {
       overflow: auto;
-      padding: .5em; }
+      padding: 2px; }
     .query .tweet_list .tweet_even {}
     .query .tweet_list .tweet_avatar {
       padding-right: .5em;
