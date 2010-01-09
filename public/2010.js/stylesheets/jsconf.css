@@ -1,0 +1,87 @@
+body {
+  background: black url(http://jsconf.s3.amazonaws.com/planks.jpg) top center repeat-x;
+  padding:0px;
+  margin:0px;
+  color: #333;
+  font-size: 12px;
+  text-align:center;
+  height: 100%;
+}
+a{ color: #E9FBF9;}
+p, li {
+  font-size:18px;
+}
+#callforspeakers ul{
+  margin-top:0px;
+  padding-bottom: 12px;
+}
+p {
+  margin-bottom:6px;
+}
+
+#left_column {
+    width: 300px;
+    float: left;
+}
+
+#right_column {
+    margin-left: 340px;
+    padding-top: 165px;
+    text-align: left;
+}
+ul#navigation {
+    list-style: none;
+    
+    padding: 0px;
+    margin: 0px;
+    margin-top: 24px;
+}
+ul#navigation li {
+    margin:0px;
+    padding:0px;
+}
+ul#navigation li a {
+    text-decoration: none;
+    margin-bottom: 6px;
+    display: block;
+}
+
+ul#navigation li a:hover {
+    color: #00B7FF;
+}
+
+#register a {
+margin-top: 24px;
+}
+
+#for {
+
+  width:800px;
+  text-align: left;
+  margin:20px auto;
+    
+}
+
+#win {
+  text-align: center;
+/*  text-shadow: #ddd 0.2em 0.2em 0.2em*/
+}
+p {
+  padding-bottom: 20px;
+
+}
+
+  
+.submit input {
+  font-size: 18px;
+}
+
+.submit { 
+  padding: 8px;
+}
+
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
