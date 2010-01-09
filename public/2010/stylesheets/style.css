@@ -342,3 +342,5 @@ a img {
       .query .tweet_list .tweet_avatar img {
         border: 1px solid #3f3f3f;
         vertical-align: middle; }
+
+#speakers h2 { margin-top:0px; padding-top:0px;}
