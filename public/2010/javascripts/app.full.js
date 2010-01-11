@@ -1228,7 +1228,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
         jQuery("#home").each(function() {
 
           jsconf.load_blog(1, function(result) {
-            result.feed.entries.forEach(function(e,i){
+            jQuery.each(result.feed.entries, function(e,i){
               jQuery("#top_article").append(Mustache.to_html(article_template, {title: e.title, body: e.contentSnippet.replace("Permalink", ""), date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
             });
           });
@@ -1236,7 +1236,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
 
         jQuery("#article_listing").each(function() {
           jsconf.load_blog(10, function(result) {
-            result.feed.entries.forEach(function(e,i){
+            jQuery.each(result.feed.entries, function(e,i){
               jQuery("#article_listing").append(Mustache.to_html(article_template, {title: e.title, body: e.content, date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
             });
             $("#article_listing .article p:last").remove();
