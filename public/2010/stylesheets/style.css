@@ -1,333 +1,73 @@
-body {
-  background: black url(../images/planks.slim.jpg) top center repeat-x;
-  padding:0px;
-  margin:0px;
-  top:0px;
-  bottom:0px;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 12px;
-  background-attachment: fixed;
-  text-align: center;
+body{background:black url(../images/planks.slim.jpg) top center repeat-x;padding:0;margin:0;top:0;bottom:0;font-family:helvetica,arial,sans-serif;font-size:12px;background-attachment:fixed;text-align:center;}
+div#class_pictures{margin:24px 0;text-align:center;}
+#container{margin:0 auto;}
+div.block{height:528px;width:862px;background:white;margin:0 auto;text-align:left;}
+code.example{background:black;border:1px solid #cecece;padding:8px;margin:8px 0;display:block;color:#fffffa;}
+#viewport{text-align:center;margin:0 auto;}
+.left{margin-left:10px;margin-top:325px;float:left;text-align:center;width:370px;}
+textarea{width:100%;height:150px;margin:8px 0;}
+#header{text-align:center;margin:0 auto;}
+#navigation{width:900px;height:135px;margin:0 auto;margin:0 auto;background:transparent url(../images/header.png) top left no-repeat;z-index:99px;text-align:center;}
+#navigation ul{list-style:none;padding:50px 40px 0 250px;margin:0;}
+#navigation li{float:left;}
+#navigation li a{display:block;color:#a39784;padding:7px;font-weight:bold;font-size:14px;text-decoration:none;font-family:georgia;}
+#articles{background:transparent url(../images/news.jpg) 0 0 no-repeat;}
+#schedule{background:transparent url(../images/schedule.jpg) 0 0 no-repeat;}
+#home{background:transparent url(../images/home.jpg) 0 0 no-repeat;}
+#home h1{display:none;}
+#videos{background:transparent url(../images/video.jpg) 0 0 no-repeat;}
+#register{background:transparent url(../images/registration.jpg) 0 0 no-repeat;}
+#sponsors{background:transparent url(../images/sponsors.jpg) 0 0 no-repeat;}
+#about{background:transparent url(../images/about.jpg) 0 0 no-repeat;}
+#speakers{background:transparent url(../images/speakers.jpg) 0 0 no-repeat;}
+#venue{background:transparent url(../images/venue.jpg) 0 0 no-repeat;}
+#navigation a{color:white;}
+.block .inner{padding-left:110px;padding-right:55px;padding-top:20px;color:#fffffa;line-height:1.4;}
+#speakers.block .inner{padding-left:400px;}
+.block a,.block a:visited{color:#f7b04d;}
+.registernow{float:right;margin-bottom:12px;margin-left:12px;}
+#articles.block h2{display:none;}
+#articles.block .inner{padding-left:135px;padding-top:40px;}
+#articles.block .article{margin-bottom:12px;}
+.article h3{font-weight:bold;font-size:14px;margin-top:0;margin-bottom:0;}
+.article .dateline{font-size:10px;font-style:italic;margin-bottom:6px;}
+.article .body{font-size:12px;}
+#articles.block .body p{margin-top:0;}
+#article_listing{width:630px;height:400px;}
+.event h4{display:none;}
+.event{background:transparent url(../images/ticket.png) top center no-repeat;height:312px;margin:6px auto 0;width:559px;}
+.container{width:440px;margin:0 auto;}
+.event table{line-height:22px;padding-bottom:11px;width:100%;font-size:12px;}
+table{border-spacing:0;border-collapse:separate;}
+.tickets{padding-top:90px;color:black;}
+table,td,th{vertical-align:middle;}
+thead td{font-weight:bold;}
+.event table td{border-bottom:1px solid #dadada;}
+button{position:relative;border:0;overflow:visible;padding:0;cursor:pointer;color:#303030;padding:0 5px 0 0;font-weight:bold;height:33px;margin:0;background:url("http://guestlistapp.com/images/1262492555/buttons-right.png") right -157px no-repeat;}
+button span{display:block;position:relative;white-space:nowrap;line-height:33px;height:33px;padding:0 15px 0 20px;background:url("http://guestlistapp.com/images/1262492555/buttons-left.png") left -157px no-repeat;}
+button:hover,button:focus{background:url("http://guestlistapp.com/images/1262492555/buttons-right.png") right -191px no-repeat;outline:none;}
+button:hover span,button:focus span,button.disabled:focus span{background:url("http://guestlistapp.com/images/1262492555/buttons-left.png") left -191px no-repeat;}
+button::-moz-focus-inner{border:none;padding:0;}
+@media screen and (-webkit-min-device-pixel-ratio:0){button span{margin-top:-1px;}
 }
-
-div#class_pictures {
-    margin: 24px 0px;
-    text-align: center;
-}
-
-
-#container {
-  margin: 0px auto;
-}
-div.block {
-	height: 528px;
-	width: 862px;
-	background: white;
-	margin: 0px auto;
-	text-align:left;
-}
-
-code.example {
- background:black;
- border: 1px solid #cecece;
- padding: 8px;
- margin: 8px 0px;
- display: block;
- color: #FFFFFA;
-}
-
-#viewport {
-    text-align:center;
-    margin: 0px auto;
-    
-}
-.left{
-  margin-left: 10px;
-  margin-top: 325px;
-  float:left;
-  text-align: center;
-  width: 370px;
-  
-}
-textarea {
-width:100%; height:150px;
-margin: 8px 0px;
-}
-
-#header { text-align:center; margin: 0px auto; }
-#navigation {
-    width: 900px;
-    height: 135px;
-    margin: 0px auto;
-  	
-    margin: 0px auto;
-    background: transparent url(../images/header.png) top left no-repeat;
-    z-index: 99px;
-    text-align: center;
-
-}
-
-#navigation ul{
-    list-style:none;
-    padding: 50px 40px 0px 250px;
-    
-    margin:0px;
-}
-
-#navigation li {
-    float:left;
-}
-#navigation li a {
-    display: block;
-    color:#a39784;
-    padding: 7px;
-    font-weight:bold;
-    font-size:14px;
-    text-decoration:none;
-    font-family:georgia;
-}
-
-
-#articles {
-    background: transparent url(../images/news.jpg) 0px 0px no-repeat;
-}
-
-#schedule {
-    background: transparent url(../images/schedule.jpg) 0px 0px no-repeat;
-}
-#home {
-background: transparent url(../images/home.jpg) 0px 0px no-repeat;
-}
-#home h1 { display:none;}
-#videos {
-    background: transparent url(../images/video.jpg) 0px 0px no-repeat;
-}
-
-
-#register {
-    background: transparent url(../images/registration.jpg) 0px 0px no-repeat;
-}
-
-#sponsors {
-    background: transparent url(../images/sponsors.jpg) 0px 0px no-repeat;
-}
-
-#about {
-    background: transparent url(../images/about.jpg) 0px 0px no-repeat;
-}
-
-#speakers {
-    background: transparent url(../images/speakers.jpg) 0px 0px no-repeat;
-}
-
-#venue {
-    background: transparent url(../images/venue.jpg) 0px 0px no-repeat;
-}
-
-
-#navigation a{
-    color: white;
-}
-
-.block .inner {
-    padding-left: 110px;
-    padding-right: 55px;
-    padding-top: 20px;
-    color:#FFFFFA;
-    line-height: 1.4;
-}
-
-
-#speakers.block .inner {
-  padding-left: 400px;
-}
-
-.block a,.block a:visited {
-  color:#f7b04d;
-}
-
-.registernow {
-  float:right;
-  margin-bottom:12px;
-  margin-left:12px;
-}
-
-#articles.block h2 { display: none;}
-#articles.block .inner {
-  padding-left:135px;
-  padding-top:40px;
-}
-#articles.block .article { margin-bottom: 12px;}
-.article h3 { font-weight:bold; font-size:14px; margin-top:0px; margin-bottom:0px;}
-.article .dateline { font-size:10px; font-style:italic; margin-bottom:6px;}
-.article .body {font-size: 12px;}
-#articles.block .body p {margin-top: 0px;}
-#article_listing { width: 630px; height:400px;}
-
-
-.event h4 {display:none;}
-.event {
-  background: transparent url(../images/ticket.png) top center no-repeat;
-  height: 312px;
-  margin:6px auto 0px;
-  width: 559px;
-}
-
-.container {
-  width: 440px; 
-  margin: 0px auto;
-  
-}
-.event table {
-  line-height: 22px;
-  padding-bottom: 11px;
-  width:100%;
-  font-size:12px;
-}
-
-table {
-  border-spacing: 0px 0px;
-  border-collapse: separate;
-}
-
-.tickets{ padding-top:90px; color:black;}
-
-table, td, th{vertical-align: middle;}
-thead td{ font-weight:bold;}
-.event table td {border-bottom: 1px solid #DADADA;}
-
-
-/* standard button  */
-button {
-	position: relative;
-  border: 0;
-  overflow: visible; /* IE7 fix */
-  padding: 0;
-  cursor: pointer;
-  color: #303030;
-  padding: 0 5px 0 0;
-  font-weight: bold;
-  height: 33px;
-  margin: 0;
-	background: url("http://guestlistapp.com/images/1262492555/buttons-right.png") right -157px  no-repeat;
-}
-button span {
-	display: block;
-	position: relative;
-	white-space: nowrap;
-  line-height: 33px;
-	height: 33px;
-  padding: 0 15px 0 20px;
-  background: url("http://guestlistapp.com/images/1262492555/buttons-left.png") left -157px no-repeat;
-}
-button:hover, 
-button:focus { background: url("http://guestlistapp.com/images/1262492555/buttons-right.png") right -191px  no-repeat; outline: none; }
-button:hover span, 
-button:focus span,
-button.disabled:focus span { background: url("http://guestlistapp.com/images/1262492555/buttons-left.png") left -191px no-repeat; }
-button::-moz-focus-inner {
-  /* Firefox extra padding fix */
-  border: none;
-  padding: 0px;
-}
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	/* Safari and Google Chrome only - fix margins */
-	button span {
-    margin-top: -1px;
-	}
-}
-
-.tickets table .quantity { text-align: right;
-width: 50px;}
-
-
-a img {border: 0px;}
-
-#venue h2, #videos h2 { display:none;}
-#venue .inner p { 
-  background:none;
-  padding:0px;
-}
-
-#videos .title {
-  text-align: center;
-  margin-top: 2px;
-  background:transparent url(../images/grad.png) top left;
-  padding:2px;
-  -moz-border-radius: 5px; 
-  -webkit-border-radius: 5px;
-  border-radius: 5px
-}
-#sponsors .inner p, #videos .inner p {
-    color:white;
-    background:transparent url(../images/grad.png) top left;
-    padding:8px;
-    -moz-border-radius: 5px; 
-    -webkit-border-radius: 5px;
-    border-radius: 5px
-}
-#twitter {
-  float: left;
-  height: 130px;
-  overflow: hidden;
-  width: 295px;
-  margin-left: 33px;
-}
-#top_article h3 { margin: 0px; padding: 0px; margin-bottom: 4px;}
-#top_article {
-  float: left;
-  height: 130px;
-  width: 390px;
-}
-
-#top_article a { color: black;}
-
-#home .buffer { 
-  height:355px;}
-#video_listing{
-  height: 360px;
-  overflow: auto;
-}
-#video_listing a {
-  display:block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  float: left;
-}
-
-
-a img {
-  /*GECKOOOOOOOOOOOOOOOOOOOOOOOOO*/
-  border: 0px;
-}
-
-#home .inner { 
-  padding-right: 0px;
-}
-
-.query {
-  font-family: Arial, serif;
-  font-size: 10px;
-  background:transparent url(../images/grad.png) top left;
-  padding:8px;
-  -moz-border-radius: 5px; 
-  -webkit-border-radius: 5px;
-  border-radius: 5px
-  color: white; }
-  .query .tweet_list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: transparent; }
-    .query .tweet_list li {
-      overflow: auto;
-      padding: 2px; }
-    .query .tweet_list .tweet_even {}
-    .query .tweet_list .tweet_avatar {
-      padding-right: .5em;
-      float: left; }
-      .query .tweet_list .tweet_avatar img {
-        border: 1px solid #3f3f3f;
-        vertical-align: middle; }
-
-#speakers h2 { margin-top:0px; padding-top:0px;}
+.tickets table .quantity{text-align:right;width:50px;}
+a img{border:0;}
+#venue h2,#videos h2{display:none;}
+#venue .inner p{background:none;padding:0;}
+#videos .title{text-align:center;margin-top:2px;background:transparent url(../images/grad.png) top left;padding:2px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+#sponsors .inner p,#videos .inner p{color:white;background:transparent url(../images/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+#twitter{float:left;height:130px;overflow:hidden;width:295px;margin-left:33px;}
+#top_article h3{margin:0;padding:0;margin-bottom:4px;}
+#top_article{float:left;height:130px;width:390px;}
+#top_article a{color:black;}
+#home .buffer{height:355px;}
+#video_listing{height:360px;overflow:auto;}
+#video_listing a{display:block;margin-right:10px;margin-bottom:10px;float:left;}
+a img{border:0;}
+#home .inner{padding-right:0;}
+.query{font-family:Arial,serif;font-size:10px;background:transparent url(../images/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px color:white;}
+.query .tweet_list{list-style-type:none;margin:0;padding:0;background-color:transparent;}
+.query .tweet_list li{overflow:auto;padding:2px;}
+.query .tweet_list .tweet_avatar{padding-right:.5em;float:left;}
+.query .tweet_list .tweet_avatar img{border:1px solid #3f3f3f;vertical-align:middle;}
+#speakers h2{margin-top:0;padding-top:0;}
