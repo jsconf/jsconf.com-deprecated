@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" href="stylesheets/style.css" />
+<link rel="alternate" type="application/rss+xml" href="http://jsconf.posterous.com/rss.xml"/>
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAG5wXnLcSXAk6kMitA6qqeBQt6c0Khb4DN3tuaFdxZOUKS1f97BS2ynuiYpaIBsPR-HBR3GQe31ri7w"></script>
+<script type="text/javascript">
+google.load("jquery", "1");
+google.load("feeds", "1");
+</script>
+<title>JSConf.US 2010 -- Swashbucklin' JavaScript!</title>
+</head>
+<body>
+  <div id="header">
+    <div id="navigation">
+        JSConf 2010
+        <ul>
+          <li class="home">
+            <a href="index.html">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="register">
+            <a href="register.html">
+              <span>Register</span>
+            </a>
+          </li>
+          <li class="speakers">
+            <a href="speakers.html">
+              <span>Speakers</span>
+            </a>
+          </li>
+          <li class="sponsors">
+            <a href="sponsors.html">
+              <span>Sponsors</span>
+            </a>
+          </li>
+          <li class="news">
+            <a href="articles.html">
+              <span>News</span>
+            </a>
+          </li>
+          <li class="schedule">
+            <a href="schedule.html">
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li class="videos">
+            <a href="videos.html">
+              <span>Videos</span>
+            </a>
+          </li>
+          <li class="venue">
+            <a href="venue.html">
+              <span>Venue</span>
+            </a>
+          </li>
+          <li class="about">
+            <a href="about.html">
+              <span>About</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>  
+
+
+
+  <div id="container">
+    <div id="viewpane">
+      <div id="speakers" class="block">
+        <div class="left">
+          <form action='/app/register_speaker' id="regform" method='POST'>
+            <textarea style='' name='submission' id="submission"></textarea>
+            <div class='submit'><input type='submit' value='I WANT ME PICTURE IN THAT FRAME!'/></div>
+          </form>          
+        </div>
+        <div class="inner">
+          <h2>Calling all JavaScript Visionaries, Craftspeople, and Rebellious Leaders</h2>
+          <p>We are bringing together the top minds in JavaScript for a truly memorable and mindblowing time. Do you have a great 
+          product, project, or concept in JavaScript that you think the world needs to see? JSConf is the launching point for
+          everything JavaScript in 2010 and beyond; at least until JSConf EU. The JSConf team has made a firm commitment to making 
+          it the best technology conference out there, so we need the best damn speakers around, speakers like you.</p>
+          <p>In the speaker proposal, we are looking for a description of your topic and why its better than writing documentation. We give extra credit for presentations that challenge the status quo, stir up emotions within the crowd, and are banned in at least 3 states. JavaScript
+          should be the focus, but should not be a limiter, so go ahead and submit your dissertation on unicorns. Examples of 
+          presentations from 2009 can be found at the JSConf <a href='http://jsconf.us/2009'>US</a> and <a href='http://jsconf.eu/2009'>EU</a> websites.</p>
+          <p>We need from you a JSON encoded submission of your proposal with the 
+          following attributes at a minimum. Malformed submissions will be laughed at and made to walk the plank.</p>
+          <code class="example">
+            { "name": "JSConf", "twitter": "jsconf", "email": "info@jsconf.us", "location": "Washington DC", "topic_title": "BEST EVER", "topic_description": "Unicorns FTW", "claim_to_fame": "One time, at bandcamp..." }
+          </code>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <script type="text/javascript" src="javascripts/app.min.js"></script>
+</body>
+</html>

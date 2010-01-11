@@ -4,11 +4,10 @@ body {
   margin:0px;
   top:0px;
   bottom:0px;
-  position: absolute;
-  overflow:hidden;
   font-family: helvetica, arial, sans-serif;
   font-size: 12px;
   background-attachment: fixed;
+  text-align: center;
 }
 
 div#class_pictures {
@@ -16,34 +15,16 @@ div#class_pictures {
     text-align: center;
 }
 
-div#container{ 
-	overflow:hidden;
-  top:0px;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  height:100%;
-  width:100%;
-}
-div#viewpane {
-	height: 1680px;
-	width: 2700px;
-	position: absolute;
+
+#container {
+  margin: 0px auto;
 }
 div.block {
 	height: 528px;
 	width: 862px;
-	float: left;
 	background: white;
-	margin: 10px;
-}
-#header {
-    position: fixed;
-    top:0px;
-    z-index: 99;
-    width: 100%;
-    height:0px;
-    overflow: visible;
+	margin: 0px auto;
+	text-align:left;
 }
 
 code.example {
@@ -55,7 +36,11 @@ code.example {
  color: #FFFFFA;
 }
 
-
+#viewport {
+    text-align:center;
+    margin: 0px auto;
+    
+}
 .left{
   margin-left: 10px;
   margin-top: 325px;
@@ -69,9 +54,12 @@ width:100%; height:150px;
 margin: 8px 0px;
 }
 
+#header { text-align:center; margin: 0px auto; }
 #navigation {
     width: 900px;
     height: 135px;
+    margin: 0px auto;
+  	
     margin: 0px auto;
     background: transparent url(../images/header.png) top left no-repeat;
     z-index: 99px;
@@ -101,39 +89,39 @@ margin: 8px 0px;
 
 
 #articles {
-    background: transparent url(../images/panels.jpg) 0px 0px no-repeat;
+    background: transparent url(../images/news.jpg) 0px 0px no-repeat;
 }
 
 #schedule {
-    background: transparent url(../images/panels.jpg) 0px -528px no-repeat;
+    background: transparent url(../images/schedule.jpg) 0px 0px no-repeat;
 }
 #home {
-background: transparent url(../images/panels.jpg) 0px -2112px no-repeat;
+background: transparent url(../images/home.jpg) 0px 0px no-repeat;
 }
 #home h1 { display:none;}
 #videos {
-    background: transparent url(../images/panels.jpg) 0px -1056px no-repeat;
+    background: transparent url(../images/video.jpg) 0px 0px no-repeat;
 }
 
 
 #register {
-    background: transparent url(../images/panels.jpg) 0px -1584px no-repeat;
+    background: transparent url(../images/registration.jpg) 0px 0px no-repeat;
 }
 
 #sponsors {
-    background: transparent url(../images/panels.jpg) 0px -2640px no-repeat;
+    background: transparent url(../images/sponsors.jpg) 0px 0px no-repeat;
 }
 
 #about {
-    background: transparent url(../images/panels.jpg) 0px -3168px no-repeat;
+    background: transparent url(../images/about.jpg) 0px 0px no-repeat;
 }
 
 #speakers {
-    background: transparent url(../images/panels.jpg) 0px -3696px no-repeat;
+    background: transparent url(../images/speakers.jpg) 0px 0px no-repeat;
 }
 
 #venue {
-    background: transparent url(../images/panels.jpg) 0px -4224px no-repeat;
+    background: transparent url(../images/venue.jpg) 0px 0px no-repeat;
 }
 
 
@@ -185,14 +173,13 @@ background: transparent url(../images/panels.jpg) 0px -2112px no-repeat;
   width: 559px;
 }
 
-
 .container {
   width: 440px; 
   margin: 0px auto;
   
 }
 .event table {
-  line-height: 26px;
+  line-height: 22px;
   padding-bottom: 11px;
   width:100%;
   font-size:12px;
@@ -203,7 +190,7 @@ table {
   border-collapse: separate;
 }
 
-.tickets{ padding-top:90px;}
+.tickets{ padding-top:90px; color:black;}
 
 table, td, th{vertical-align: middle;}
 thead td{ font-weight:bold;}

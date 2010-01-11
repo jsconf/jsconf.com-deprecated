@@ -1,3 +1,4 @@
+// java -jar compiler.jar --js public/2010/javascripts/app.full.js --js_output_file public/2010/javascripts/app.min.js --externs ext.js
 
 /*
  * jQuery Form Plugin
@@ -1201,35 +1202,15 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
       default_focus: function () {
         refocus(true);
       },
-      load_blog: function() {
+      load_blog: function(count, callback) {
         var blog_feed = new google.feeds.Feed("http://feeds.feedburner.com/posterous/tzwp");
-        blog_feed.setNumEntries(10); //Google Feed API method
+        blog_feed.setNumEntries(count); //Google Feed API method
         blog_feed.load(function(result) {
           if (!result.error) {
-            result.feed.entries.forEach(function(e,i){
-              jQuery("#article_listing").append(Mustache.to_html(article_template, {title: e.title, body: e.content, date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
-              if (i == 0) {
-                jQuery("#top_article").append(Mustache.to_html(article_template, {title: e.title, body: e.contentSnippet.replace("Permalink", ""), date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
-              }
-            });
-            jQuery("#article_listing .article p:last").remove();
+            callback(result);
           }
         });
       },
-      load_videos: function() {
-        var blog_feed = new google.feeds.Feed("http://blip.tv/?search=jsconf;s=search&skin=rss");
-        blog_feed.setNumEntries(20); //Google Feed API method
-        blog_feed.load(function(result) {
-          if (!result.error) {
-            var count = result.feed.entries.length;
-            result.feed.entries.forEach(function(pick) {
-              var t = pick.title.split(" ").slice(0,2).join(" ").replace(/[^a-zA-z ]/, "");
-              jQuery("#video_listing").append(Mustache.to_html(video_template, {title: t,  link: pick.link, flv: pick.mediaGroups[0].contents[1].url }));
-            })
-          }
-        });
-        
-      }, 
       load_tweets: function() {
         jQuery("#twitter").tweet({
             avatar_size: 28,
@@ -1239,9 +1220,29 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
           });
       },
       wrap_form: function() {
-        $('#regform').ajaxForm({complete: function(responseText, statusText) {
-          $("#submission").val(responseText.responseText);
+        jQuery('#regform').ajaxForm({complete: function(responseText, statusText) {
+          jQuery("#submission").val(responseText.responseText);
         }});
+      },
+      init: function() {
+        jQuery("#home").each(function() {
+
+          jsconf.load_blog(1, function(result) {
+            result.feed.entries.forEach(function(e,i){
+              jQuery("#top_article").append(Mustache.to_html(article_template, {title: e.title, body: e.contentSnippet.replace("Permalink", ""), date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
+            });
+          });
+        });
+
+        jQuery("#article_listing").each(function() {
+          jsconf.load_blog(10, function(result) {
+            result.feed.entries.forEach(function(e,i){
+              jQuery("#article_listing").append(Mustache.to_html(article_template, {title: e.title, body: e.content, date: Date.parse(e.publishedDate).toString('dddd, MMMM d, yyyy'), link: e.link }));
+            });
+            $("#article_listing .article p:last").remove();
+          });
+        });
+        jsconf.load_tweets();
       }
     }
 })();
@@ -1249,23 +1250,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
 
 
 
-var initialize = function() {
-  jsconf.resizeContainer();
-  jQuery(window).resize(jsconf.resizeContainer);
-  jQuery("div.block").click(function(e) {
-    jsconf.focus_on(jQuery(this).attr("id"));
-  });
-  jQuery("#navigation a, a.focus").click(function(e) {
-    e.preventDefault(); e.stopPropagation();
-    jsconf.focus_on(jQuery(this).attr("href").replace("#",""));
-  });
-  jsconf.load_blog();
-  jsconf.load_videos();
-  jsconf.load_tweets();
-  jsconf.wrap_form();
-};
-
 
 // jQuery(document).ready(initialize);
 
-google.setOnLoadCallback(initialize);
+google.setOnLoadCallback(jsconf.init);
