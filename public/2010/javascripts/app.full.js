@@ -1219,13 +1219,11 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
             loading_text: "searching twitter..."
           });
       },
-      wrap_form: function() {
+      init: function() {
+        
         jQuery('#regform').ajaxForm({complete: function(responseText, statusText) {
           jQuery("#submission").val(responseText.responseText);
         }});
-      },
-      init: function() {
-        wrap_form();
         jQuery("#home").each(function() {
 
           jsconf.load_blog(1, function(result) {
