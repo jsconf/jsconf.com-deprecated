@@ -1,4 +1,4 @@
-body{background:black url(http://static.jsconf.us/planks.slim.jpg) top center repeat-x;padding:0;margin:0;top:0;bottom:0;font-family:helvetica,arial,sans-serif;font-size:12px;background-attachment:fixed;text-align:center;}
+body{background:black url(http://static.jsconf.us/planks.slim.jpg) top center repeat-x;padding:0;margin:0;top:0;bottom:0;font-family:helvetica,arial,sans-serif;font-size:12px;text-align:center;}
 div#class_pictures{margin:24px 0;text-align:center;}
 #container{margin:0 auto;}
 div.block{height:528px;width:862px;background:white;margin:0 auto;text-align:left;}
@@ -7,11 +7,19 @@ code.example{background:black;border:1px solid #cecece;padding:8px;margin:8px 0;
 .left{margin-left:10px;margin-top:325px;float:left;text-align:center;width:370px;}
 textarea{width:100%;height:150px;margin:8px 0;}
 #header{text-align:center;margin:0 auto;}
-#navigation{width:900px;height:135px;margin:0 auto;margin:0 auto;background:transparent url(http://static.jsconf.us/header.jpg) top left no-repeat;z-index:99px;text-align:center;}
+#navigation{width:900px;height:135px; margin:0 auto;margin:0 auto;background:transparent url(http://static.jsconf.us/header.jpg) top left no-repeat;z-index:99px;text-align:center;}
 #navigation ul{list-style:none;padding:50px 40px 0 250px;margin:0;}
 #navigation li{float:left;}
-#navigation li a{display:block;color:#a39784;padding:7px;font-weight:bold;font-size:14px;text-decoration:none;font-family:georgia;}
-#articles{background:transparent url(http://static.jsconf.us/news.jpg) 0 0 no-repeat;}
+#navigation li a{display:block;color:#f4f4f4;padding:7px;font-weight:bold;font-size:14px;text-decoration:none;font-family:georgia;}
+#articles .inner{background:transparent url(http://static.jsconf.us/articles.jpg) 0 0 no-repeat;}
+#articles .bottom{background:transparent url(http://static.jsconf.us/blogbottom.jpg) 0 0 no-repeat; height:78px; width: 862px;}
+#articles.block{background:transparent url(http://static.jsconf.us/blogbg.jpg) 0 0 repeat-y; height: auto;}
+
+#venue .inner{background:transparent url(http://static.jsconf.us/venue1.jpg) 0 0 no-repeat;}
+#venue .bottom{background:transparent url(http://static.jsconf.us/venuebottom1.jpg) bottom left no-repeat; height:145px; width: 862px;}
+#venue.block{background:transparent url(http://static.jsconf.us/venuebg1.jpg) bottom left repeat-y; height: auto; margin-bottom: 40px;}
+#venue b { font-size:150%; color:black;}
+
 #schedule{background:transparent url(http://static.jsconf.us/schedule.jpg) 0 0 no-repeat;}
 #home{background:transparent url(http://static.jsconf.us/home.jpg) 0 0 no-repeat;}
 #home h1{display:none;}
@@ -33,7 +41,7 @@ textarea{width:100%;height:150px;margin:8px 0;}
 .article .dateline{font-size:10px;font-style:italic;margin-bottom:6px;}
 .article .body{font-size:12px;}
 #articles.block .body p{margin-top:0;}
-#article_listing{width:630px;height:400px;}
+#article_listing{width:630px;}
 .event h4{display:none;}
 .event{background:transparent url(http://static.jsconf.us/ticket.png) top center no-repeat;height:312px;margin:6px auto 0;width:559px;}
 .container{width:440px;margin:0 auto;}
@@ -57,8 +65,12 @@ a img{border:0;}
 #videos .title{text-align:center;margin-top:2px;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:2px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
 #sponsors .inner p,#videos .inner p{color:white;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
 #twitter{float:left;height:130px;overflow:hidden;width:295px;margin-left:33px;}
-#top_article h3{margin:0;padding:0;margin-bottom:4px;}
+#top_article h3{margin:0;padding:0;margin-bottom:2px; margin-top:6px;}
+#top_article h3 a{ color: #f4f4f4; font-weight:bold; }
 #top_article{float:left;height:130px;width:390px;}
+#top_article .article .body { font-size: 10px;}
+#top_article .article h3 { font-size: 11px;}
+#top_article .article .dateline { margin-bottom:2px;}
 #top_article a{color:black;}
 #home .buffer{height:355px;}
 #video_listing{height:360px;overflow:auto;}
@@ -71,3 +83,6 @@ a img{border:0;}
 .query .tweet_list .tweet_avatar{padding-right:.5em;float:left;}
 .query .tweet_list .tweet_avatar img{border:1px solid #3f3f3f;vertical-align:middle;}
 #speakers h2{margin-top:0;padding-top:0;}
+
+
+#venue a { color:black;}
