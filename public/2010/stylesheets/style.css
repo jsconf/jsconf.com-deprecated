@@ -86,3 +86,16 @@ a img{border:0;}
 
 
 #venue a { color:black;}
+
+
+#speaker_line { height: 100px; width: 500px; overflow:auto; margin-left: 100px; padding-top: 20px;}
+#speaker_line ul { margin:0px; padding: 0px; list-style: none;}
+
+#speaker_bios { padding-right:12px; color: white;}
+#speaker_bios .title { font-weight:bold; margin-bottom: 4px; font-size:120%;}
+#speaker_bios .bio { line-height: 1.4; }
+#speaker_bios .bio img { float: left; margin-top:27px; margin-left:130px; }
+#speaker_bios .bio .text { margin-left: 380px; margin-top: 0px;}
+#speaker_bios .bio .name { font-weight: bold; font-size: 150%; margin-bottom: 6px;}
+#speaker_bios .bio h5 { margin: 6px 0px; font-size: 12px;}
+  

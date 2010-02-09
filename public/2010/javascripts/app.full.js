@@ -1220,7 +1220,11 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
           });
       },
       init: function() {
-        
+        jQuery("#speaker_line a").click(function(e) { 
+          e.preventDefault(); e.stopPropagation(); 
+          $(".bio").hide();
+          $($(this).attr("href")).show();
+        });
         jQuery('#regform').ajaxForm({complete: function(responseText, statusText) {
           jQuery("#submission").val(responseText.responseText);
         }});
@@ -1238,7 +1242,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
             jQuery.each(result.feed.entries, function(e,i){
               jQuery("#article_listing").append(Mustache.to_html(article_template, {title: this.title, body: this.content.replace("Permalink", ""), date: Date.parse(this.publishedDate).toString('dddd, MMMM d, yyyy'), link: this.link }));
             });
-            $("#article_listing .article p:last").remove();
+            jQuery("#article_listing .article p:last").remove();
           });
         });
         jsconf.load_tweets();
