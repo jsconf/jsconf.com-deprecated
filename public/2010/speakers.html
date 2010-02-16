@@ -72,32 +72,33 @@ google.load("feeds", "1");
       <div id="speakers" class="block">
         <div id="speaker_line">
           <ul>
-            <!-- <li><a href="#kevin"><img src="images/speakers/mini/kevin.jpg" title="One Eyed Olaf"/></a></li> -->
+            <li><a href="#kevin"><img src="images/speakers/mini/kevin.jpg" title="One Eyed Olaf"/></a></li>
             <li><a href="#john"><img src="images/speakers/mini/john.jpg" title="Captain Ragnar"/></a></li>
             <li><a href="#aaron"><img src="images/speakers/mini/aaron.jpg" title="A. Queasy"/></a></li>
           </ul>
         </div>
         <div id="speaker_bios">
+          
+          <div class="bio" id="kevin" style='display:none'>
+            <img src="images/speakers/full/kevin.jpg" alt="One Eyed Olaf"/>
+            <div class="text">
+              <div class="name"><a href="http://weblog.hypotheticalabs.com/">Kevin Smith</a></div>
+              <div class="title">Javascript, Erlang, and C: A Romance In Three Parts</div>
+              <div class="description">Erlang is great for building concurrent and robust applications. Javascript is wonderful for building all kinds of applications. C is the lingua franca of low-level programming and highly useful for gluing random bits of code together. Learn how I used all three languages to build a very useful library which capitalizes on the strengths of all three languages.<br/>We're going get dirty and explore how to get two very different languages to play nice and get along with each other. If you're curious about how to embed Javascript in your application or the finer points of wrestling Erlang's C API, then this talk is for you. For Kevin's erlang_js library, <a href="http://bitbucket.org/basho/erlang_js/">check bitbucket</a>.</div>
+              <div class="about">
+                <h5>About</h5>
+                Erlang hacker, JS wrangler, Sr. Developer @ <a href="http://www.basho.com">Basho</a>.</div>
+            </div>
+          </div>
           <div class="bio" id="john">
             <img src="images/speakers/full/john.jpg" alt="Captain Ragnar"/>
             <div class="text">
               <div class="name"><a href="http://allyoucanleet.com/">John-David Dalton</a></div>
               <div class="title">All you can leet - Coding for performance, CSS engines, and sandboxed natives</div>
-              <div class="description">Coding for performance by utilizing feature testing, method forking, lazy method defining, and avoiding unnecessary abstraction. The second topic discussed is what I look for in a CSS selector engine. Engines should not be chosen based on hype or popularity of the author, but rather by how they maintain consistent results across browsers, follow specification, and support the browsers required by your project. The third topic discussed is the who/what/when/where of sandboxed natives. I will explain the history, process of creating, and the advantages of using sandboxed natives.</div>
+              <div class="description">Coding for performance by utilizing feature testing, method forking, lazy method defining, and avoiding unnecessary abstraction. The second topic discussed is what I look for in a CSS selector engine. Engines should be chosen based on how they maintain consistent results across browsers, follow specification, and support the browsers required by your project. The third topic discussed is the who/what/when/where of sandboxed natives. I will explain the history, process of creating, and the advantages of using sandboxed natives.</div>
               <div class="about">
                 <h5>About</h5>
                 Creator of the first cross-browser implementation of sandboxed natives, and the <a href="http://github.com/jdalton/fusejs">FuseJS framework</a>.</div>
-            </div>
-          </div>
-          <div class="bio" id="kevin" style='display:none'>
-            <img src="images/speakers/full/kevin.jpg" alt="One Eyed Olaf"/>
-            <div class="text">
-              <div class="name"><a href="http://weblog.hypotheticalabs.com/">Kevin Smith</a></div>
-              <div class="title">Erlang &amp; Javascript: A Match Made In Cambridge</div>
-              <div class="description">Kevin will share the lessons learned embedding both Google V8 and Spidermonkey into Riak, a distributed data store written in Erlang. The talk will conclude with a live demo of Riak using Javascript to perform map/reduce queries over HTTP. This talk is going to go into deep nerdcore details about JavaScript embedding which Kevin has done some mighty impressive work in the <a href="http://bitbucket.org/basho/erlang_js/">erlang_js library</a>.</div>
-              <div class="about">
-                <h5>About</h5>
-                Erlang hacker, JS wrangler, Sr. Developer @ <a href="http://www.basho.com">Basho</a>.</div>
             </div>
           </div>
           <div class="bio" id="aaron" style='display:none'>
