@@ -20,7 +20,8 @@ textarea{width:100%;height:150px;margin:8px 0;}
 #venue.block{background:transparent url(http://static.jsconf.us/venuebg1.jpg) bottom left repeat-y; height: auto; margin-bottom: 40px;}
 #venue b { font-size:150%; color:black;}
 
-#schedule{background:transparent url(http://static.jsconf.us/schedule.jpg) 0 0 no-repeat;}
+#schedule.block{background:transparent url(http://static.jsconf.us/schedulerepeat.jpg) 0 0 repeat-y; height: auto;}
+#schedule .inner {background:transparent url(http://static.jsconf.us/schedule2.jpg) 0 0 no-repeat; padding-bottom: 20px;}
 #home{background:transparent url(http://static.jsconf.us/home.jpg) 0 0 no-repeat;}
 #home h1{display:none;}
 #videos{background:transparent url(http://static.jsconf.us/video.jpg) 0 0 no-repeat;}
@@ -101,3 +102,6 @@ a img{border:0;}
 #speaker_bios .bio .name { font-weight: bold; font-size: 150%; margin-bottom: 6px;}
 #speaker_bios .bio h5 { margin: 6px 0px; font-size: 12px;}
   
+  
+  
+.shadow {color:white;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
