@@ -89,7 +89,7 @@ a img{border:0;}
 #venue a { color:black;}
 
 
-#speaker_line { height: 100px; width: 500px; overflow:auto; margin-left: 100px; padding-top: 20px;}
+#speaker_line { height: 100px; width: 750px; overflow:auto; margin-left: 100px; padding-top: 20px;}
 #speaker_line ul { margin:0px; padding: 0px; list-style: none;}
 #speaker_line ul li {float:left; margin-right: 8px;}
 
