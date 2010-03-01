@@ -2,14 +2,15 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-<link rel="stylesheet" href="stylesheets/style.css" />
-<link rel="alternate" type="application/rss+xml" href="http://jsconf.posterous.com/rss.xml"/>
-<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAG5wXnLcSXAk6kMitA6qqeBQt6c0Khb4DN3tuaFdxZOUKS1f97BS2ynuiYpaIBsPR-HBR3GQe31ri7w"></script>
-<script type="text/javascript">
-google.load("jquery", "1");
-google.load("feeds", "1");
-</script>
-<title>JSConf.US 2010 -- Swashbucklin' JavaScript!</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="stylesheets/jquery.jcarousel.css" />
+  <link rel="alternate" type="application/rss+xml" href="http://jsconf.posterous.com/rss.xml"/>
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAG5wXnLcSXAk6kMitA6qqeBQt6c0Khb4DN3tuaFdxZOUKS1f97BS2ynuiYpaIBsPR-HBR3GQe31ri7w"></script>
+  <script type="text/javascript">
+    google.load("jquery", "1");
+    google.load("feeds", "1");
+  </script>
+  <title>JSConf.US 2010 -- Swashbucklin' JavaScript!</title>
 </head>
 <body>
   <div id="header">
@@ -71,7 +72,27 @@ google.load("feeds", "1");
     <div id="viewpane">
       <div id="speakers" class="block">
         <div id="speaker_line">
-          <ul>
+          <div class="prev arr"><img src="images/prev-horizontal.png"/></div>
+          <div class="next arr"><img  src="images/next-horizontal.png"/></div>
+          <div id="speaker_carousel">
+          <ul id="speaker_list" >
+            <!-- Des be the ones you don't know. -->
+            
+            <!--
+            <li><a href="#alex"><img src="images/speakers/mini/alex.jpg" height="72" width="72" title="Alex Effin Russell."/></a></li>
+            <li><a href="#francisco"><img src="images/speakers/mini/francisco.jpg" height="72" width="72" title="Cap'n #fail"/></a></li>
+            <li><a href="#newton"><img src="images/speakers/mini/newton.jpg" height="72" width="72" title="I am not a pirate. Hail to the Royal Navy."/></a></li>
+
+            <li><a href="#felix"><img src="images/speakers/mini/felix.jpg" height="72" width="72" title="The Scallywag!"/></a></li>
+            <li><a href="#dmitry"><img src="images/speakers/mini/dmitry.jpg" height="72" width="72" title="Bloody Russian"/></a></li>
+            <li><a href="#doug"><img src="images/speakers/mini/doug.jpg" height="72" width="72" title="The Captain"/></a></li>
+            <li><a href="#tobey"><img src="images/speakers/mini/tobey.jpg" height="72" width="72" title='Tobey \"Hackbeard\" Tailor'/></a></li>
+            <li><a href="#makinde"><img src="images/speakers/mini/makinde.jpg" height="72" width="72" title='Makinde The Great'/></a></li>
+            <li><a href="#steve"><img src="images/speakers/mini/steve.jpg" height="72" width="72" title='Van Witsen'/></a></li>
+             -->
+            
+            <!-- ARR Matey these be the ones we have announced -->
+
             <li><a href="#charles"><img src="images/speakers/mini/charles.jpg" height="72" width="72" title="Charlie the Undecided"/></a></li>
             <li><a href="#jenn"><img src="images/speakers/mini/jenn.jpg" height="72" width="72" title="Jenn de Belleville"/></a></li>
             <li><a href="#ryan"><img src="images/speakers/mini/ryan.jpg" height="72" width="72" title="Cap'n Laszlo Bloodsmear"/></a></li>
@@ -80,9 +101,154 @@ google.load("feeds", "1");
             <li><a href="#john"><img src="images/speakers/mini/john.jpg" height="72" width="72" title="Captain Ragnar"/></a></li>
             <li><a href="#aaron"><img src="images/speakers/mini/aaron.jpg" height="72" width="72" title="A. Queasy"/></a></li>
           </ul>
+          </div>
         </div>
         <div id="speaker_bios">
           
+          <div class="bio" id="steve" style='display:none'>
+            <img src="images/speakers/full/steve.jpg" alt="Van Witsen"/>
+            <div class="text shadow">
+              <div class="name"><a href="http://stevesouders.com">Steve Souders</a></div>
+              <div class="title">The Best of Steve</div>
+              <div class="description">Steve definitely won the contest of most submissions to JSConf and so we made him a deal. You can present BUT you have to do all of them in a single time slot. Consider it the Best of Steve.  Example topics include:
+                  <ul>
+                    <li>Ads, widgets, and analytics - Oh my!</li>
+                    <li>Make My Mobile Fast</li>
+                    <li>Even Faster Web Sites</li>
+                    <li>Even more craziness</li>
+                  </ul>
+              </div>
+              <div class="about">
+                <h5>About</h5>
+                Steve works at <a href="http://www.google.com">Google</a> on web performance and open source initiatives. He previously served as Chief Performance <a href="http://www.yahoo.com">Yahoo!</a>. Steve is the author of High Performance Web Sites and Even Faster Web Sites. He created YSlow, the performance analysis plug-in for Firefox. He serves as co-chair of <a href="http://en.oreilly.com/velocity2010">Velocity</a>, the web performance and operations conference from O'Reilly, and is co-founder of the <a href="http://getfirebug.com/">Firebug</a> Working Group. He recently taught CS193H: High Performance Web Sites at Stanford University.
+                </div>
+            </div>
+          </div>
+
+          
+          <div class="bio" id="alex" style='display:none'>
+            <img src="images/speakers/full/alex.jpg" alt="Alex Effin Russell"/>
+            <div class="text shadow">
+              <div class="name"><a href="http://alex.dojotoolkit.org/">Alex Russell</a></div>
+              <div class="title">Google Chrome Frame</div>
+              <div class="description">What if new browser features were usable in months instead of years?
+              What apps would we build if V8-level performance were ubiquitous?This
+              talk discusses the role of <a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a> in breaking the logjam
+              of browser progress, quickly shows how simple it is to implement GCF
+              for your sites and applications, describes how GCF will let us all
+              write <i>less</i> JavaScript, and ends with a quick overview of the HTML 5
+              and JavaScript features available today to sites that are opting into
+              GCF.
+              </div>
+              <div class="about">
+                <h5>About</h5>
+                Alex Russell is a software engineer at <a href="http://www.google.com">Google</a>. Prior to joining Google
+                he contributed to the development of <a href="http://www.dojotoolkit.org/">Dojo</a>. He's still fighting IE 6 so
+                you don't have to.
+                </div>
+            </div>
+          </div>
+          <div class="bio" id="newton" style='display:none'>
+            <img src="images/speakers/full/newton.jpg" alt="I am not a pirate. Hail to the Royal Navy."/>
+            <div class="text shadow">
+              <div class="name"><a href="http://www.clientcide.com/">Aaron Newton</a></div>
+              <div class="title">Programming To Patterns</div>
+              <div class="description">Implementing a design pattern in JavaScript isn't very difficult - image galleries, tabbed boxes, date pickers, etc are relatively straight forward. But it's also very tempting to just select some elements out of the document and enhance them as part of your web site's basic functionality and to not think of these things in a structural way. Architecting nearly everything you author into reusable objects that can be extended and reused presents a lot of benefits. Breaking up components into smaller reusable chunks lets you develop some small bit of functionality (like, say, dragging) for one task, then reuse it later. The speakers will each tackle the same problem with code examples in MooTools and Dojo to illustrate the concept.</div>
+              <div class="about">
+                <h5>Also - What's new in MooTools in 2010</h5>
+                Attendants will receive an in-depth overview of what MooTools and its community has been up to this year and has planned for the rest of it. This will include an in-depth overview of the official plugin library for the framework, the unofficial "forge", new tools and upcoming releases.
+                
+                  <h5>About</h5>
+                  <a href="http://mootools.net/">MooTools Representin' fo Real</a> and helping browsers do the "honorable" thing!
+                </div>
+            </div>
+          </div>
+          <div class="bio" id="francisco" style='display:none'>
+            <img src="images/speakers/full/francisco.jpg" alt="Cap'n #fail"/>
+            <div class="text shadow">
+              <div class="name"><a href="http://www.280north.com/">Francisco Tolmasky</a></div>
+              <div class="title">Socratic: Documentation Done Right</div>
+              <div class="description">At 280 North we've been developing a new documentation tool built on top of Common JS to help new JS projects quickly overcome the initial hump of being documentation deprived. Unlike most documentation tools, the act of documenting is completely divorced from the source code, allowing the creation of media-rich docs with a wiki-style workflow, while maintaining versionability and tracking the changes that take place on the branches of your source.  Additionally, this tool uses git and textmate as its core, so we will be announcing some cool new JS wrappers for accessing both of these powerful tools.</div>
+              <div class="about">
+                <h5>About</h5>
+                Francisco Tolmasky is a co-founder of 280 North and the creator of the Objective-J programming language.  Before 280 North, Francisco was an early member of the iPhone team at Apple, working extensively on the Mobile Safari browser, as well as its open source WebKit backend.  280 North recently launched 280 Slides, a web based presentation program that blurs the lines between desktop and web applications.</div>
+            </div>
+          </div>
+          <div class="bio" id="felix" style='display:none'>
+            <img src="images/speakers/full/felix.jpg" alt="The Scallywag!"/>
+            <div class="text shadow">
+              <div class="name"><a href="http://debuggable.com/">Felix Geisendörfer</a></div>
+              <div class="title">Dirty NoSQL</div>
+              <div class="description">
+                I would like to talk dirty : ). More precisely I am going to talk about a little key-value store of mine called dirty. Dirty is a love child between <a href="http://code.google.com/p/redis/">Redis</a> and <a href="http://couchdb.apache.org/">CouchDB</a>. The result is a very fast (750K doc writes / sec, 14M docs filtered / sec), <a href="http://www.nodejs.org">node.js</a>-based <a href="http://nosql-database.org/">NoSQL</a> store written in &lt; 250 LoC. Admittedly dirty is a quite a cheater to make those numbers possible. That's because dirty does not do any networking. But that is by design. I think that sending trivial questions like "What value does key x have?" over a network is rather stupid. Instead one should ask a db questions like "How many pirates does it take to send out all available ships?". Dirty makes it really easy to build special-purpose databases like this and give them a REST interface using the underlaying powers of node.js. This makes dirty an excellent choice for:<ul><li>Rapid prototyping</li><li>Small databases (dirty stores all docs in memory, you need to partition in order to expand storage)</li><li>Databases where speed is one of the most critical factors</li></ol> I'm currently hacking away over here: <a href="http://github.com/felixge/node-dirty">http://github.com/felixge/node-dirty</a>
+</div>
+              <div class="about">
+                <h5>About</h5>
+                Former CakePHP core contributor, Currently #2 contributor @ node.js</div>
+            </div>
+          </div>
+          <div class="bio" id="dmitry" style='display:none'>
+            <img src="images/speakers/full/dmitry.jpg" alt="Bloody Russian"/>
+            <div class="text shadow">
+              <div class="name"><a href="http://dmitry.baranovskiy.com/">Dmitry Baranovskiy</a></div>
+              <div class="title">Dirty NoSQL</div>
+              <div class="description">
+                If you think Flash is the only choice for cross-browser graphics on the web, think again. In this session I will introduce you to <a href="http://raphaeljs.com/">Raphaël</a>, a JavaScript library for vector graphics, and walk you through its API. We will discover what possibilities for web applications it opens and what limitations still exist.</div>
+              <div class="about">
+                <h5>About</h5>
+                Raphaël author, <a href="http://dmitry.baranovskiy.com/post/jsquizz">JS Quiz Master</a>, and <a href="http://www.sitepoint.com/blogs/2009/11/12/google-closure-how-not-to-write-javascript/">general troublemaker</a>. He is currently working at Atlassian as a JavaScript Developer in <abbr title="Put another shrimp on the barbie">Sydney, Australia</a>.</div>
+            </div>
+          </div>
+          <div class="bio" id="doug" style='display:none'>
+            <img src="images/speakers/full/doug.jpg" alt="The Captain"/>
+            <div class="text shadow">
+              <div class="name"><a href="http://www.crockford.com/">Douglas Crockford</a></div>
+              <div class="title">Really, JavaScript?</div>
+              <div class="description">
+              First misunderstanding, then huge semipopularity, and now, respect. Despite its many obvious deficiencies, JavaScript has gotten something profoundly right. What does the future hold for this duckling?
+              </div>
+              <div class="about">
+                <h5>About</h5>
+                Douglas Crockford was born in the wilds of Minnesota, but left when he was only six months old because it was just too damn cold. He turned his back on a promising career in television when he discovered computers. He has worked in learning systems, small business systems, office automation, games, interactive music, multimedia, location-based entertainment, social systems, and programming languages. He is the inventor of Tilton, the ugliest programming language that was not specifically designed to be an ugly programming language. He is best known for having discovered that there are good parts in JavaScript. This was an important and unexpected discovery. He discovered the JSON Data Interchange Format. He is currently working on making the web a secure and reliable software delivery platform. He has his work cut out for him.</div>
+            </div>
+          </div>
+          <div class="bio" id="tobey" style='display:none'>
+            <img src="images/speakers/full/tobey.jpg" alt='Tobey "Hackbeard" Tailor'/>
+            <div class="text shadow">
+              <div class="name"><a href="http://jancona.com/">Tobias Schneider</a></div>
+              <div class="title">Gordon</div>
+              <div class="description">
+                If you don't know, then you probably should take the time to figure out what it is.
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                And then scream with excitement....
+              </div>
+              <div class="about">
+                <h5>His view of JSConf</h5>
+                Pirates, free Grog and JavaScript? Arrrrrrrr, sounds like the greatest conference ever! Only dead lubbers would decline such an unique opportunity, thus i'm very proud to board the ship as part of your infamous pirate crew.
+            </div>
+            </div>
+          </div>
+          <div class="bio" id="makinde" style='display:none'>
+            <img src="images/speakers/full/makinde.jpg" alt='Makinde The Great'/>
+            <div class="text shadow">
+              <div class="name"><a href="http://makinde.adeagbo.com/">Makinde Adeagbo</a></div>
+              <div class="title">Primer: <a href="http://www.facebook.com">Facebook</a>'s 2k of JavaScript to power (almost) all interactions</div>
+              <div class="description">
+                Despite having access to advanced JavaScript frameworks, many web developers continue to write very similar boilerplate code to setup AJAX interactions.  Facebook, in particular, peaked at nearly one megabyte of JavaScript on its homepage.  The team then realized that 90% of our interactions could be boiled down into a very small set of steps: (1) User clicks on a link or submits a form, (2) an AJAX request is sent to the server, (3) some markup is put into the DOM.  By framing all interactions in this manner, we have been able to put a small snippet of JavaScript, Primer, at the top of all pages that can listen and wire up these interactions.  Built atop plain links and forms, we have created a simple, fast, accessible way to implement most interactions on our site.  The talk will include a breakdown of the various Javascript techniques (event handlers, asynchronous loading of JavaScript files, etc.), server side integration, metrics gathering, and future work to build our AJAX pageload systems on top of Primer.
+              </div>
+              <div class="about">
+                <h5>About</h5>
+                Born in Ibadan, Nigeria, my family moved around when I was a child. We finally settled in Louisville, KY. I have a computer science degree from MIT. I am a software engineer at facebook in sunny, sunny Palo Alto. I once ran track. I can jump high and far. Swimming is not my forte. People say I smile a lot.
+            </div>
+            </div>
+          </div>
+
+
+          <!-- De Plank -->
           <div class="bio" id="charles">
             <img src="images/speakers/full/charles.jpg" alt="Charlie the Undecided"/>
             <div class="text shadow">
@@ -94,34 +260,7 @@ google.load("feeds", "1");
                 Charles is the creator of <a href="http://sproutcore.com">SproutCore</a>.  SproutCore is used by Apple for their MobileMe apps, by Mozilla for Bespin and many more sites.  He currently works at Apple as a senior front end architect.</div>
             </div>
           </div>
-            <div class="bio" id="newton" style='display:none'>
-              <img src="images/speakers/full/newton.jpg" alt=" am not a pirate. Hail to the Royal Navy."/>
-              <div class="text shadow">
-                <div class="name"><a href="http://www.clientcide.com/">Aaron Newton</a></div>
-                <div class="title">Programming To Patterns</div>
-                <div class="description">Implementing a design pattern in JavaScript isn't very difficult - image galleries, tabbed boxes, date pickers, etc are relatively straight forward. But it's also very tempting to just select some elements out of the document and enhance them as part of your web site's basic functionality and to not think of these things in a structural way. Architecting nearly everything you author into reusable objects that can be extended and reused presents a lot of benefits. Breaking up components into smaller reusable chunks lets you develop some small bit of functionality (like, say, dragging) for one task, then reuse it later. The speakers will each tackle the same problem with code examples in MooTools and Dojo to illustrate the concept.</div>
-                <div class="about">
-                  <h5>Also - What's new in MooTools in 2010</h5>
-                  Attendants will receive an in-depth overview of what MooTools and its community has been up to this year and has planned for the rest of it. This will include an in-depth overview of the official plugin library for the framework, the unofficial "forge", new tools and upcoming releases.
-                  </div>
-              </div>
-            </div>
-            
-            
-            
-            <div class="bio" id="francisco" style='display:none'>
-              <img src="images/speakers/full/francisco.jpg" alt="Cap'n #fail"/>
-              <div class="text shadow">
-                <div class="name"><a href="http://www.280north.com/">Francisco Tolmasky</a></div>
-                <div class="title">Socratic: Documentation Done Right</div>
-                <div class="description">At 280 North we've been deveping a new documentation tool built on top of Common JS to help new JS projects quickly overcome the initial hump of being documentation deprived. Unlike most documentation tools, the act of documenting is completely divorced from the source code, allowing the creation of media-rich docs with a wiki-style workflow, while maintaining versionability and tracking the changes that take place on the branches of your source.  Additionally, this tool uses git and textmate as its core, so we will be announcing some cool new JS wrappers for accessing both of these powerful tools.</div>
-                <div class="about">
-                  <h5>About</h5>
-                  Francisco Tolmasky is a co-founder of 280 North and the creator of the Objective-J programming language.  Before 280 North, Francisco was an early member of the iPhone team at Apple, working extensively on the Mobile Safari browser, as well as its open source WebKit backend.  280 North recently launched 280 Slides, a web based presentation program that blurs the lines between desktop and web applications.</div>
-              </div>
-            </div>
-            
-            <div class="bio" id="billy" style='display:none'>
+          <div class="bio" id="billy" style='display:none'>
               <img src="images/speakers/full/billy.jpg" alt="Capt. Harrrrrrrrrrrrr-y"/>
               <div class="text shadow">
                 <div class="name"><a href="http://zoompf.com/">Billy Hoffman</a></div>
@@ -132,8 +271,7 @@ google.load("feeds", "1");
                   I wrote the book <i>Ajax Security</i> (Addison Wesley. 2007). I have been sued for allegedly violating the Digital Millennium Copyright Act and the Espionage Act of 1917 while reverse engineering a magstripe-based ID and access system. As a web security researcher I pioneered many of today's JavaScript security issues and presented that research at conferences on 3 continents and to the US FBI.</div>
               </div>
             </div>
-            
-            <div class="bio" id="jenn" style='display:none' >
+          <div class="bio" id="jenn" style='display:none' >
               <img src="images/speakers/full/jenn.jpg" alt="Jenn de Belleville"/>
               <div class="text shadow">
                 <div class="name"><a href="http://jennlukas.com/">Jenn Lukas</a></div>
@@ -153,8 +291,7 @@ google.load("feeds", "1");
                   </div>
               </div>
             </div>
-            
-            <div class="bio" id="ryan"  style='display:none'>
+          <div class="bio" id="ryan"  style='display:none'>
               <img src="images/speakers/full/ryan.jpg" alt="Cap'n Laszlo Bloodsmear"/>
               <div class="text shadow">
                 <div class="name"><a href="http://tinyclouds.org/">Ryan Dahl</a></div>
@@ -173,21 +310,6 @@ google.load("feeds", "1");
                   Ryan Dahl is programmer at <a href="http://www.joyent.com">Joyent, Inc</a>.</div>
               </div>
             </div>
-            
-            <div class="bio" id="doug" style='display:none'>
-              <img src="images/speakers/full/doug.jpg" alt="The Captain"/>
-              <div class="text shadow">
-                <div class="name"><a href="http://www.crockford.com/">Douglas Crockford</a></div>
-                <div class="title">Really, JavaScript?</div>
-                <div class="description">
-                First misunderstanding, then huge semipopularity, and now, respect. Despite its many obvious deficiencies, JavaScript has gotten something profoundly right. What does the future hold for this duckling?
-                </div>
-                <div class="about">
-                  <h5>About</h5>
-                  Douglas Crockford was born in the wilds of Minnesota, but left when he was only six months old because it was just too damn cold. He turned his back on a promising career in television when he discovered computers. He has worked in learning systems, small business systems, office automation, games, interactive music, multimedia, location-based entertainment, social systems, and programming languages. He is the inventor of Tilton, the ugliest programming language that was not specifically designed to be an ugly programming language. He is best known for having discovered that there are good parts in JavaScript. This was an important and unexpected discovery. He discovered the JSON Data Interchange Format. He is currently working on making the web a secure and reliable software delivery platform. He has his work cut out for him.</div>
-              </div>
-            </div>
-<!-- De Plank -->
           <div class="bio" id="kevin" style='display:none'>
             <img src="images/speakers/full/kevin.jpg" alt="One Eyed Olaf" />
             <div class="text shadow">
@@ -225,6 +347,8 @@ google.load("feeds", "1");
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="javascripts/jcarousellite_1.0.1.min.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.mousewheel.min.js"></script>
   <script type="text/javascript" src="javascripts/app.min.js"></script>
 </body>
 </html>

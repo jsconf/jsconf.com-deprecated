@@ -105,6 +105,8 @@ var initialize = function() {
   jsconf.load_blog();
   jsconf.load_videos();
   jsconf.load_tweets();
+  $("#speaker_list").jcarousel();
+
 };
 
 
