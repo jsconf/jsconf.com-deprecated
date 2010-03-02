@@ -1247,7 +1247,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
             jQuery("#article_listing .article p:last").remove();
           });
         });
-        
+        if (jQuery("#speaker_carousel").length > 0) {
         jQuery("#speaker_carousel").jCarouselLite({
                 btnNext: ".next",
                 btnPrev: ".prev",
@@ -1257,7 +1257,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
                 },
                 mouseWheel: true
             });
-        
+        }
         jsconf.load_tweets();
       }
     }

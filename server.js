@@ -15,39 +15,57 @@ function isblank(str) {
 		}
 }
 
+function valid_params(name, title, description, email) {
+  
+}
+
 function save_failed(data) {
 	doc = {"category": "failed_speaker", "data": data, "created_at": (new Date())}
 	couchdb.saveDoc(doc);
 }	
 
-fu.post("/app/register_speaker", function (req, res) {
-    var data = "";
-    req.addListener("body", function(chunk) {
-        data += chunk;
-    });
-    req.addListener("complete", function() {
-        try {
-						data = data.split("=")[1];
-            var clean_data = decodeURIComponent(data.replace(/\+/g," ")); //.replace(/\%40/g, "@").replace(/\%3A/g, ":").replace(/\%2C/g, ",").replace("submission=", "").replace(/\)$/, "");
-            var reg_data = JSON.parse(clean_data);
-            reg_data.category="speaker";
-						reg_data.created_at = (new Date());
-            if (isblank(reg_data.name) || isblank(reg_data.twitter) || isblank(reg_data.email) || isblank(reg_data.location) || isblank(reg_data.topic_title) || isblank(reg_data.topic_description) || isblank(reg_data.claim_to_fame)) {
-  							save_failed(data);
-                res.simpleJSON(200, { message: "If you follow the directions, there will be cake." });
-            } else {
-                couchdb.saveDoc(reg_data, {success: function(doc) {
-                    res.simpleJSON(200, { message: "We got yer submission. ARR, we be gettin' back to you soon." });
-                }, error: function(result) {
-										save_failed(data);
-                    res.simpleJSON(200, { message: "MUTINY WILL NOT BE TOLERATED!!!" });  
-                }});
-            }
-        } catch (e) {
-						save_failed(data);
-            res.simpleJSON(200, { message: "MUTINY WILL NOT BE TOLERATED!!!" });      
-        }
-    });
+fu.post("/app/schedule", function(req, res) {
+  var data = "";
+  req.addListener("body", function(chunk) {
+    data += chunk;
+  });
+  req.addListener("complete", function() {
+    var params = {};
+    var worked = false;
+    var parts = data.split("&");
+    for (var i in parts) {
+      var part = parts[i].split("=");
+      if (part.length == 2) {
+        params[new String(part[0])] = part[1];
+      }
+    }
+    var day = null;
+    var time = null;
+    if (params["day"] == "sat") {
+      day = "sat";
+    } else if (params["day"] == "sun") { 
+      day = "sun"; 
+    }
+    if (day == "sat" && params["time"] >= 1 && params["time"] <= 14)  {
+      time = params["time"];
+    } else if (day == "sun" && params["time"] >= 1 && params["time"] <= 17) {
+      time = params["time"];
+    }
+    if (day && time && valid_params(name, title, description, email)) {
+      var trackb = couchdb.get("TRACKB");
+      if (trackb[day][time-1] === null) {
+        trackb[day][time-1] = {"name": name, "title": title, "description": description, "email": email};
+        couchdb.saveDoc(trackb);
+        worked = true;
+      }
+    }
+    if (!worked) {
+      "Try again bucko!"
+    } else { 
+      "That's how the Davey Jones likes it."
+    }
+  });
 });
+
 
 fu.listen(8000, 'localhost');
