@@ -1,0 +1,3 @@
+[submodule "lib/node-couch"]
+	path = lib/node-couch
+	url = git://github.com/sixtus/node-couch.git

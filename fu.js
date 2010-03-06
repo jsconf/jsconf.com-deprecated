@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // Stolen like a theif in the night from http://github.com/ry/node_chat/raw/master/fu.js
 // Also added a couple things to make it awesomerer.
 // But hell its called fu.js, it had to be used.
