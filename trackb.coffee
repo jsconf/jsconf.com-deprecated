@@ -94,12 +94,12 @@ schedule: (data, callback) ->
 
 
 getMap: {
-  "//schedule": (req, res) ->
+  "/app/schedule": (req, res) ->
     jsconf.openDoc("TRACKB", {success: (body) -> res.simpleJSON(200, body)})
 }
 
 postMap: {
-  "//schedule": (req, res) ->
+  "/app/schedule": (req, res) ->
     data: ""
     callback: (state)->
       if (state is "saved") 
