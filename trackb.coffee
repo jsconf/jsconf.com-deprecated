@@ -13,13 +13,11 @@ opts: {
   error: (body) ->
     doc: {"_id": TRACK_NAME}
     for day, timeslots of DAYS
-      puts day
       doc[day]: []
       i: 0
       while i < timeslots
        doc[day].push null
        i++
-    puts doc
     jsconf.saveDoc(doc)
 }
 test_doc: jsconf.openDoc(TRACK_NAME, opts)
@@ -49,6 +47,7 @@ valid_params: (name, title, description, email, av_confirm) ->
   return true
 
 schedule: (data, callback) ->
+  puts "-----------------------"
   params: {}
   worked: false
   # parse request
@@ -79,12 +78,15 @@ schedule: (data, callback) ->
         if not doc[day][timeslot]? 
           doc[day][timeslot]: {"name": name, "title": title, "description": description, "email": email}
           jsconf.saveDoc(doc)
+          puts "Result: Scheduled"
           callback("saved")
         else
+          puts "Result: Collision"
           callback("taken")
 
     })
   else
+    puts "Result: Mutiny"
     callback("invalid")
 
 
@@ -115,7 +117,6 @@ postMap: {
 http.createServer( (req,res) ->
   map: getMap
   map: postMap if (req.method is "POST")
-  puts req.url
   handler: map[req.url] || notFound
 
   res.simpleJSON: (code, obj) ->
@@ -125,4 +126,4 @@ http.createServer( (req,res) ->
     res.close()
   handler req, res
 ).listen 8000
-puts "Server running"
+puts "Now Accepting Registrations"
