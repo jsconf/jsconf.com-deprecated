@@ -1156,6 +1156,8 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
     var targeted_id = 'home';
     var article_template = "<div class='article'><h3><a href='{{link}}'>{{title}}</a></h3><div class='dateline'>{{date}}</div><div class='body'>{{{body}}}</div>";
     var video_template = "<a href='{{link}}' class='video'><div class='img'><img height='90' width='120' src='{{flv}}.jpg'/></div><div class='title'>{{title}}</div></a>";
+    var trackb_session_template = "<div id='{{part}}-{{idx}}' class='timeslot'><div class='time'>{{timeslot}}</div><div class='content'>{{{content}}}</div></div>";
+    var trackb_inner_template = "<div class='title'>{{title}}</div><div class='name'>{{name}}</div><div class='description'>{{description}}</div>";
     var panel_width = 870;
     var left_edge = function() {
         return jQuery("#navigation").offset().left;
@@ -1196,6 +1198,54 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
       $(".bio").hide();
       $($(this).attr("href")).show();
     };
+    
+    var saturday_timeslots = [
+      "9:00AM - 9:30AM",
+      "9:30AM - 10:00AM",
+      "10:00AM - 10:30AM",
+      "10:30AM - 11:00AM",
+      "11:00AM - 11:30AM",
+      "11:30AM - 12:00PM",
+      "12:00PM - 12:30PM",
+      "1:30PM - 2:00PM",
+      "2:00PM - 2:30PM",
+      "2:30PM - 3:00PM",
+      "3:00PM - 3:30PM",
+      "3:30PM - 4:00PM",
+      "4:00PM - 4:30PM",
+      "4:30PM - 5:00PM"
+    ];
+    
+    var sunday_timeslots = [
+      "9:00AM - 9:30AM",
+      "9:30AM - 10:00AM",
+      "10:00AM - 10:30AM",
+      "10:30AM - 11:00AM",
+      "11:00AM - 11:30AM",
+      "11:30AM - 12:00PM",
+      "12:00PM - 12:30PM",
+      "1:30PM - 2:00PM",
+      "2:00PM - 2:30PM",
+      "2:30PM - 3:00PM",
+      "3:00PM - 3:30PM",
+      "3:30PM - 4:00PM",
+      "4:00PM - 4:30PM",
+      "4:30PM - 5:00PM",
+      "5:00PM - 5:30PM",
+      "5:30PM - 6:00PM",
+      "6:00PM - 6:30PM",
+      "6:30PM - 7:00PM"
+    ];
+    
+    var render_trackb_day = function(day, timeslots, data) {
+      var sched = data[day];
+      jQuery.each(sched, function(index, value) {
+        var ts = timeslots[index];
+        var content = (value ? Mustache.to_html(trackb_inner_template, value) : "<a href='#register' class='register' ref='"+day+"_"+index+"'>I want this slot!</a>");
+        jQuery("#"+day).append( Mustache.to_html(trackb_session_template, {"content": content, "timeslot": ts, "part":day, "idx": index}));
+      });
+    }
+    
     
     return {
       resizeContainer: function() {
@@ -1248,25 +1298,28 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
           });
         });
         if (jQuery("#speaker_carousel").length > 0) {
-        jQuery("#speaker_carousel").jCarouselLite({
-                btnNext: ".next",
-                btnPrev: ".prev",
-                visible: 8,
-                afterEnd: function (e) {
-                  jQuery("#speaker_line a").click(show_bio);
-                },
-                mouseWheel: true
-            });
+          jQuery("#speaker_carousel").jCarouselLite({
+            btnNext: ".next",
+            btnPrev: ".prev",
+            visible: 8,
+            afterEnd: function (e) {
+              jQuery("#speaker_line a").click(show_bio);
+            },
+            mouseWheel: true
+          });
         }
+        
+        if (jQuery("#trackb").length == 1)    {
+          // Load Track B Data
+          jQuery.getJSON("/app/schedule", function(data, textStatus) {
+            render_trackb_day("sat", saturday_timeslots, data);
+            render_trackb_day("sun", sunday_timeslots,  data);
+          });
+          
+        }
+        
         jsconf.load_tweets();
       }
     }
 })();
-
-
-
-
-
-// jQuery(document).ready(initialize);
-
 google.setOnLoadCallback(jsconf.init);

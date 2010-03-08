@@ -110,3 +110,7 @@ a img{border:0;}
   
   
 .shadow {color:white;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.timeslot .title { margin-top:6px; font-weight: bold; }
+.timeslot .name { font-style: italic; font-size:11px;}
+.timeslot .time { font-weight: bold; font-size: 12px;}
+.timeslot { padding: 8px; border-bottom: 1px solid #333;}
