@@ -64,7 +64,7 @@ a img{border:0;}
 #venue h2,#videos h2{display:none;}
 #venue .inner p{background:none;padding:0;}
 #videos .title{text-align:center;margin-top:2px;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:2px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
-#sponsors .inner p,#videos .inner p{color:white;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+#videos .inner p{color:white;background:transparent url(http://static.jsconf.us/grad.png) top left;padding:8px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
 #twitter{float:left;height:130px;overflow:hidden;width:295px;margin-left:33px;}
 #top_article h3{margin:0;padding:0;margin-bottom:2px; margin-top:6px;}
 #top_article h3 a{ color: #f4f4f4; font-weight:bold; }
@@ -114,3 +114,11 @@ a img{border:0;}
 .timeslot .name { font-style: italic; font-size:11px;}
 .timeslot .time { font-weight: bold; font-size: 12px;}
 .timeslot { padding: 8px; border-bottom: 1px solid #333;}
+
+
+
+.sponsor { text-align: left;}
+
+.sponsor .logo { float:left; width: 200px; text-align:center; padding: 8px 0px;}
+.sponsor .desc { margin-left:200px; background: black;}
+.sponsor .desc h3 { margin:0px;}

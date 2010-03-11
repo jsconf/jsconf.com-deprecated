@@ -9,7 +9,7 @@ DAYS: { "sat": 14, "sun": 18 }
 
 
 # Test for document existence and setup if not already setup.
-opts: {  
+opts: {
   error: (body) ->
     doc: {"_id": TRACK_NAME}
     for day, timeslots of DAYS
@@ -22,16 +22,18 @@ opts: {
 }
 test_doc: jsconf.openDoc(TRACK_NAME, opts)
 
+
+# Handle 404s with as little information as possible
 NOT_FOUND: "END OF LINE."
 notFound: (req,res) ->
   res.writeHead 404, [ ["Content-Type", "text/plain"], ["Content-Length", NOT_FOUND.length] ]
   res.write NOT_FOUND
   res.close()
 
-
+# Simple blank test
 isblank: (str) ->
-  return true if not str? 
-  try 
+  return true if not str?
+  try
     return (str.replace(/^\s+|\s+$/, '') is "")
   catch error
     return false
@@ -57,14 +59,14 @@ schedule: (data, callback) ->
     str: new String(part[0])
     puts str+": " + part[1]
     params[str]: part[1] if part.length is 2
-    
+
   #extra request data
   name:  params["name"] || ""
   title:  params["title"] || ""
   description: params["description"] || ""
   email: params["email"] || ""
   av_confirm: params["av_confirm"] || ""
-  
+
   # identify the requested timeslot
   day: null
   slots: DAYS[params["day"]]
@@ -73,9 +75,9 @@ schedule: (data, callback) ->
     timeslot: params["time"]
   if timeslot? and valid_params(name, title, description, email, av_confirm)
     day: params["day"]
-    jsconf.openDoc("TRACKB", { 
+    jsconf.openDoc("TRACKB", {
       success: (doc) ->
-        if not doc[day][timeslot]? 
+        if not doc[day][timeslot]?
           doc[day][timeslot]: {"name": name, "title": title, "description": description, "email": email}
           jsconf.saveDoc(doc)
           puts "Result: Scheduled"
@@ -102,15 +104,15 @@ postMap: {
   "/app/schedule": (req, res) ->
     data: ""
     callback: (state)->
-      if (state is "saved") 
+      if (state is "saved")
         res.simpleJSON(201, "Thank you for your Track B Submission!")
       else if (state is "invalid")
         res.simpleJSON(422, "You will never get on the ship's manifest with a submission like that!")
-      else 
+      else
         res.simpleJSON(422, "How's about picking an available timeslot?")
     req.addListener("data", (chunk) -> data += chunk )
     req.addListener("end", () -> schedule(data, callback))
-    
+
 }
 
 
