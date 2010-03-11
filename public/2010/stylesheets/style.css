@@ -116,9 +116,10 @@ a img{border:0;}
 .timeslot { padding: 8px; border-bottom: 1px solid #333;}
 
 
+#list { margin-bottom: 12px; background: black;}
+#list a { text-decoration:none;}
+.sponsor { text-align: left; margin-bottom:12px;}
 
-.sponsor { text-align: left;}
-
-.sponsor .logo { float:left; width: 200px; text-align:center; padding: 8px 0px;}
-.sponsor .desc { margin-left:200px; background: black;}
+.sponsor .logo { float:left; width: 210px; text-align:center; padding: 8px 0px;}
+.sponsor .desc { margin-left:220px; background: black;}
 .sponsor .desc h3 { margin:0px;}
