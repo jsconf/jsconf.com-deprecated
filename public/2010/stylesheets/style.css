@@ -26,7 +26,9 @@ textarea{width:100%;height:150px;margin:8px 0;}
 #home h1{display:none;}
 #videos{background:transparent url(http://static.jsconf.us/video.jpg) 0 0 no-repeat;}
 #register{background:transparent url(http://static.jsconf.us/registration.jpg) 0 0 no-repeat;}
-#sponsors{background:transparent url(http://static.jsconf.us/sponsors.jpg) 0 0 no-repeat;}
+#sponsors .inner{background:transparent url(../images/sponsors.jpg) 0 0 no-repeat;}
+#sponsors .inner { padding-bottom: 20px;}
+#sponsors.block { height: auto; background:transparent url(../images/sponsor_repeat.jpg) 0 0 repeat-y;}
 #about{background:transparent url(http://static.jsconf.us/about.jpg) 0 0 no-repeat;}
 #speakers{background:transparent url(http://static.jsconf.us/speakers.jpg) 0 0 no-repeat;}
 #venue{background:transparent url(http://static.jsconf.us/venue.jpg) 0 0 no-repeat;}
