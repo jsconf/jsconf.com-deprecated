@@ -123,3 +123,31 @@ a img{border:0;}
 .sponsor .logo { float:left; width: 210px; text-align:center; padding: 8px 0px;}
 .sponsor .desc { margin-left:220px; background: black;}
 .sponsor .desc h3 { margin:0px;}
+
+
+#schedulebg { background: white; color:black; padding:8px;}
+#schedulebg table { width:100%;}
+#schedulebg table td.day { text-align:center; background:black; color:white; font-weight:bold; }
+#schedulebg table td, #schedulebg table th { padding:4px; vertical-align: top;}
+#schedulebg table td.time { width:80px; font-weight:bold;}
+#schedulebg table h4 { margin: 0px;}
+
+
+#schedulebg .len15 { height: 40px; border-bottom: 1px solid #eee;}
+#schedulebg .len30  { height: 80px; border-bottom: 1px solid #eee;}
+#schedulebg .len45  { height: 120px; border-bottom: 1px solid #eee;}
+
+#schedulebg table table td { padding:0px;}
+
+.bb td { border-bottom: 1px solid #eee;}
+#schedulebg .len15 td { height: 40px; border-bottom: 1px solid #eee;}
+#schedulebg .len30 td  { height: 80px; border-bottom: 1px solid #eee;}
+#schedulebg .len45 td  { height: 120px; border-bottom: 1px solid #eee;}
+#schedulebg table div.name { font-weight:bold;}
+#schedulebg table div.title { font-size: 12px;}
+
+#schedulebg table table .track_header td { background: black; font-weight:bold; color:white; padding:4px;}
+#schedulebg table table td { background:#eee;}
+#schedulebg table table table td { background:white;}
+
+.w { padding: 4px 8px 0px 8px}
