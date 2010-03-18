@@ -1,5 +1,15 @@
 // java -jar compiler.jar --js public/2010/javascripts/app.full.js --js_output_file public/2010/javascripts/app.min.js --externs ext.js
 
+
+
+
+
+
+
+
+
+
+
 /*
  * jQuery Form Plugin
  * version: 2.36 (07-NOV-2009)
@@ -1156,8 +1166,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
     var targeted_id = 'home';
     var article_template = "<div class='article'><h3><a href='{{link}}'>{{title}}</a></h3><div class='dateline'>{{date}}</div><div class='body'>{{{body}}}</div>";
     var video_template = "<a href='{{link}}' class='video'><div class='img'><img height='90' width='120' src='{{flv}}.jpg'/></div><div class='title'>{{title}}</div></a>";
-    var trackb_session_template = "<div id='{{part}}-{{idx}}' class='timeslot'><div class='time'>{{timeslot}}</div><div class='content'>{{{content}}}</div></div>";
-    var trackb_inner_template = "<div class='title'>{{title}}</div><div class='name'>{{name}}</div><div class='description'>{{description}}</div>";
+    var trackb_inner_template = "<div class='tb'><div class='name'>{{name}}</div><div class='title'>{{title}}</div><div class='description'>{{description}}</div></div>";
     var panel_width = 870;
     var left_edge = function() {
         return jQuery("#navigation").offset().left;
@@ -1192,57 +1201,70 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
         jQuery("#viewpane").css(new_coords);
       }
     };
+
+    var activate_unicorns = function() {
+        jQuery(".trackbreg").click(function(e) { 
+            e.preventDefault(); e.stopPropagation();
+            var id = jQuery(this).attr("href").split("_");
+            var day = id[0].replace("#", "");
+            var slot = id[1];
+            var form =  "<h3>Registering For Track B</h3>"
+                + "<form class='regform' method='POST' action='/app/schedule'>"
+                + "<input type='hidden' name='day' value='"+day+"'/><input type='hidden' name='time' value='"+slot+"'/>"
+                + "<div class='field clearfix'><label for='name'>Name</label> <input type='text' id='name' name='name' value=''/></div>"
+                + "<div class='field clearfix'><label for='email'>Email</label> <input type='text' id='email' name='email' value=''/></div>"
+                + "<div class='field clearfix'><label for='title'>Talk Title</label> <input type='text' id='title' name='title' value=''/></div>"
+                + "<div class='text'><label for='description'>Talk Description</label> <textarea id='description' name='description'></textarea></div>"
+                + "<div class='terms'><input type='checkbox' name='av_confirm' value='1' id='av_confirm'/> <label for='av_confirm'>I allow JSConf to record and present my Track B talk on the Internet and to do everything possible to make me famous!</label></div>"
+                + "<p>Please note, we reserve the right to remove any submission if deemed inappropriate or hostile. <b>You must already be attending JSConf to speak on Track B.</b></p>"
+                + "<div id='spinner' style='display:none'><img src='/facebox/loading.gif' alt='just hold on a second'/> The ship's monkey is evaluating your offer.</div>"
+                + "<div id='subm'><input type='submit' value='Put Me In Captain'/> or <a href='#cancel' class='cancel'>Get me off this boat</a></div></form>";
+            jQuery.facebox(form);
+            jQuery("#facebox .footer").remove();
+            jQuery("form .cancel").click(function(e) { 
+                e.preventDefault(); e.stopPropagation();
+                jQuery(document).trigger("close.facebox");
+            });
+            jQuery("form.regform").submit(function() {
+                jQuery("#spinner").show();
+                jQuery("#subm").hide();
+                jQuery(this).ajaxSubmit({
+                    dataType:  'json', 
+                    success: function (txt) {
+                        jQuery(document).trigger("close.facebox");
+                        jQuery.facebox("<h3>Successfully Submitted</h3><p>"+txt+"</p>");
+                        jQuery.getJSON("/app/schedule", function(data, textStatus) {
+                            render_trackb_day("sat", data);
+                            render_trackb_day("sun", data);
+                            activate_unicorns();
+                        });
+                        
+                    },
+                    error: function (resp) {
+                        jQuery("#facebox .error").remove();
+                        jQuery("#subm").show();
+                        jQuery("#spinner").hide();
+                        console.log(resp);
+                        jQuery("#facebox h3").after("<div class='error'>"+resp.responseText.replace('"', "")+"</div>");
+                    }
+                });
+                return false;
+            });
+        });
+    };
     
     var show_bio = function(e) { 
       e.preventDefault(); e.stopPropagation(); 
       $(".bio").hide();
       $($(this).attr("href")).show();
     };
-    
-    var saturday_timeslots = [
-      "9:00AM - 9:30AM",
-      "9:30AM - 10:00AM",
-      "10:00AM - 10:30AM",
-      "10:30AM - 11:00AM",
-      "11:00AM - 11:30AM",
-      "11:30AM - 12:00PM",
-      "12:00PM - 12:30PM",
-      "1:30PM - 2:00PM",
-      "2:00PM - 2:30PM",
-      "2:30PM - 3:00PM",
-      "3:00PM - 3:30PM",
-      "3:30PM - 4:00PM",
-      "4:00PM - 4:30PM",
-      "4:30PM - 5:00PM"
-    ];
-    
-    var sunday_timeslots = [
-      "9:00AM - 9:30AM",
-      "9:30AM - 10:00AM",
-      "10:00AM - 10:30AM",
-      "10:30AM - 11:00AM",
-      "11:00AM - 11:30AM",
-      "11:30AM - 12:00PM",
-      "12:00PM - 12:30PM",
-      "1:30PM - 2:00PM",
-      "2:00PM - 2:30PM",
-      "2:30PM - 3:00PM",
-      "3:00PM - 3:30PM",
-      "3:30PM - 4:00PM",
-      "4:00PM - 4:30PM",
-      "4:30PM - 5:00PM",
-      "5:00PM - 5:30PM",
-      "5:30PM - 6:00PM",
-      "6:00PM - 6:30PM",
-      "6:30PM - 7:00PM"
-    ];
-    
-    var render_trackb_day = function(day, timeslots, data) {
+        
+    var render_trackb_day = function(day, data) {
       var sched = data[day];
       jQuery.each(sched, function(index, value) {
-        var ts = timeslots[index];
-        var content = (value ? Mustache.to_html(trackb_inner_template, value) : "<a href='#register' class='register' ref='"+day+"_"+index+"'>I want this slot!</a>");
-        jQuery("#"+day).append( Mustache.to_html(trackb_session_template, {"content": content, "timeslot": ts, "part":day, "idx": index}));
+          if (value) {
+              jQuery("#"+day+"_"+index).html(Mustache.to_html(trackb_inner_template, value));
+          }
       });
     }
     
@@ -1277,11 +1299,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
       },
       init: function() {
         jQuery("#speaker_line a").click(show_bio);
-        jQuery('#regform').ajaxForm({complete: function(responseText, statusText) {
-          jQuery("#submission").val(responseText.responseText);
-        }});
         jQuery("#home").each(function() {
-
           jsconf.load_blog(2, function(result) {
             jQuery.each(result.feed.entries, function(){
               jQuery("#top_article").append(Mustache.to_html(article_template, {title: this.title, body: this.contentSnippet.replace("Permalink", ""), date: Date.parse(this.publishedDate).toString('dddd, MMMM d, yyyy'), link: this.link }));
@@ -1309,12 +1327,15 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
           });
         }
         
-        if (jQuery("#trackb").length == 1)    {
+        if (jQuery("#schedule").length == 1)    {
           // Load Track B Data
           jQuery.getJSON("/app/schedule", function(data, textStatus) {
-            render_trackb_day("sat", saturday_timeslots, data);
-            render_trackb_day("sun", sunday_timeslots,  data);
+            render_trackb_day("sat", data);
+            render_trackb_day("sun", data);
+            activate_unicorns();
           });
+
+            
           
         }
         

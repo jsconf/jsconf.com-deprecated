@@ -152,4 +152,35 @@ a img{border:0;}
 #schedulebg table table td { background:#eee;}
 #schedulebg table table table td { background:white;}
 
-.w { padding: 4px 8px 0px 8px}
+.w, .tb { padding: 4px 8px 0px 8px}
+
+#schedulebg a { color: #66402c; }
+
+.regform .field { margin-bottom:3px; }
+.regform label { font-weight: bold;}
+.regform .field label {width: 75px; font-weight: bold; display:block; float:left; padding:8px 0px; font-size:12px;}
+.regform .field input { margin-left:90; width:200px; font-size: 12px; }
+.regform #spinner, .regform #spinner img { vertical-align: middle; }
+
+.regform .text { padding-top: 8px }    
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+#facebox .error { 
+    border: 3px solid red;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 8px;
+    text-align:center;
+    margin: 12px;
+}
