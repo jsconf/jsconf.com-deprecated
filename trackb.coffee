@@ -5,7 +5,7 @@ jsconf: couchdb.db("jsconf")
 
 TRACK_NAME: "TRACKB"
 # day: num_of_timeslots
-DAYS: { "sat": 14, "sun": 18 }
+DAYS: { "sat": 14, "sun": 16 }
 
 EMAIL_ADDRESSES: []
 
@@ -32,9 +32,13 @@ opts: {
 test_doc: jsconf.openDoc(TRACK_NAME, opts)
 
 
+clean: (val) ->
+  val.replace(/[^a-zA-Z0-9\(\)@ \.\-\n]/g, "")
+
 # Handle 404s with as little information as possible
 NOT_FOUND: "END OF LINE."
 notFound: (req,res) ->
+  puts req.url
   res.writeHead 404, [ ["Content-Type", "text/plain"], ["Content-Length", NOT_FOUND.length] ]
   res.write NOT_FOUND
   res.close()
@@ -65,16 +69,18 @@ schedule: (data, callback) ->
   parts: data.split("&")
   for i in parts
     part: i.split("=")
-    str: new String(part[0])
-    puts str+": " + part[1]
-    params[str]: part[1] if part.length is 2
+    if part.length is 2
+      str: decodeURIComponent(new String(part[0])).replace(/\+/g,  " ")
+      val: decodeURIComponent(new String(part[1])).replace(/\+/g,  " ")
+      puts str+": " + part[1]
+      params[str]: val
 
   #extra request data
-  name:  params["name"] || ""
-  title:  params["title"] || ""
-  description: params["description"] || ""
-  email: params["email"] || ""
-  av_confirm: params["av_confirm"] || ""
+  name:  clean(params["name"] || "")
+  title:  clean(params["title"] || "")
+  description: clean(params["description"] || "")
+  email: clean(params["email"] || "")
+  av_confirm: clean(params["av_confirm"] || "")
 
   # identify the requested timeslot
   day: null
@@ -84,17 +90,24 @@ schedule: (data, callback) ->
     timeslot: params["time"]
   if timeslot? and valid_params(name, title, description, email, av_confirm)
     day: params["day"]
-    jsconf.openDoc("TRACKB", {
-      success: (doc) ->
-        if not doc[day][timeslot]?
-          doc[day][timeslot]: {"name": name, "title": title, "description": description, "email": email}
-          jsconf.saveDoc(doc)
-          puts "Result: Scheduled"
-          callback("saved")
-        else
-          puts "Result: Collision"
-          callback("taken")
+    sched_req: {"_id": "TRACKB_"+day+"_"+timeslot, "name": name, "title": title, "description": description, "email": email}
 
+    # Save doc first to ensure no race conditions.
+    jsconf.saveDoc(sched_req, {
+      success: (doc) ->
+        jsconf.openDoc("TRACKB", {
+          success: (doc) ->
+            doc[day][timeslot]: {"name": name, "title": title, "description": description, "email": email}
+            jsconf.saveDoc(doc)
+            puts "Result: Scheduled"
+            callback("saved")
+          error: (result) ->
+            puts "Result: Collision"
+            callback("taken")
+        })
+      error: (result) ->
+        puts "Result: Collision"
+        callback("taken")
     })
   else
     puts "Result: Mutiny"
