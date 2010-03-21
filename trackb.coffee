@@ -7,6 +7,15 @@ TRACK_NAME: "TRACKB"
 # day: num_of_timeslots
 DAYS: { "sat": 14, "sun": 18 }
 
+EMAIL_ADDRESSES: []
+
+#load valid email addresses
+
+jsconf.openDoc("ATTENDEES", {
+  success: (doc) ->
+    EMAIL_ADDRESSES.push(addr) for addr in doc.emails
+  })
+
 
 # Test for document existence and setup if not already setup.
 opts: {
@@ -44,7 +53,7 @@ valid_params: (name, title, description, email, av_confirm) ->
   return false if isblank(name) or name.length < 2
   return false if isblank(title) or title.length < 2
   return false if isblank(description) or description.length < 2
-  return false if isblank(email) or not email.match(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/)
+  return false if isblank(email) or not email.match(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/) or EMAIL_ADDRESSES.indexOf(email) < 0
   return false unless av_confirm is "1"
   return true
 
