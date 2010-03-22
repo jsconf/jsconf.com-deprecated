@@ -76,11 +76,7 @@ TRACK_B_SUNDAY = [
 	{"begin": "5:00 PM", "end": "6:30 PM"}
 ]
 
-# Track B injections
-TRACK_B_SATURDAY_BREAKS = [{"position": 6, "obj": {"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's YayQuery Lunch Special", "type":"break"}},{"position": 9, "obj": {"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type":"break"}}]
-TRACK_B_SUNDAY_BREAKS = [{"position": 6, "obj": {"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's CommonJS Lunch Forum", "type":"break"}},{"position": 12, "obj": {"begin": "4:30 PM", "end": "5:00 PM", "name": "Snack Break", "type":"break"}}]
 
-TRACK_NAME: "TRACKB"
 # day: num_of_timeslots
 DAYS: { "sat": TRACK_B_SATURDAY.length, "sun": TRACK_B_SUNDAY.length }
 
@@ -202,6 +198,22 @@ schedule: (data, callback) ->
 
 getMap: {
   "/app/schedule": (req, res) ->
+    jsconf.openDoc("SCHEDULE", {
+      success: (body) -> 
+        trackb: body["TRACKB"]
+        sat: trackb["sat"]
+        sun: trackb["sun"]
+        
+        sat: sat.slice(0, 6)+ [{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's YayQuery Lunch Special", "type":"break"}]+sat.slice(6, 9)+[{"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type":"break"}]+sat.slice(9, -1)
+        sun: sun.slice(0, 6)+ [{"begin": "12:30 PM", "end": "1:30 PM", "name": "CommonJS Lunch Forum", "type":"break"}]+sun.slice(6, 12)+[{"begin": "4:30 PM", "end": "5:00 PM", "name": "Snack Break", "type":"break"}]+sat.slice(12, -1)
+        
+        
+        res.simpleJSON(200, body)
+    })
+}
+
+getMap: {
+  "/app/schedule?raw=1": (req, res) ->
     jsconf.openDoc("SCHEDULE", {
       success: (body) -> 
         res.simpleJSON(200, body)
