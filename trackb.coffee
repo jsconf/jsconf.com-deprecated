@@ -24,16 +24,18 @@ TRACK_A = {
   "sun": [
   	{"begin": "9:00 AM", "end": "9:45 AM", "name": "Charles Jolley", "title": "SproutCore 1.1: Even Faster HTML5 Apps (in less time)"},
   	{"begin": "9:45 AM", "end": "10:30 AM", "name": "Dmitry Baranovskiy", "title": "Raphaël the Great"},
-  	{"begin": "10:30 AM", "end": "11:00 AM", "name": "ScurvyConf Master", "title": "The crowd favorite from ScurvyConf"},
+  	{"begin": "10:30 AM", "end": "11:00 AM", "name": "CommonJS Panel Discussion", "title": "JavaScript Outside of the Browser - Where it is and where it's going!"},
   	{"begin": "11:00 AM", "end": "11:45 AM", "name": "Makinde Adeagbo", "title": "Primer: Facebook's 2k of JavaScript to power (almost) all interactions"},
   	{"begin": "11:45 AM", "end": "12:30 PM", "name": "John-David Dalton", "title": "All you can leet - Coding for performance, CSS engines, and sandboxed natives"},
-  	{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's CommonJS Lunch Forum", "type":"break"},
+  	{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's Red Plate Lunch Special", "type":"break", "title":"Relax, Recover, Refuel!"},
     {"begin": "1:30 PM", "end": "2:15 PM", "name": "Felix Geisendoerfer", "title": "Dirty NoSQL"},
     {"begin": "2:15 PM", "end": "2:45 PM", "name": "Jupiter Consulting", "title": "Enterprise JavaScript"},
-    {"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type": "break"},
-    {"begin": "3:15 PM", "end": "4:00 PM", "name": "Aaron Newton", "title": "Programming To Patterns"},
-    {"begin": "4:00 PM", "end": "4:30 PM", "name": "Tom Hughes-Croucher", "title": "Piratin' the YQL way"},
-    {"begin": "4:30 PM", "end": "5:15 PM", "name": "Aaron Quint", "title": "The front-end takeover or how to use Sammy.js to stop writing server side code"}
+    {"begin": "2:45 PM", "end": "3:30 PM", "name": "Steve Souders", "title": "The Best Of Steve"},
+  	{"begin": "3:30 PM", "end": "4:15 PM", "name": "ScurvyConf Master", "title": "The crowd favorite from ScurvyConf"},
+    {"begin": "4:15 PM", "end": "4:30 PM", "name": "Snack Break", "type": "break", "title": "Activating Caffeine Powers!"},
+    {"begin": "4:30 PM", "end": "5:15 PM", "name": "Billy Hoffman", "title": "JavaScript's Evil Side"},
+    {"begin": "5:15 PM", "end": "6:00 PM", "name": "Brendan Eich", "title": "An Introduction to JavaScript"},
+    {"begin": "6:00 PM", "end": "6:45 PM", "name": "Alex Russell", "title": "Google Chrome Frame"}
   ]
 }
 
