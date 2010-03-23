@@ -238,7 +238,7 @@ http.createServer( (req,res) ->
 
   res.simpleJSON: (code, obj) ->
     body: JSON.stringify(obj)
-    res.writeHead code, [ ["Content-Type", "text/json"], ["Content-Length", body.length] ]
+    res.writeHead code, [ ["Content-Type", "application/json"], ["Content-Length", body.length] ]
     res.write(body)
     res.close()
   handler req, res
