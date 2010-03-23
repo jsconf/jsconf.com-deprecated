@@ -31,7 +31,7 @@ TRACK_A = {
     {"begin": "1:30 PM", "end": "2:15 PM", "name": "Felix Geisendoerfer", "title": "Dirty NoSQL"},
     {"begin": "2:15 PM", "end": "2:45 PM", "name": "Jupiter Consulting", "title": "Enterprise JavaScript"},
     {"begin": "2:45 PM", "end": "3:30 PM", "name": "Steve Souders", "title": "The Best Of Steve"},
-  	{"begin": "3:30 PM", "end": "4:15 PM", "name": "ScurvyConf Master", "title": "The crowd favorite from ScurvyConf"},
+    {"begin": "3:30 PM", "end": "4:15 PM", "name": "ScurvyConf Master", "title": "The crowd favorite from ScurvyConf"},
     {"begin": "4:15 PM", "end": "4:30 PM", "name": "Snack Break", "type": "break", "title": "Activating Caffeine Powers!"},
     {"begin": "4:30 PM", "end": "5:15 PM", "name": "Billy Hoffman", "title": "JavaScript's Evil Side"},
     {"begin": "5:15 PM", "end": "6:00 PM", "name": "Brendan Eich", "title": "An Introduction to JavaScript"},
@@ -218,13 +218,13 @@ postMap: {
   "/app/schedule": (req, res) ->
     data: ""
     callback: (state, opts)->
-      res.simpleJSON(422, {msg: "Sign Up Begins April 1, 2010", data: opts});
-      # if (state is "saved")
-      #   res.simpleJSON(201, {msg: "Thank you for your Track B Submission!" } )
-      # else if (state is "invalid")
-      #   res.simpleJSON(422, {msg: "You will never get on the ship's manifest with a submission like that!", data: opts} )
-      # else
-      #   res.simpleJSON(422, {msg: "How's about picking an available timeslot?" } )
+      res.simpleJSON(422, {msg: "Sign Up Begins April 1, 2010", data: opts})
+    # if (state is "saved")
+    #   res.simpleJSON(201, {msg: "Thank you for your Track B Submission!" } )
+    # else if (state is "invalid")
+    #   res.simpleJSON(422, {msg: "You will never get on the ship's manifest with a submission like that!", data: opts} )
+    # else
+    #   res.simpleJSON(422, {msg: "How's about picking an available timeslot?" } )
     req.addListener("data", (chunk) -> data += chunk )
     req.addListener("end", () -> callback()) # schedule(data, callback))
 
