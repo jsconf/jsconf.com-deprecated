@@ -7,34 +7,34 @@ jsconf: couchdb.db("jsconf")
 
 TRACK_A = {
   "sat": [
-    	{"begin": "9:00 AM", "end": "9:45 AM", "name": "Douglas Crockford", "title": "Really, JavaScript?"},
-    	{"begin": "9:45 AM", "end": "10:00 AM", "name": "Michael Erlewine", "title": "Mozilla's JetPack"},
-    	{"begin": "10:00 AM", "end": "10:45 AM", "name": "Ben Galbraith, Dion Almaer, Matt MacNulty", "title": "Solving Device Fragmentation: How Do You Support 12,320 Different Mobile Platforms?"},
-    	{"begin": "10:45 AM", "end": "11:00 AM", "name": "Break", "type": "break"},
-    	{"begin": "11:00 AM", "end": "11:45 AM", "name": "Francisco Tolmasky", "title": "Socratic: Documentation Done Right"},
-    	{"begin": "11:45 AM", "end": "12:30 PM", "name": "Jenn Lukas", "title": "JavaScript and Web Standards Sitting in a Tree"},
-    	{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's YayQuery Lunch Special", "type":"break"}}
-      {"begin": "1:30 PM", "end": "2:15 PM", "name": "Ryan Dahl", "title": "Less is More in Node.js"},
-      {"begin": "2:15 PM", "end": "3:00 PM", "name": "Tobias Schneider", "title": "Flash is dead, long live Flash!"},
-      {"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type": "break"},
-      {"begin": "3:15 PM", "end": "4:00 PM", "name": "Aaron Newton", "title": "Programming To Patterns"},
-      {"begin": "4:00 PM", "end": "4:30 PM", "name": "Tom Hughes-Croucher", "title": "Piratin' the YQL way"},
-      {"begin": "4:30 PM", "end": "5:15 PM", "name": "Aaron Quint", "title": "The front-end takeover or how to use Sammy.js to stop writing server side code"}
-    ],
+  	{"begin": "9:00 AM", "end": "9:45 AM", "name": "Douglas Crockford", "title": "Really, JavaScript?"},
+  	{"begin": "9:45 AM", "end": "10:00 AM", "name": "Michael Erlewine", "title": "Mozilla's JetPack"},
+  	{"begin": "10:00 AM", "end": "10:45 AM", "name": "Ben Galbraith, Dion Almaer, Matt MacNulty", "title": "Solving Device Fragmentation: How Do You Support 12,320 Different Mobile Platforms?"},
+  	{"begin": "10:45 AM", "end": "11:00 AM", "name": "Break", "type": "break"},
+  	{"begin": "11:00 AM", "end": "11:45 AM", "name": "Francisco Tolmasky", "title": "Socratic: Documentation Done Right"},
+  	{"begin": "11:45 AM", "end": "12:30 PM", "name": "Jenn Lukas", "title": "JavaScript and Web Standards Sitting in a Tree"},
+  	{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's YayQuery Lunch Special", "type":"break"},
+    {"begin": "1:30 PM", "end": "2:15 PM", "name": "Ryan Dahl", "title": "Less is More in Node.js"},
+    {"begin": "2:15 PM", "end": "3:00 PM", "name": "Tobias Schneider", "title": "Flash is dead, long live Flash!"},
+    {"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type": "break"},
+    {"begin": "3:15 PM", "end": "4:00 PM", "name": "Aaron Newton", "title": "Programming To Patterns"},
+    {"begin": "4:00 PM", "end": "4:30 PM", "name": "Tom Hughes-Croucher", "title": "Piratin' the YQL way"},
+    {"begin": "4:30 PM", "end": "5:15 PM", "name": "Aaron Quint", "title": "The front-end takeover or how to use Sammy.js to stop writing server side code"}
+  ],
   "sun": [
-    	{"begin": "9:00 AM", "end": "9:45 AM", "name": "Charles Jolley", "title": "SproutCore 1.1: Even Faster HTML5 Apps (in less time)"},
-    	{"begin": "9:45 AM", "end": "10:30 AM", "name": "Dmitry Baranovskiy", "title": "Raphaël the Great"},
-    	{"begin": "10:30 AM", "end": "11:00 AM", "name": "ScurvyConf Master", "title": "The crowd favorite from ScurvyConf"},
-    	{"begin": "11:00 AM", "end": "11:45 AM", "name": "Makinde Adeagbo", "title": "Primer: Facebook's 2k of JavaScript to power (almost) all interactions"},
-    	{"begin": "11:45 AM", "end": "12:30 PM", "name": "John-David Dalton", "title": "All you can leet - Coding for performance, CSS engines, and sandboxed natives"},
-    	{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's CommonJS Lunch Forum", "type":"break"}}
-      {"begin": "1:30 PM", "end": "2:15 PM", "name": "Felix Geisendoerfer", "title": "Dirty NoSQL"},
-      {"begin": "2:15 PM", "end": "2:45 PM", "name": "Jupiter Consulting", "title": "Enterprise JavaScript"},
-      {"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type": "break"},
-      {"begin": "3:15 PM", "end": "4:00 PM", "name": "Aaron Newton", "title": "Programming To Patterns"},
-      {"begin": "4:00 PM", "end": "4:30 PM", "name": "Tom Hughes-Croucher", "title": "Piratin' the YQL way"},
-      {"begin": "4:30 PM", "end": "5:15 PM", "name": "Aaron Quint", "title": "The front-end takeover or how to use Sammy.js to stop writing server side code"}
-    ]
+  	{"begin": "9:00 AM", "end": "9:45 AM", "name": "Charles Jolley", "title": "SproutCore 1.1: Even Faster HTML5 Apps (in less time)"},
+  	{"begin": "9:45 AM", "end": "10:30 AM", "name": "Dmitry Baranovskiy", "title": "Raphaël the Great"},
+  	{"begin": "10:30 AM", "end": "11:00 AM", "name": "ScurvyConf Master", "title": "The crowd favorite from ScurvyConf"},
+  	{"begin": "11:00 AM", "end": "11:45 AM", "name": "Makinde Adeagbo", "title": "Primer: Facebook's 2k of JavaScript to power (almost) all interactions"},
+  	{"begin": "11:45 AM", "end": "12:30 PM", "name": "John-David Dalton", "title": "All you can leet - Coding for performance, CSS engines, and sandboxed natives"},
+  	{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's CommonJS Lunch Forum", "type":"break"},
+    {"begin": "1:30 PM", "end": "2:15 PM", "name": "Felix Geisendoerfer", "title": "Dirty NoSQL"},
+    {"begin": "2:15 PM", "end": "2:45 PM", "name": "Jupiter Consulting", "title": "Enterprise JavaScript"},
+    {"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type": "break"},
+    {"begin": "3:15 PM", "end": "4:00 PM", "name": "Aaron Newton", "title": "Programming To Patterns"},
+    {"begin": "4:00 PM", "end": "4:30 PM", "name": "Tom Hughes-Croucher", "title": "Piratin' the YQL way"},
+    {"begin": "4:30 PM", "end": "5:15 PM", "name": "Aaron Quint", "title": "The front-end takeover or how to use Sammy.js to stop writing server side code"}
+  ]
 }
 
 
@@ -95,8 +95,8 @@ opts: {
   error: (body) ->
     doc: {"_id": "SCHEDULE"}
     trackb: {}
-    doc["TRACK_B"]: TRACK_A
-    doc["TRACK_A"]: {"sat": TRACK_B_SATURDAY, "sun": TRACK_B_SUNDAY} 
+    doc["TRACK_A"]: TRACK_A
+    doc["TRACK_B"]: {"sat": TRACK_B_SATURDAY, "sun": TRACK_B_SUNDAY} 
     jsconf.saveDoc(doc)
 }
 test_doc: jsconf.openDoc("SCHEDULE", opts)
@@ -108,7 +108,6 @@ clean: (val) ->
 # Handle 404s with as little information as possible
 NOT_FOUND: "END OF LINE."
 notFound: (req,res) ->
-  puts req.url
   res.writeHead 404, [ ["Content-Type", "text/plain"], ["Content-Length", NOT_FOUND.length] ]
   res.write NOT_FOUND
   res.close()
@@ -131,6 +130,7 @@ valid_params: (name, title, description, email, av_confirm) ->
   errors.push("Email must be the same as what you provided when registering.")if isblank(email) or not email.match(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/) or EMAIL_ADDRESSES.indexOf(email) < 0
   errors.push("You have to let us make you famous.") unless av_confirm is "1"
   return errors
+
 
 
 
@@ -162,29 +162,31 @@ schedule: (data, callback) ->
   timeslot: null
   if slots? && (0 <= params["time"] < (slots))
     timeslot: params["time"]
+    
   errors: valid_params(name, title, description, email, av_confirm)
   if timeslot? and errors.length == 0
     day: params["day"]
     sched_req: {"_id": "TRACKB_"+day+"_"+timeslot, "name": name, "title": title, "description": description, "email": email}
 
     # Save doc first to ensure no race conditions.
+    puts day
+    merge_doc: (scheduled_doc) ->
+      jsconf.openDoc("SCHEDULE", { 
+        success: (doc) ->
+          idx: parseInt(timeslot)
+          obj: doc["TRACK_B"][day][idx] 
+          obj["name"]: name
+          obj["description"]: description
+          obj["title"]: title
+          doc["TRACK_B"][day][idx]: obj
+          jsconf.saveDoc(doc)
+          puts "Result: Scheduled"
+          callback("saved")
+      })
+    
     jsconf.saveDoc(sched_req, {
-      success: (saved_doc) ->
-        jsconf.openDoc("SCHEDULE", {
-          success: (doc) ->
-      			obj: doc["TRACK_B"][day][timeslot] 
-      			obj["name"]: name
-      			obj["description"]: description
-      			obj["title"]: title
-      			doc[day][timeslot]: obj
-            jsconf.saveDoc(doc)
-            puts "Result: Scheduled"
-            callback("saved")
-          error: (result) ->
-            puts "Result: Collision"
-            callback("taken")
-        })
-      error: (result) ->
+      success: merge_doc
+      error: (result) -> 
         puts "Result: Collision"
         callback("taken")
     })
@@ -192,30 +194,20 @@ schedule: (data, callback) ->
     puts "Result: Mutiny"
     callback("invalid", errors)
 
-
-
-
-
 getMap: {
   "/app/schedule": (req, res) ->
     jsconf.openDoc("SCHEDULE", {
       success: (body) -> 
-        trackb: body["TRACKB"]
+        trackb: body["TRACK_B"]
         sat: trackb["sat"]
         sun: trackb["sun"]
         
-        sat: sat.slice(0, 6)+ [{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's YayQuery Lunch Special", "type":"break"}]+sat.slice(6, 9)+[{"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type":"break"}]+sat.slice(9, -1)
-        sun: sun.slice(0, 6)+ [{"begin": "12:30 PM", "end": "1:30 PM", "name": "CommonJS Lunch Forum", "type":"break"}]+sun.slice(6, 12)+[{"begin": "4:30 PM", "end": "5:00 PM", "name": "Snack Break", "type":"break"}]+sat.slice(12, -1)
+        sat: sat.slice(0, 6).concat([{"begin": "12:30 PM", "end": "1:30 PM", "name": "Mozilla's YayQuery Lunch Spectacular", "type":"break"}]).concat(sat.slice(6, 9)).concat([{"begin": "3:00 PM", "end": "3:15 PM", "name": "Snack Break", "type":"break"}]).concat(sat.slice(9, -1))
+        sun: sat.slice(0, 6).concat([{"begin": "12:30 PM", "end": "1:30 PM", "name": "CommonJS Lunch Forum", "type":"break"}]).concat(sat.slice(6, 12)).concat([{"begin": "4:30 PM", "end": "5:00 PM", "name": "Snack Break", "type":"break"}]).concat(sat.slice(12, -1))
         
+        trackb["sat"]: sat
+        trackb["sun"]: sun
         
-        res.simpleJSON(200, body)
-    })
-}
-
-getMap: {
-  "/app/schedule?raw=1": (req, res) ->
-    jsconf.openDoc("SCHEDULE", {
-      success: (body) -> 
         res.simpleJSON(200, body)
     })
 }

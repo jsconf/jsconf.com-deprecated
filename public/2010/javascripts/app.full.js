@@ -1234,8 +1234,8 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
                         jQuery(document).trigger("close.facebox");
                         jQuery.facebox("<h3>Successfully Submitted</h3><p>"+txt+"</p>");
                         jQuery.getJSON("/app/schedule", function(data, textStatus) {
-                            render_trackb_day("sat", data);
-                            render_trackb_day("sun", data);
+                            render_trackb_day("sat", data["TRACK_B"]);
+                            render_trackb_day("sun", data["TRACK_B"]);
                             activate_unicorns();
                         });
                         
@@ -1244,7 +1244,6 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
                         jQuery("#facebox .error").remove();
                         jQuery("#subm").show();
                         jQuery("#spinner").hide();
-                        console.log(resp);
                         jQuery("#facebox h3").after("<div class='error'>"+resp.responseText.replace('"', "")+"</div>");
                     }
                 });
@@ -1262,9 +1261,7 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
     var render_trackb_day = function(day, data) {
       var sched = data[day];
       jQuery.each(sched, function(index, value) {
-          if (value) {
-              jQuery("#"+day+"_"+index).html(Mustache.to_html(trackb_inner_template, value));
-          }
+        if (value.name && value.type !== "break") { jQuery("#"+day+"_"+index).html(Mustache.to_html(trackb_inner_template, value));    }
       });
     }
     
@@ -1330,15 +1327,11 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
         if (jQuery("#schedule").length == 1)    {
           // Load Track B Data
           jQuery.getJSON("/app/schedule", function(data, textStatus) {
-            render_trackb_day("sat", data);
-            render_trackb_day("sun", data);
+            render_trackb_day("sat", data["TRACK_B"]);
+            render_trackb_day("sun", data["TRACK_B"]);
             activate_unicorns();
           });
-
-            
-          
         }
-        
         jsconf.load_tweets();
       }
     }
