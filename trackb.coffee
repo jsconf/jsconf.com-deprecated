@@ -9,7 +9,7 @@ TRACK_A = {
   "sat": [
   	{"begin": "9:00 AM", "end": "9:45 AM", "name": "Douglas Crockford", "title": "Really, JavaScript?"},
   	{"begin": "9:45 AM", "end": "10:00 AM", "name": "Michael Erlewine", "title": "Mozilla's JetPack"},
-  	{"begin": "10:00 AM", "end": "10:45 AM", "name": "Ben Galbraith, Dion Almaer, Matt MacNulty", "title": "Solving Device Fragmentation: How Do You Support 12,320 Different Mobile Platforms?"},
+  	{"begin": "10:00 AM", "end": "10:45 AM", "name": "Ben Galbraith, Dion Almaer, Matt McNulty", "title": "Solving Device Fragmentation: How Do You Support 12,320 Different Mobile Platforms?"},
   	{"begin": "10:45 AM", "end": "11:00 AM", "name": "Break", "type": "break"},
   	{"begin": "11:00 AM", "end": "11:45 AM", "name": "Francisco Tolmasky", "title": "Socratic: Documentation Done Right"},
   	{"begin": "11:45 AM", "end": "12:30 PM", "name": "Jenn Lukas", "title": "JavaScript and Web Standards Sitting in a Tree"},
