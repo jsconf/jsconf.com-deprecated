@@ -1333,7 +1333,9 @@ return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Da
           });
         }
         jsconf.load_tweets();
+        jQuery(".chest").hover(function() { jQuery(".treasure").fadeIn(); }, function() { jQuery(".treasure").fadeOut(); });
       }
     }
+    
 })();
 google.setOnLoadCallback(jsconf.init);
