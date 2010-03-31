@@ -138,21 +138,18 @@ schedule: (data, callback) ->
       val: decodeURIComponent(part[1]).replace(/\+/g,  " ")
       puts str + ": " + part[1]
       params[str]: val
-
   #extra request data
   name:  clean(params.name || "")
   title:  clean(params.title || "")
   description: clean(params.description || "")
   email: clean(params.email || "")
   av_confirm: clean(params.av_confirm || "")
-
   # identify the requested timeslot
   day: null
   slots: DAYS[params.day]
   timeslot: null
   if slots? && (0 <= params.time < (slots))
     timeslot: params.time
-
   errors: valid_params(name, title, description, email, av_confirm)
   if timeslot? and errors.length == 0
     day: params.day
