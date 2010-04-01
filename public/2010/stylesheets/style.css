@@ -148,7 +148,8 @@ a img{border:0;}
 #schedulebg .len15 td div.tb { height: 36px; overflow-x:hidden; overflow-y:scroll;}
 #schedulebg .len30 td div.tb  { height: 76px; overflow-x:hidden; overflow-y:scroll;}
 #schedulebg .len45 td div.tb  { height: 116px; overflow-x:hidden; overflow-y:scroll;}
-
+.tb .title { border-bottom: 1px solid #eee; padding-bottom: 2px; margin-bottom: 2px;}
+.tb .description { font-size: 10px;}
 
 #schedulebg table div.name { font-weight:bold;}
 #schedulebg table div.title { font-size: 12px;}
