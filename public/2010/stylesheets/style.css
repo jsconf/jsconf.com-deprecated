@@ -20,7 +20,7 @@ textarea{width:100%;height:150px;margin:8px 0;}
 #venue.block{background:transparent url(http://static.jsconf.us/venuebg1.jpg) bottom left repeat-y; height: auto; margin-bottom: 40px;}
 #venue b { font-size:150%; color:black;}
 
-#schedule.block{background:transparent url(http://static.jsconf.us/schedulerepeat.jpg) 0 0 repeat-y; height: auto;}
+#schedule.block, #cancellation.block{background:transparent url(http://static.jsconf.us/schedulerepeat.jpg) 0 0 repeat-y; height: auto;}
 #schedule .inner {background:transparent url(http://static.jsconf.us/schedule2.jpg) 0 0 no-repeat; padding-bottom: 20px;}
 #home{background:transparent url(http://static.jsconf.us/home.jpg) 0 0 no-repeat;}
 #home h1{display:none;}
@@ -184,3 +184,7 @@ a img{border:0;}
     text-align:center;
     margin: 12px;
 }
+
+#cancellation.block .inner{padding-left:55px;padding-right:55px;}
+#cancellation.block .inner .shadow { padding: 12px; margin-bottom: 12px;}
+#cancellation.block {margin-bottom:24px; padding-bottom:12px;}
