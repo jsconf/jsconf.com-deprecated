@@ -184,10 +184,22 @@ getMap: {
     jsconf.openDoc("SCHEDULE", {
       success: (body) ->
         trackb: body.TRACK_B
-        sat: trackb.sat
-        sun: trackb.sun
-        sat: sat.slice(0, 7).concat([{begin: "12:30", end: "13:30", name: "Mozilla's YayQuery Lunch Spectacular", type: "break"}]).concat(sat.slice(7, 10)).concat([{begin: "15:00", end: "15:15", name: "Snack Break", type: "break"}]).concat(sat.slice(10, -1))
-        sun: sun.slice(0, 7).concat([{begin: "12:30", end: "13:30", name: "CommonJS Lunch Forum", type: "break"}]).concat(sun.slice(7, 13)).concat([{begin: "16:30", end: "17:00", name: "Snack Break", type: "break"}]).concat(sun.slice(13, -1))
+        full_sat: trackb.sat
+        full_sun: trackb.sun
+        sat: full_sat.slice(0, 7)
+        sat: sat.concat([{begin: "12:30", end: "13:30", name: "Mozilla's YayQuery Lunch Spectacular", type: "break"}])
+        sat: sat.concat(full_sat.slice(7, 10))
+        sat: sat.concat([{begin: "15:00", end: "15:15", name: "Snack Break", type: "break"}])
+        sat: sat.concat(full_sat.slice(10, -1))
+        puts sat
+        
+        sun: full_sun.slice(0, 7)
+        sun: sun.concat([{begin: "12:30", end: "13:30", name: "CommonJS Lunch Forum", type: "break"}])
+        sun: sun.concat(full_sun.slice(7, 13))
+        sun: sun.concat([{begin: "16:30", end: "17:00", name: "Snack Break", type: "break"}])
+        sun: sun.concat(full_sun.slice(13, -1))
+        puts sun
+
         trackb.sat: sat
         trackb.sun: sun
         res.simpleJSON(200, body)
