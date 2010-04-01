@@ -145,9 +145,9 @@ a img{border:0;}
 #schedulebg .len15 td { height: 40px; border-bottom: 1px solid #eee; overflow:hidden;}
 #schedulebg .len30 td  { height: 80px; border-bottom: 1px solid #eee; overflow:hidden;}
 #schedulebg .len45 td  { height: 120px; border-bottom: 1px solid #eee; overflow:hidden;}
-#schedulebg .len15 td div.tb { height: 36px; overflow:hidden;}
-#schedulebg .len30 td div.tb  { height: 76px; overflow:hidden;}
-#schedulebg .len45 td div.tb  { height: 116px; overflow:hidden;}
+#schedulebg .len15 td div.tb { height: 36px; overflow:scroll;}
+#schedulebg .len30 td div.tb  { height: 76px; overflow:scroll;}
+#schedulebg .len45 td div.tb  { height: 116px; overflow:scroll;}
 
 
 #schedulebg table div.name { font-weight:bold;}
