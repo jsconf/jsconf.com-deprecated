@@ -207,7 +207,7 @@ postMap: {
       else
         res.simpleJSON(422, {msg: "How's about picking an available timeslot?" } )
     req.addListener("data", (chunk) -> data += chunk )
-    req.addListener("end", () -> callback()) # schedule(data, callback))
+    req.addListener("end", () ->  schedule(data, callback))
 }
 
 http.createServer( (req,res) ->
