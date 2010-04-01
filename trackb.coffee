@@ -198,13 +198,13 @@ postMap: {
   "/app/schedule": (req, res) ->
     data: ""
     callback: (state, opts)->
-      res.simpleJSON(422, {msg: "Sign Up Begins April 1, 2010", data: opts})
-    # if (state is "saved")
-    #   res.simpleJSON(201, {msg: "Thank you for your Track B Submission!" } )
-    # else if (state is "invalid")
-    #   res.simpleJSON(422, {msg: "You will never get on the ship's manifest with a submission like that!", data: opts} )
-    # else
-    #   res.simpleJSON(422, {msg: "How's about picking an available timeslot?" } )
+      # res.simpleJSON(422, {msg: "Sign Up Begins April 1, 2010", data: opts})
+      if (state is "saved")
+        res.simpleJSON(201, {msg: "Thank you for your Track B Submission!" } )
+      else if (state is "invalid")
+        res.simpleJSON(422, {msg: "You will never get on the ship's manifest with a submission like that!", data: opts} )
+      else
+        res.simpleJSON(422, {msg: "How's about picking an available timeslot?" } )
     req.addListener("data", (chunk) -> data += chunk )
     req.addListener("end", () -> callback()) # schedule(data, callback))
 }
