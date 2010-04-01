@@ -151,6 +151,7 @@ schedule: (data, callback) ->
   if slots? && (0 <= params.time < (slots))
     timeslot: params.time
   errors: valid_params(name, title, description, email, av_confirm)
+  puts errors.length
   if timeslot? and errors.length == 0
     day: params.day
     sched_req: {_id: "TRACKB_" + day + "_" + timeslot, name: name, title: title, description: description, email: email}
@@ -190,15 +191,13 @@ getMap: {
         sat: sat.concat([{begin: "12:30", end: "13:30", name: "Mozilla's YayQuery Lunch Spectacular", type: "break"}])
         sat: sat.concat(full_sat.slice(7, 10))
         sat: sat.concat([{begin: "15:00", end: "15:15", name: "Snack Break", type: "break"}])
-        sat: sat.concat(full_sat.slice(10, -1))
-        puts sat
+        sat: sat.concat(full_sat.slice(10, 14))
         
         sun: full_sun.slice(0, 7)
         sun: sun.concat([{begin: "12:30", end: "13:30", name: "CommonJS Lunch Forum", type: "break"}])
         sun: sun.concat(full_sun.slice(7, 13))
         sun: sun.concat([{begin: "16:30", end: "17:00", name: "Snack Break", type: "break"}])
-        sun: sun.concat(full_sun.slice(13, -1))
-        puts sun
+        sun: sun.concat(full_sun.slice(13, 18))
 
         trackb.sat: sat
         trackb.sun: sun
