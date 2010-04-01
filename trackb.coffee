@@ -198,6 +198,7 @@ postMap: {
   "/app/schedule": (req, res) ->
     data: ""
     callback: (state, opts)->
+      puts state
       # res.simpleJSON(422, {msg: "Sign Up Begins April 1, 2010", data: opts})
       if (state is "saved")
         res.simpleJSON(201, {msg: "Thank you for your Track B Submission!" } )
