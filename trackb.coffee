@@ -126,6 +126,23 @@ valid_params: (name, title, description, email, av_confirm) ->
   errors.push("You have to let us make you famous.") unless av_confirm is "1"
   return errors
 
+mutate_timeslot: (day, target) ->
+  if (day === "sat")
+    if (target > 10)
+      return (target-2)
+    else if (target > 7)
+      return (target - 1)
+    else 
+      return target
+  else if (day === "sun")
+    if (target > 13)
+      return (target-2)
+    else if (target > 7)
+      return (target - 1)
+    else 
+      return target
+  
+  
 schedule: (data, callback) ->
   puts "-----------------------"
   params: {}
@@ -148,10 +165,13 @@ schedule: (data, callback) ->
   day: null
   slots: DAYS[params.day]
   timeslot: null
-  if slots? && (0 <= params.time < (slots))
-    timeslot: params.time
+  target_time = mutate_timeslot(params.day, params.time)
+  
+  if slots? && (0 <= target_time < (slots))
+    timeslot: target_time
   errors: valid_params(name, title, description, email, av_confirm)
   puts errors.length
+  puts timeslot
   if timeslot? and errors.length == 0
     day: params.day
     sched_req: {_id: "TRACKB_" + day + "_" + timeslot, name: name, title: title, description: description, email: email}
