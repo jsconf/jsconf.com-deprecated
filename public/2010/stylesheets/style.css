@@ -142,9 +142,9 @@ a img{border:0;}
 #schedulebg table table td { padding:0px;}
 
 .bb td { border-bottom: 1px solid #eee;}
-#schedulebg .len15 td { height: 40px; border-bottom: 1px solid #eee;}
-#schedulebg .len30 td  { height: 80px; border-bottom: 1px solid #eee;}
-#schedulebg .len45 td  { height: 120px; border-bottom: 1px solid #eee;}
+#schedulebg .len15 td { height: 40px; border-bottom: 1px solid #eee; overflow:hidden;}
+#schedulebg .len30 td  { height: 80px; border-bottom: 1px solid #eee; overflow:hidden;}
+#schedulebg .len45 td  { height: 120px; border-bottom: 1px solid #eee; overflow:hidden;}
 #schedulebg table div.name { font-weight:bold;}
 #schedulebg table div.title { font-size: 12px;}
 
