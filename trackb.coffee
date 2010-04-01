@@ -127,20 +127,21 @@ valid_params: (name, title, description, email, av_confirm) ->
   return errors
 
 mutate_timeslot: (day, target) ->
-  if (day === "sat")
-    if (target > 10)
-      return (target-2)
-    else if (target > 7)
-      return (target - 1)
-    else 
-      return target
-  else if (day === "sun")
-    if (target > 13)
-      return (target-2)
-    else if (target > 7)
-      return (target - 1)
-    else 
-      return target
+  t: 1
+  if day is "sat"
+    if target > 10
+      return target-2
+    if target > 7
+      return target - 1
+    return target
+  else if day is "sun"
+    if target > 13
+      return target-2
+    if target > 7
+      return target - 1
+    return target
+  else
+    return target
   
   
 schedule: (data, callback) ->
