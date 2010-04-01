@@ -186,8 +186,8 @@ getMap: {
         trackb: body.TRACK_B
         sat: trackb.sat
         sun: trackb.sun
-        sat: sat.slice(0, 6).concat([{begin: "12:30", end: "13:30", name: "Mozilla's YayQuery Lunch Spectacular", type: "break"}]).concat(sat.slice(6, 9)).concat([{begin: "15:00", end: "15:15", name: "Snack Break", type: "break"}]).concat(sat.slice(9, -1))
-        sun: sun.slice(0, 6).concat([{begin: "12:30", end: "13:30", name: "CommonJS Lunch Forum", type: "break"}]).concat(sun.slice(6, 12)).concat([{begin: "16:30", end: "17:00", name: "Snack Break", type: "break"}]).concat(sun.slice(12, -1))
+        sat: sat.slice(0, 7).concat([{begin: "12:30", end: "13:30", name: "Mozilla's YayQuery Lunch Spectacular", type: "break"}]).concat(sat.slice(7, 10)).concat([{begin: "15:00", end: "15:15", name: "Snack Break", type: "break"}]).concat(sat.slice(10, -1))
+        sun: sun.slice(0, 7).concat([{begin: "12:30", end: "13:30", name: "CommonJS Lunch Forum", type: "break"}]).concat(sun.slice(7, 13)).concat([{begin: "16:30", end: "17:00", name: "Snack Break", type: "break"}]).concat(sun.slice(13, -1))
         trackb.sat: sat
         trackb.sun: sun
         res.simpleJSON(200, body)
