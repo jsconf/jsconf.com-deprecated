@@ -32,6 +32,10 @@
       }
       .conf {
         margin: 12px;
+        /*height: 250px;
+        width: 365px;
+        text-align: center;
+        float: left;*/
       }
       #footer{
           height:1px;
@@ -46,7 +50,27 @@
       h2 {
       font-size:12px; }
       hr { margin: 20px 10px;}
-      .conf { padding-bottom: 40px;  display: block}
+      .conf { padding-bottom: 40px;  display: block; float: left;}
+      .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+       
+      .clearfix {
+        display: inline-block;
+      }
+       
+      html[xmlns] .clearfix {
+        display: block;
+      }
+       
+      * html .clearfix {
+        height: 1%;
+      }
     </style>
   </head>
   <body>
@@ -54,23 +78,32 @@
       <h1>JSConf<sup>&trade;</sup></h1>
       <h2>We make the events you want to attend.</h2>
       <hr/>
-      
-      <div class='conf'>
-        <a href="http://www.jsconf.com.au"><img src="images/jsconf_au_2012.png" alt="JSConf AU 2012 - Flipping the JS world upside down"/></a>
+      <div class='clearfix'>
+        <div class='conf'>
+          <a href="http://www.jsconf.com.au"><img src="images/jsconf_au_2012.png" alt="JSConf AU 2012 - Flipping the JS world upside down"/></a>
+          <caption>JSConf AU</caption>
+        </div>
+        
+        <div class='conf'>
+          <a href="http://2012.jsconf.eu/"><img src="images/jsconf_eu_2009.png" alt="JSConf EU 2012 - THAT WAS ROCK'N'ROLL"/></a>
+          <caption>JSConf EU</caption>
+        </div>
+        
+        <div class='conf'>
+          <a href="http://www.jsconf.com.ar/"><img src="images/jsconf_ar.png" alt="JSConf AR 2012"/></a>
+          <caption>JSConf AR</caption>
+        </div>
+        
+        <div class='conf'>
+          <a href="http://2012.jsconf.us/"><img src="images/jsconf_us_2012.png" alt="JSConf US 2012 - YEEHHAWWW!"/></a>
+          <caption>JSConf US</caption>
+        </div>
+        
       </div>
-      
-      <div class='conf'>
-        <a href="http://2012.jsconf.eu/"><img src="images/jsconf_eu_2009.png" alt="JSConf EU 2012 - THAT WAS ROCK'N'ROLL"/></a>
-      </div>
-      
-      <div class='conf'>
-        <a href="http://www.jsconf.com.ar/"><img src="images/jsconf_ar.png" alt="JSConf AR 2012"/></a>
-      </div>
-      
-      <div class='conf'>
-        <a href="http://2012.jsconf.us/"><img src="images/jsconf_us_2012.png" alt="JSConf US 2012 - YEEHHAWWW!"/></a>
-      </div>
-      
+      <hr/>
+      <h1>The JSConf Family Of Conferences</h1>
+
+      <div class='clearfix'>
       <div class='conf'>
         <a href="http://capitoljs.com/"><img src="images/capitoljs_2011.png" alt="CapitolJS 2011"/></a>
       </div>
@@ -78,20 +111,21 @@
       <div class='conf'>
         <a href="http://dojoconf.com/"><img src="images/dojoconf_2011.png" alt="DojoConf 2011"/></a>
       </div>
+    </div>
       
-      <div class='conf'>
-        <a href="http://2011.jsconf.us/"><img src="images/jsconf_us_2011.png" alt="JSConf US 2011 - The JSConf Trail"/></a>
-      </div>
-      
-      <div class='conf'>
-        <a href="http://2010.jsconf.us"><img src="images/jsconf_us_2010.png" alt="JSConf US 2010 - Swashbucklin' JavaScript"/></a>
-      </div>
-      
-      
-      <div class='conf'>
-        <a href="http://2009.jsconf.us"><img src="images/jsconf_us_2009.png" alt="JSConf US 2009 - Holy Shit I Hope This Works"/></a>
-      </div>
-      
+<!-- 
+        <div class='conf'>
+          <a href="http://2011.jsconf.us/"><img src="images/jsconf_us_2011.png" alt="JSConf US 2011 - The JSConf Trail"/></a>
+        </div>
+        
+        <div class='conf'>
+          <a href="http://2010.jsconf.us"><img src="images/jsconf_us_2010.png" alt="JSConf US 2010 - Swashbucklin' JavaScript"/></a>
+        </div>
+        
+        <div class='conf'>
+          <a href="http://2009.jsconf.us"><img src="images/jsconf_us_2009.png" alt="JSConf US 2009 - Holy Shit I Hope This Works"/></a>
+        </div>
+         -->
       <div id='footer'></div>
     </div>
     <script type="text/javascript">
