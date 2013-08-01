@@ -1,75 +1,95 @@
   body {
-        text-align: center;
-        font-size:12px;
-        background:white;
-        padding:0px;
-        margin:0px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-family: "ABeeZee", sans-serif;
-        padding-bottom: 200px;
-      }
-      hr { border: 0px; background: 0px; border-top: 1px solid #333;}
-      h2 {
-          margin-bottom: 24px;
-      }
-      a img {
-        border: 0px;
-      }
-      #frame {
-        width:880px;
-        margin: 0px auto;
-        padding: 12px;
-        background:white;
+    text-align: center;
+    font-size:12px;
+    background:white;
+    padding:0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "ABeeZee", sans-serif;
+    padding-bottom: 200px;
+}
+hr { 
+    border: 0px; 
+    background: 0px; 
+    border-top: 1px solid #333;
+}
+h2 {
+  margin-bottom: 24px;
+}
+a img {
+border: 0px;
+}
+#frame {
+    width:880px;
+    margin: 0px auto;
+    padding: 12px;
+    background:white;
+}
+.conf {
+    margin: 10px;
+    /*height: 250px;
+    width: 365px;
+    text-align: center;
+    float: left;*/
+}
+#footer{
+    height:1px;
+    background: black;
+}
+h1 {
+    font-family: "Poiret One", cursive;
+    color: #333;
+    font-size: 40px;
+}
+h1 sup { 
+    color: #ccc; font-size: 12px
+}
+h2 {
+    font-size:12px; 
+}
+hr { 
+    margin: 20px 10px; 
+}
+.conf {  
+    display: block; float: left;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
 
-      }
-      .conf {
-        margin: 10px;
-        /*height: 250px;
-        width: 365px;
-        text-align: center;
-        float: left;*/
-      }
-      #footer{
-          height:1px;
-          background: black;
-      }
-      h1 {
-        font-family: "Poiret One", cursive;
-        color: #333;
-        font-size: 40px;
-      }
-      h1 sup { color: #ccc; font-size: 12px}
-      h2 {
-      font-size:12px; }
-      hr { margin: 20px 10px;}
-      .conf {  display: block; float: left;}
-      .clearfix:after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-      }
+html[xmlns] .clearfix {
+    display: block;
+}
 
-      .clearfix {
-        display: inline-block;
-      }
+* html .clearfix {
+    height: 1%;
+}
 
-      html[xmlns] .clearfix {
-        display: block;
-      }
+#wanttorun{ margin: 40px 0px; text-align:center;}
+#wanttorun a,#wanttorun a:visited{ color: black;}
+#gplus{ margin: 40px 0px; text-align:center;}
+#gplus a,#gplus a:visited{ color: black;}
 
-      * html .clearfix {
-        height: 1%;
-      }
+div.conf p { 
+    display: block; 
+    font-weight: bold; 
+    font-size: 16px; 
+}
 
-      #wanttorun{ margin: 40px 0px; text-align:center;}
-      #wanttorun a,#wanttorun a:visited{ color: black;}
-      #gplus{ margin: 40px 0px; text-align:center;}
-      #gplus a,#gplus a:visited{ color: black;}
-      div.conf p { display: block; font-weight: bold; font-size: 16px; }
-      section { font-size: 16px; color: #333; text-align: justify; padding: 0px 24px ;}
+section { 
+    font-size: 16px; 
+    color: #333; 
+    text-align: justify; 
+    padding: 0px 24px ;
+}
 
 @media only screen and (max-width : 300px) {
   #frame {
