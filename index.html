@@ -19,7 +19,16 @@
         font-family: "ABeeZee", sans-serif;
         padding-bottom: 200px;
       }
-      .onsale { background: white url(images/onsale.png) bottom center no-repeat;}
+      .onsale p:before {
+          background: white url(images/onsale.png) 100% -1px no-repeat;
+          content: "";
+          height: 16px;
+          width: 200px;
+          display: block;
+          margin-top: 0;
+          position: absolute;
+          margin-top: -1.25em;
+      }
       hr { border: 0px; background: 0px; border-top: 1px solid #333;}
       h2 {
           margin-bottom: 24px;
