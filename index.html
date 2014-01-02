@@ -19,15 +19,40 @@
         font-family: "ABeeZee", sans-serif;
         padding-bottom: 200px;
       }
-      .onsale p:before {
-          background: white url(images/onsale.png) 100% -1px no-repeat;
-          content: "";
+      .onsale:before {
+          background: red;
+          content: "Tickets On Sale Now!";
+          font-weight: bold;
+          display: block;
+          font-size: 12px;
+          padding: 2px 0px;
+          color:white;
+          line-height: 16px;
+          text-align: center;
           height: 16px;
           width: 200px;
           display: block;
           margin-top: 0;
           position: absolute;
-          margin-top: -1.25em;
+          margin-bottom: -22px;
+      }
+      .opencfp a:after {
+          background: blue;
+          content: "Open Call For Speakers!";
+          font-weight: bold;
+          display: block;
+          font-size: 12px;
+          padding: 2px 0px;
+          color:white;
+          line-height: 16px;
+          text-align: center;
+          height: 16px;
+          width: 200px;
+          display: block;
+          margin-bottom: 0;
+          position: absolute;
+          margin-top: -23px;
+
       }
       hr { border: 0px; background: 0px; border-top: 1px solid #333;}
       h2 {
@@ -45,10 +70,14 @@
       }
       .conf {
         margin: 10px;
-        /*height: 250px;
-        width: 365px;
+        height: 293px;
+        /*width: 365px;
         text-align: center;
         float: left;*/
+      }
+      .conf a img {
+        margin-top:20px;
+        margin-bottom: 20px;
       }
       #footer{
           height:1px;
@@ -99,7 +128,7 @@
       <h2>Conferences for the JavaScript community.</h2>
       <hr/>
       <div class="clearfix">
-        <div class="conf onsale">
+        <div class="conf onsale opencfp">
           <a href="http://2014.jsconf.us/" rel="me"><img src="images/jsconf_us.png" alt="JSConf US 2013"/></a>
           <p>JSConf US</p>
         </div>
@@ -110,12 +139,12 @@
         </div>
 
         <div class="conf">
-          <img src="images/jsconf_au.png" alt="JSConf AU 2012 - Flipping the JS world upside down"/>
+          <a href="#" rel="me"><img src="images/jsconf_au.png" alt="JSConf AU 2012 - Flipping the JS world upside down"/></a>
           <p>JSConf AU</p>
         </div>
 
         <div class="conf">
-          <img src="images/jsconf_ar.png" alt="JSConf AR 2012"/>
+          <a href="#" rel="me"><img src="images/jsconf_ar.png" alt="JSConf AR 2012"/></a>
           <p>JSConf AR</p>
         </div>
 
