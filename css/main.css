@@ -1,12 +1,12 @@
 body {
   text-align: center;
-  font-size:12px;
-  background:white;
+  font-size: 12px;
+  line-height: 1.5;
+  background: white;
   padding:0px;
   margin:0px;
   font-family: Arial, Helvetica, sans-serif;
   font-family: "ABeeZee", sans-serif;
-  padding-bottom: 200px;
 }
 
 .onsale:before {
@@ -63,7 +63,7 @@ a img {
 }
 
 .conf {
-  margin: 10px;
+  margin: 20px 10px;
   height: 293px;
 }
 
