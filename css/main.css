@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+  font-size:12px;
+  background:white;
+  padding:0px;
+  margin:0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "ABeeZee", sans-serif;
+  padding-bottom: 200px;
+}
+
+.onsale:before {
+  background: red;
+  content: "Tickets On Sale Now!";
+  font-weight: bold;
+  display: block;
+  font-size: 12px;
+  padding: 2px 0px;
+  color:white;
+  line-height: 16px;
+  text-align: center;
+  height: 16px;
+  width: 200px;
+  display: block;
+  margin-top: 0;
+  position: absolute;
+  margin-bottom: -22px;
+}
+
+.opencfp a:after {
+  background: blue;
+  content: "Open Call For Speakers!";
+  font-weight: bold;
+  display: block;
+  font-size: 12px;
+  padding: 2px 0px;
+  color:white;
+  line-height: 16px;
+  text-align: center;
+  height: 16px;
+  width: 200px;
+  display: block;
+  margin-bottom: 0;
+  position: absolute;
+  margin-top: -23px;
+}
+
+hr { border: 0px; background: 0px; border-top: 1px solid #333;}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+a img {
+  border: 0px;
+}
+
+#frame {
+  width:880px;
+  margin: 0px auto;
+  padding: 12px;
+  background:white;
+}
+
+.conf {
+  margin: 10px;
+  height: 293px;
+}
+
+.conf a img {
+  height: auto;
+  margin-top:20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+#footer {
+  height:1px;
+  background: black;
+}
+
+h1 {
+  font-family: "Poiret One", cursive;
+  color: #333;
+  font-size: 40px;
+}
+
+h1 sup { color: #ccc; font-size: 12px;}
+
+h2 {
+  font-size:12px;
+}
+
+hr { margin: 20px 10px;}
+
+.conf {  display: block; float: left;}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+#wanttorun{ margin: 40px 0px; text-align:center;}
+#wanttorun a,#wanttorun a:visited{ color: black;}
+#gplus{ margin: 40px 0px; text-align:center;}
+#gplus a,#gplus a:visited{ color: black;}
+div.conf p { display: block; font-weight: bold; font-size: 16px; }
+section { font-size: 16px; color: #333; text-align: justify; padding: 0px 24px ;}
