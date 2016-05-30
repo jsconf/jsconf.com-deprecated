@@ -99,7 +99,7 @@ section {
 }
 .wanttorun,
 .gplus {
-  margin: 40px 0;
+  margin: 2.5em 0;
   text-align: center;
 }
 @media only screen and (max-width: 300px) {
@@ -107,7 +107,7 @@ section {
     width: 220px;
   }
   body {
-    margin : 0px;
+    margin : 0;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 480px) {
@@ -115,13 +115,26 @@ section {
     width: 220px;    
   }  
   body {
-    margin : 0px;
+    margin : 0;
   }
-  
 }
 @media only screen and (min-width: 480px) and (max-width: 680px) {
   .container {
     width: 500px;    
+  }
+}
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.25em;
+  }
+  hr {
+    margin: .25em 0;
+  }
+  .conf {
+    margin: .25em .75em 0;
+  }
+  .conf a img {
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 800px) { 
