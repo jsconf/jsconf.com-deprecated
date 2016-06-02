@@ -57,7 +57,6 @@ hr {
 }
 .conf a img {
   height: auto;
-  margin: 1em 0;
   width: 200px;
 }
 .conf p {
@@ -131,7 +130,7 @@ section {
     margin: .25em 0;
   }
   .conf {
-    margin: .25em .75em 0;
+    margin: .75em .75em 1em;;
   }
   .conf a img {
     margin-bottom: 0;
