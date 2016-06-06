@@ -1,124 +1,159 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
-  text-align: center;
-  font-size: 12px;
+  font-family: "ABeeZee", Arial, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
-  background: white;
-  padding:0px;
-  margin:0px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "ABeeZee", sans-serif;
-}
-
-.onsale:before {
-  background: red;
-  content: "Tickets On Sale Now!";
-  font-weight: bold;
-  display: block;
-  font-size: 12px;
-  padding: 2px 0px;
-  color:white;
-  line-height: 16px;
+  margin: 0 auto;
   text-align: center;
-  height: 16px;
-  width: 200px;
-  display: block;
-  margin-top: 0;
-  position: absolute;
-  margin-bottom: -22px;
 }
-
-.opencfp a:after {
-  background: blue;
-  content: "Open Call For Speakers!";
-  font-weight: bold;
-  display: block;
-  font-size: 12px;
-  padding: 2px 0px;
-  color:white;
-  line-height: 16px;
-  text-align: center;
-  height: 16px;
-  width: 200px;
-  display: block;
-  margin-bottom: 0;
-  position: absolute;
-  margin-top: -23px;
-}
-
-hr { border: 0px; background: 0px; border-top: 1px solid #333;}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-a img {
-  border: 0px;
-}
-
-#frame {
-  width:880px;
-  margin: 0px auto;
-  padding: 12px;
-  background:white;
-}
-
-.conf {
-  margin: 20px 10px;
-  height: 293px;
-}
-
-.conf a img {
-  height: auto;
-  margin-top:20px;
-  margin-bottom: 20px;
-  width: 200px;
-}
-
-#footer {
-  height:1px;
-  background: black;
-}
-
-h1 {
-  font-family: "Poiret One", cursive;
-  color: #333;
-  font-size: 40px;
-}
-
-h1 sup { color: #ccc; font-size: 12px;}
-
-h2 {
-  font-size:12px;
-}
-
-hr { margin: 20px 10px;}
-
-.conf {  display: block; float: left;}
-
 .clearfix:after {
-  content: ".";
-  display: block;
   clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+  content: "";
+  display: table;
 }
-
 .clearfix {
   display: inline-block;
 }
-
-html[xmlns] .clearfix {
+.container {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0;
+}
+h1 {
+  color: #333;
+  font-family: "Poiret One", cursive;
+  font-size: 2.5em;
+}
+h1 sup {
+  color: #999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .5em;
+}
+h2 {
+  font-size: 1.75em;
+}
+.row {
+  margin: 0 0 1.25em;
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+div[class*="col-"] {
+  float: left;
+}
+.conf {
+  float: left;
+  margin: 1.25em .75em; 
+}
+hr {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 1.25em .75em;
+}
+.conf a img {
+  height: auto;
+  width: 200px;
+}
+.conf p {
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.onsale:before {
+  background: #f00;
+  color: #fff;
+  content: "Tickets on Sale Now!";
   display: block;
+  font-size: .75em;
+  font-weight: bold;
+  margin: -18px 0 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 200px;
 }
-
-* html .clearfix {
-  height: 1%;
+.opencfp a:after {
+  background: #00f;
+  color: #fff;
+  content: "Open Call for Speakers!";
+  display: block;
+  font-size: .75em;
+  font-weight: bold;
+  margin: -7px 0 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 200px;
 }
-
-#wanttorun{ margin: 40px 0px; text-align:center;}
-#wanttorun a,#wanttorun a:visited{ color: black;}
-#gplus{ margin: 40px 0px; text-align:center;}
-#gplus a,#gplus a:visited{ color: black;}
-div.conf p { display: block; font-weight: bold; font-size: 16px; }
-section { font-size: 16px; color: #333; text-align: justify; padding: 0px 24px ;}
+section {
+  color: #333;
+  line-height: 1.5;
+  padding: 0 1.75em;
+  text-align: justify;
+}
+.wanttorun,
+.gplus {
+  margin: 2.5em 0;
+  text-align: center;
+}
+@media only screen and (max-width: 300px) {
+  .container {
+    width: 220px;
+  }
+  body {
+    margin : 0;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 480px) {
+  .container {
+    width: 220px;    
+  }  
+  body {
+    margin : 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 680px) {
+  .container {
+    width: 500px;    
+  }
+}
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.25em;
+  }
+  hr {
+    margin: .25em 0;
+  }
+  .conf {
+    margin: .75em .75em 1em;;
+  }
+  .conf a img {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 800px) { 
+  .container {
+    width: 480px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+  .container {
+    width: 770px;
+  }
+  .clearfix {
+    margin-left: 50px;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width : 1100px) {
+  .container {
+    width: 875px;
+  }
+  .clearfix {
+    margin-left: 100px;
+  }  
+}
