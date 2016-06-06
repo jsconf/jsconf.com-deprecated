@@ -62,16 +62,16 @@ hr {
 .conf p {
   font-size: 1.25em;
   font-weight: bold;
-  margin: 0;
+  line-height: 1.5;
 }
 .onsale:before {
   background: #f00;
   color: #fff;
-  content: "Tickets On Sale Now!";
+  content: "Tickets on Sale Now!";
   display: block;
   font-size: .75em;
   font-weight: bold;
-  margin: 0 0 -22px;
+  margin: -18px 0 0;
   padding: 0;
   position: absolute;
   text-align: center;
@@ -80,11 +80,11 @@ hr {
 .opencfp a:after {
   background: #00f;
   color: #fff;
-  content: "Open Call For Speakers!";
+  content: "Open Call for Speakers!";
   display: block;
   font-size: .75em;
   font-weight: bold;
-  margin: -23px 0 0;
+  margin: -7px 0 0;
   padding: 0;
   position: absolute;
   text-align: center;
