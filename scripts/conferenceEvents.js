@@ -412,13 +412,13 @@ var confEvents = [
   {
     name: 'TahoeJS<br/>Truckee, CA',
     location: undefined,
-    url: 'http://tahoejs.com',
+    url: 'http://www.tahoejs.com/jsconf-2018',
     img: {
       url: 'images/tahoejs.gif',
       alt: 'TahoeJS'
     },
     confDate: undefined,
-    confStatus:[],
+    confStatus:['opencfp'],
     type: 'family'
   }
 ]
