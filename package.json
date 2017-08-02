@@ -1,0 +1,25 @@
+{
+  "name": "jsconf.com",
+  "version": "1.0.0",
+  "description": "The [JSConf US](http://www.jsconf.us) Site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TahoeJS/jsconf.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TahoeJS/jsconf.com/issues"
+  },
+  "homepage": "https://github.com/TahoeJS/jsconf.com#readme",
+  "devDependencies": {
+    "browser-sync": "2.18.7"
+  },
+  "scripts": {
+    "start": "browser-sync start -s -f . --no-ui --no-notify"
+  }
+}
