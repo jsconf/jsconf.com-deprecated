@@ -19,3 +19,4 @@ tmp/restart.txt
 tmp/debug.txt
 _site
 .idea
+node_modules
