@@ -1,1 +1,1 @@
-The [JSConf US](http://www.jsconf.us) Site.
+The [JSConf](https://jsconf.com) Site.
