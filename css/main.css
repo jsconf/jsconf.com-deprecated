@@ -67,6 +67,10 @@ a img {
   height: 293px;
 }
 
+.conf.inactive {
+  display: none;
+}
+
 .conf a img {
   height: auto;
   margin-top:20px;
